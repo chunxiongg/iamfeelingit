@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
+
 // import { ParallaxDirective } from './parallax.directive';
 
 // import { MyStyleDirective } from './my-style.directive';
@@ -20,6 +22,7 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    NativePageTransitions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

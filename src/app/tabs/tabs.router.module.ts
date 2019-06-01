@@ -53,6 +53,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'food/recipes-details/:makan.id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../food/recipes-details/recipes-details.module#RecipesDetailsPageModule'
+          }
+        ]
+      },
+      {
         path: 'contact-us',
         children: [
           {

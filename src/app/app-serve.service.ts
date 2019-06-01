@@ -61,6 +61,50 @@ export class AppServeService {
     }
   ]
 
+  public foodRecipe = [
+    { image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
+      website: 'Facebook', link: 'https://facebook.com',
+      information: [{
+        title: 'Calories',
+        figure: 100
+      },
+      {
+        title: 'Prep Time',
+        figure: '25m'
+      },
+      {
+        title: 'Cook Time',
+        figure: '125m'
+      }],
+      briefDes: 'Nourishing dish that provides several health benefits.',
+      des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.' 
+    },
+    
+    { image: 'assets/night.svg', id: 2, name: 'Carot', website: 'Twitter', link: 'https://twitter.com',
+      information: [{
+        title: 'Calories',
+        figure: 30000
+      },
+      {
+        title: 'Prep Time',
+        figure: '23335m'
+      },
+      {
+        title: 'Cook Time',
+        figure: '12335m'
+      }] 
+    },
+    { image: 'assets/night.svg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com' }
+  ]
+
+  getRecipeArr() {
+    return this.foodRecipe;
+  }
+
+  getIndividual(makanIndividual) {
+    return this.foodRecipe.find(e => e.id === makanIndividual)
+  }
+
   public arrQuote = [
   'Have I not commanded you? Be strong and of good courage; do not be afraid, nor be dismayed, for the Lord your God is with you wherever you go.',
   'But seek first the kingdom of God and His righteousness, and all these things shall be added to you.',

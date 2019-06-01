@@ -30,16 +30,21 @@
 
               <ion-slides pager="false" [options]="slideOpts"> 
                   
-                  <ion-slide *ngFor='let makan of foodRecipe'>
+                  <ion-slide *ngFor='let makan of foodRecipe; let m = index' (click)='openRecipe(makan)'>
                       <ion-card class="welcome-card">
                           <ion-img [src]='makan.image' ></ion-img>
-                          <ion-card-header>
-                            <ion-card-title>{{ makan.name }}</ion-card-title>
+                          <ion-card-header class='ion-text-left'>
+                            <ion-card-subtitle>{{ makan.name }}</ion-card-subtitle>
+                            <br>
+                            <ion-text>{{ makan.briefDes }} </ion-text>
+                            <br>
+                            <br>
+                            <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
                           </ion-card-header>
-                          <ion-card-content>
-                               <a href='{{ makan.link }}'> <ion-card-subtitle>Learn More</ion-card-subtitle> </a>
+                          <!-- <ion-card-content>
+                            <ion-card-subtitle>Learn More</ion-card-subtitle>
                           </ion-card-content>
-        
+         -->
                         </ion-card>
                   </ion-slide>
           

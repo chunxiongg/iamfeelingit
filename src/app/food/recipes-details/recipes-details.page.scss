@@ -1,0 +1,24 @@
+@import '../../../theme/BoxShadowNone';
+
+hr {
+    background: grey !important;
+    display: block !important;
+    font-size: 2em !important;
+    opacity: .2 !important;
+    visibility: visible !important;
+  }
+
+.dark {
+    font-weight: bold;
+    font-size: 2vh !important;
+    color: #000 !important;
+}
+
+p {
+    text-align: center;
+}
+
+ion-card {
+    margin-top: 5vh !important;
+}
+

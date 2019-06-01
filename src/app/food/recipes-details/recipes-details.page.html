@@ -1,0 +1,73 @@
+<ion-header>
+
+    <ion-title></ion-title>
+    <!-- <ion-buttons justify-content-start >
+        <ion-button routerLink='/tabs/food'>
+          <ion-icon color='warning' slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+    </ion-buttons> -->
+    
+  <img [src] = 'getMakanOne.image'>
+</ion-header>
+
+<ion-content>
+  <ion-card class='noBorder'>
+    <ion-card-header>
+      <ion-card-title> {{ getMakanOne.name }} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text> {{ getMakanOne.des }} </ion-text>
+      <br>
+      <br>
+      <rating [rate]="rate"
+      readonly="false" 
+      size="default" 
+      (rateChange)="onRateChange($event)">
+      </rating>
+
+      <hr />
+
+    <ion-grid>
+
+        <ion-row>
+          <ion-col>
+              <p>{{ getMakanOne.information[0].title }}</p>
+              <p class='dark'>{{ getMakanOne.information[0].figure }}</p>
+          </ion-col>
+
+          <ion-col>
+              <p>{{ getMakanOne.information[1].title }}</p>
+              <p class='dark'>{{ getMakanOne.information[1].figure }}</p>
+          </ion-col>
+
+          <ion-col>
+              <p>{{ getMakanOne.information[1].title }}</p>
+              <p class='dark'>{{ getMakanOne.information[1].figure }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+<!-- 
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <p>Calories</p>
+            <p class='dark'>100</p>
+        </ion-col>
+
+        <ion-col>
+            <p>Prep Time</p>
+            <p class='dark'>25m</p>
+          </ion-col>
+
+          <ion-col>
+              <p>Cook Time</p>
+              <p class='dark'>105m</p>
+          </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+</ion-content>
