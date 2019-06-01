@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PracticesPage implements OnInit {
 
-  galleryType = 'regular';
+  galleryType = 'mvf';
   
   constructor() { }
 

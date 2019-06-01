@@ -80,7 +80,7 @@ export class AppServeService {
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.' 
     },
     
-    { image: 'assets/night.svg', id: 2, name: 'Carot', website: 'Twitter', link: 'https://twitter.com',
+    { image: 'assets/nut.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
       information: [{
         title: 'Calories',
         figure: 30000
@@ -92,8 +92,11 @@ export class AppServeService {
       {
         title: 'Cook Time',
         figure: '12335m'
-      }] 
+      }],
+      briefDes: 'Fresh nuts bring benefits.' ,
+      des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.'
     },
+    
     { image: 'assets/night.svg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com' }
   ]
 

@@ -55,5 +55,14 @@
 
    </ion-card>
 
+   <ion-list lines='none'>
+        <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
+          <ion-thumbnail slot="start">
+            <img src="{{ read.image }}">
+          </ion-thumbnail>
+          <ion-label>{{ read.name }} </ion-label>
+        </ion-item>
+   </ion-list>
+
 
 </ion-content>

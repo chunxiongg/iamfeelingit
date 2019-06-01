@@ -49,4 +49,8 @@ ionViewWillLeave() {
   onRateChange($event) {
     console.log('changed')
   }
+
+  viewRecipe() {
+    console.log('v')
+  }
 }
