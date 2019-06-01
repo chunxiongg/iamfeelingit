@@ -1,0 +1,43 @@
+
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>PRACTICES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Default Segment -->
+      
+  <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
+    
+      <ion-segment-button value="mvf" mode='md'>
+        MVF
+      </ion-segment-button>
+  
+      <ion-segment-button value="quiz" mode='md'>
+        Quiz
+      </ion-segment-button>
+  
+    </ion-segment>
+
+  <div [ngSwitch]="galleryType">
+    <div *ngSwitchCase="'mvf'">
+      <ion-card>
+        <ion-card-content>
+          hello mvf
+        </ion-card-content>
+      </ion-card> 
+    </div>
+
+    <div *ngSwitchCase="'quiz'">
+      <ion-card>
+          <ion-card-content>
+            hello quiz
+            <ion-button routerLink='/tabs/tab2'>Go</ion-button>
+          </ion-card-content>
+        </ion-card>  
+    </div>
+  </div>
+  
+
+</ion-content>

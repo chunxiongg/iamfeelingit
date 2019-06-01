@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>FOOD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-card class='noBorder'>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <ion-card-subtitle>
+                <ion-text>Recipes</ion-text>
+              </ion-card-subtitle>
+        </ion-col>
+
+        <ion-col>
+            <ion-buttons justify-content-end>
+                <ion-button (click)='presentPopover($event)'>
+                  <ion-icon color='warning' slot="icon-only" name="more"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+        </ion-col>
+      </ion-row>
+
+
+        <ion-row>
+
+              <ion-slides pager="false" [options]="slideOpts"> 
+                  
+                  <ion-slide *ngFor='let makan of foodRecipe'>
+                      <ion-card class="welcome-card">
+                          <ion-img [src]='makan.image' ></ion-img>
+                          <ion-card-header>
+                            <ion-card-title>{{ makan.name }}</ion-card-title>
+                          </ion-card-header>
+                          <ion-card-content>
+                               <a href='{{ makan.link }}'> <ion-card-subtitle>Learn More</ion-card-subtitle> </a>
+                          </ion-card-content>
+        
+                        </ion-card>
+                  </ion-slide>
+          
+                </ion-slides>
+      </ion-row>
+    </ion-grid>
+
+
+   </ion-card>
+
+
+</ion-content>

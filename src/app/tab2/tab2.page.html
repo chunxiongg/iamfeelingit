@@ -1,9 +1,44 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar >
+
+      <ion-buttons slot="secondary">
+          <ion-button routerLink="/tabs/practices">
+            <ion-icon color='primary' slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
     <ion-title>
-      Tab Two
+      this is the quiz page
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <img src='assets/x.png'>
+      <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor='let qn of returnData; let i = index'>
+    <ion-card-content >
+        <ion-img [src]="qn.image"></ion-img>
+        <br>
+
+      <ion-text> {{ qn.question}} </ion-text>
+
+      <ion-card class='optionName' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
+        {{ options.name }}
+      </ion-card> 
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button expand="full" (click)='submitBtn()' color='primary'>Submit</ion-button>
+    </ion-toolbar>
+  </ion-footer>

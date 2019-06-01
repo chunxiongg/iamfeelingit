@@ -35,6 +35,33 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'practices',
+        children: [
+          {
+            path: '',
+            loadChildren: '../practices/practices.module#PracticesPageModule'
+          }
+        ]
+      },
+      {
+        path: 'food',
+        children: [
+          {
+            path: '',
+            loadChildren: '../food/food.module#FoodPageModule'
+          }
+        ]
+      },
+      {
+        path: 'contact-us',
+        children: [
+          {
+            path: '',
+            loadChildren: '../contact-us/contact-us.module#ContactUsPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
