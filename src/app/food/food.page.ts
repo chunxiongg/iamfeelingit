@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { PopoverPage } from '../pop-over/pop-over';
 
 @Component({
   selector: 'app-food',
@@ -12,7 +13,7 @@ export class FoodPage implements OnInit {
 
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
-      component: '',
+      component: PopoverPage,
       event: ev,
       translucent: true
     });

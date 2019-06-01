@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-// import { PopoverComponent } from '../popover/popover.page';
+import { PopoverPage } from '../pop-over/pop-over';
 
 import { FoodPage } from './food.page';
 
@@ -22,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FoodPage],
-  // entryComponents: [PopoverComponent]
+  declarations: [FoodPage, PopoverPage],
+  entryComponents: [PopoverPage]
 })
 export class FoodPageModule {}

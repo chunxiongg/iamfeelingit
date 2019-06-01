@@ -8,14 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyStyleDirective } from './my-style.directive';
 // import { ParallaxDirective } from './parallax.directive';
 
 // import { MyStyleDirective } from './my-style.directive';
 
 
 @NgModule({
-  declarations: [AppComponent, MyStyleDirective],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
