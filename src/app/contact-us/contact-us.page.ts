@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollHideConfig } from '../parallax.directive';
 import { Router } from '@angular/router';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -33,7 +33,15 @@ export class ContactUsPage implements OnInit {
   }
 
   openFacebook() {
-    const browser = this.iab.create('https://www.facebook.com/project.stillyoung');
+    this.iab.create('https://www.facebook.com/project.stillyoung', '_blank');
+  }
+
+  openInstagram() {
+    this.iab.create('https://www.instagram.com/project.stillyoung', '_blank');
+  }
+
+  openMail() {
+    this.iab.create('mailto:connectwithstillyoung@gmail.com', '_self');
   }
 
 }
