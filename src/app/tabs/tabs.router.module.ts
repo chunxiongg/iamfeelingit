@@ -53,7 +53,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'food/recipes-details/:makan.id',
+        path: 'practices/recipes-details/:makan.id',
         children: [
           {
             path: '',

@@ -10,6 +10,11 @@
 </ion-header>
 
 <ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+    </ion-refresher>
+
   <ion-card class='noBorder'>
     <ion-card-header>
       <ion-card-title> {{ getMakanOne.name }} </ion-card-title>
@@ -39,43 +44,22 @@
 
 
   <div [ngSwitch]="galleryType">
-    <div *ngSwitchCase="'ingredients'" (swiperight)='handleSwipeRight()'>
+    <div *ngSwitchCase="'ingredients'">
       <ion-card class='noBorder'>
         <ion-card-content>
 
-            <ion-list *ngFor='let value of finalArr'>
+            <ion-list *ngFor='let value of finalArr; let i = index'>
                 <ion-item>
                   <ion-label>{{ value }}</ion-label>
-                  <ion-checkbox slot="start"></ion-checkbox>
+                  <ion-checkbox slot="start" (click)='tickBox(value)'></ion-checkbox>
                 </ion-item>
             </ion-list>
-
-             <!-- <ion-list>
-                <ion-item>
-                  <ion-label>{{ getMakanOne.ingredients[0].b }}</ion-label>
-                  <ion-checkbox slot="start"></ion-checkbox>
-                </ion-item>
-              </ion-list>
-
-              <ion-list>
-                  <ion-item>
-                    <ion-label>{{ getMakanOne.ingredients[0].c }}</ion-label>
-                    <ion-checkbox slot="start"></ion-checkbox>
-                  </ion-item>
-                </ion-list>
-
-              <ion-list>
-                  <ion-item>
-                    <ion-label>{{ getMakanOne.ingredients[0].d }}</ion-label>
-                    <ion-checkbox slot="start"></ion-checkbox>
-                  </ion-item>
-                </ion-list>  -->
 
         </ion-card-content>
       </ion-card> 
     </div>
 
-    <div *ngSwitchCase="'recipes'" (swipeleft)='handleSwipeLeft()'>
+    <div *ngSwitchCase="'recipes'">
       <ion-card class='noBorder'>
         <ion-card-content>
           <ion-grid>
@@ -97,6 +81,17 @@
                 </ion-col>
               </ion-row>
               <br>
+
+              <ion-row>
+                <ion-list *ngFor='let eat of newRecipe'>
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                          <img src="{{ getMakanOne.recipe[0].image }}">
+                        </ion-thumbnail>
+                        <ion-label>{{ getMakanOne.recipe[0].Step }}</ion-label>
+                      </ion-item>
+                </ion-list>
+              </ion-row>
       
                   <!-- <ion-button routerLink='/tabs/steps' color='danger' expand="full" size='default' >ADD TO STOMACH</ion-button>
               -->

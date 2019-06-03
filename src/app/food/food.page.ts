@@ -10,6 +10,7 @@ import { ModalExample } from '../pop-over/article-pop';
   templateUrl: './food.page.html',
   styleUrls: ['./food.page.scss'],
 })
+
 export class FoodPage implements OnInit {
 
   constructor(public popoverController: PopoverController, 
@@ -70,17 +71,6 @@ export class FoodPage implements OnInit {
       this.isLoaded = true;
       console.log('yay, page loaded!')
     }, 1000);
-  }
-
-
-  handleSwipeLeft() {
-    console.log('Page Swiped Left: Lactation')
-    this.router.navigate(['/tabs/tab3'])
-  }
-
-  handleSwipeRight() {
-    console.log('Page Swiped Right: Go Back To Previous')
-    this.router.navigate(['/tabs/practices'])
   }
 
 }

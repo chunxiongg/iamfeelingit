@@ -4,15 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { PopoverPage } from '../pop-over/pop-over';
-import { ModalExample } from '../pop-over/article-pop';
 
-import { FoodPage } from './food.page';
+import { SplashQuotePage } from './splash-quote.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: FoodPage
+    component: SplashQuotePage
   }
 ];
 
@@ -23,8 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FoodPage]
-  // declarations: [FoodPage, PopoverPage, ModalExample],
-  // entryComponents: [PopoverPage, ModalExample]
+  declarations: [SplashQuotePage]
 })
-export class FoodPageModule {}
+export class SplashQuotePageModule {}

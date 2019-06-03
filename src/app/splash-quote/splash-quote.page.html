@@ -1,0 +1,30 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>splashQuote</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+
+          <img src='assets/Still Young Logo copy.svg'>
+
+        <ion-row>
+            <ion-card class='noBorder'>
+                <ion-card-content *ngFor='let random of randomQuote'>
+                  <ion-card-subtitle id='verse'>Verse of the Day</ion-card-subtitle>
+                  <ion-text>"{{ random }}"</ion-text>
+                </ion-card-content>
+              </ion-card>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-card class='noBorder'>
+    <ion-card-content>
+        <ion-button (click)='onEnter()' expand='full' color='secondary'>Enter</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-footer>

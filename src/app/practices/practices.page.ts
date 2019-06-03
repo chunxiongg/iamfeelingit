@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { Router } from '@angular/router';
+import { PopoverController, ModalController } from '@ionic/angular';
+import { PopoverPage } from '../pop-over/pop-over';
+import { ModalExample } from '../pop-over/article-pop';
 
 @Component({
   selector: 'app-practices',
@@ -11,33 +14,78 @@ export class PracticesPage implements OnInit {
 
   galleryType = 'mvf';
 
-  constructor(private appServe: AppServeService, private router: Router) {}
+  constructor(private appServe: AppServeService, private router: Router, 
+              public popoverController: PopoverController, private modalController: ModalController) { }
 
-  returnData = [];
-
-  ngOnInit() {
-    this.returnData = this.appServe.getQuizArr();
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+    component: PopoverPage,
+    event: ev,
+    translucent: true
+    });
+    return await popover.present();
   }
 
-  submittedAns = [];
+  foodRecipe = [];
 
-  submitBtn() {
-    this.appServe.submitBtn();
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    slidesPerView: 1.3
+  };
+
+  openRecipe(makan) {
+    this.router.navigate(['/tabs/practices/recipes-details', makan.id])
+    //console.log(makan.id)
   }
 
-  selectAnswer(options) {
-    this.appServe.getSelected(options);
-    console.log('Selected:', options.name)
+  readArticles = [
+    { id: 1, name: 'The Perfect Diet', image: 'assets/babi.jpg' },
+    { id: 2, name: 'Article B', image: 'assets/shapes.svg' },
+    { id: 3, name: 'Postpartum Massage', image: 'assets/m.png', link: 'https://parenting.firstcry.com/articles/a-quick-guide-to-postnatal-massage/?fbclid=IwAR39EnrK-SIzc_RIbERLXYArsnO64k46bfzqwNPy1Z8D9sHoVVa0jCdM6as' }
+  ]
+
+  async presentModal(read) {
+    console.log(read.name);
+    const modal = await this.modalController.create({
+    component: ModalExample,
+    componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
+    });
+    return await modal.present();
   }
 
-  handleSwipeLeft() {
-    console.log('Page Swiped Left: Food')
-    this.router.navigate(['/tabs/food'])
+  doRefresh(event) {
+    this.appServe.doRefresh(event);
+    this.ionViewWillEnter();
   }
 
-  handleSwipeRight() {
-    console.log('Page Swiped Right: Go Back To Previous')
-    this.router.navigate(['/tabs/tab1'])
-  }
+    isLoaded = false;
+
+    ionViewWillEnter() {
+      setTimeout(() => {
+      this.isLoaded = true;
+      console.log('yay, page loaded!')
+      }, 1000);
+    }
+
+
+    returnData = [];
+
+    ngOnInit() {
+      this.returnData = this.appServe.getQuizArr();
+      this.foodRecipe = this.appServe.getRecipeArr();
+    }
+
+    submittedAns = [];
+
+    submitBtn() {
+      this.appServe.submitBtn();
+    }
+
+    selectAnswer(options) {
+      this.appServe.getSelected(options);
+      console.log('Selected:', options.name)
+    }
+
 
 }

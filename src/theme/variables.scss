@@ -5,6 +5,10 @@ ion-tab-button {
   --color-selected: #e4b8bf;
 }
 
+ion-toolbar {
+  --min-height: 100px !important;
+}
+
 /** Ionic CSS Variables **/
 :root {
 
@@ -45,7 +49,7 @@ ion-tab-button {
   --ion-color-success-tint: #28e070;
 
   /** warning **/
-  --ion-color-warning: grey;
+  --ion-color-warning: #808080;
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;

@@ -27,11 +27,6 @@ export class ContactUsPage implements OnInit {
     }, 1000);
   }
 
-  handleSwipeRight() {
-    console.log('Page Swiped Right: Go Back To Previous')
-    this.router.navigate(['/tabs/tab3'])
-  }
-
   openFacebook() {
     this.iab.create('https://www.facebook.com/project.stillyoung', '_blank');
   }

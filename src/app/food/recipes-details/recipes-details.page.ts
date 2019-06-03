@@ -15,28 +15,6 @@ export class RecipesDetailsPage implements OnInit {
               private activatedRoute: ActivatedRoute,
               private router: Router) { }
 
-  // example of adding a transition when a page/modal closes
-// ionViewWillLeave() {
-
-//   let options: NativeTransitionOptions = {
-//      direction: 'up',
-//      duration: 500,
-//      slowdownfactor: 3,
-//      slidePixels: 20,
-//      iosdelay: 100,
-//      androiddelay: 150,
-//      fixedPixelsTop: 0,
-//      fixedPixelsBottom: 60
-//     }
- 
-//   this.nativePageTransitions.slide(options)
-//     .then(() => {
-//       console.log('succ')
-//     })
-//     .catch();
- 
-//  }
-
   galleryType = 'ingredients';
 
   makanIndividual = null;
@@ -46,14 +24,22 @@ export class RecipesDetailsPage implements OnInit {
   newArr = [];
   finalArr = [];
 
+  newRecipe = [];
+  finalRecipe = [];
+
   ngOnInit() {
     this.foodRecipe = this.appServe.getRecipeArr(); // Get all the Recipes
     this.makanIndividual = +this.activatedRoute.snapshot.params['makan.id']
     this.getMakanOne = this.appServe.getIndividual(this.makanIndividual);
 
+    // Ingredients
     this.newArr.push(this.getMakanOne.ingredients[0]);
     console.log(Object.values(this.newArr[0]));
     this.finalArr = Object.values(this.newArr[0]);
+
+    console.log(this.getMakanOne.recipe[0].Step)
+    console.log(this.getMakanOne.recipe[0].image)
+
   }
 
   onRateChange($event) {
@@ -69,9 +55,18 @@ export class RecipesDetailsPage implements OnInit {
     // return await modal.present();
   }
 
-  handleSwipeRight() {
-    console.log('Page Swiped Right: Go Back To Previous')
-    this.router.navigate(['/tabs/food'])
+  doRefresh(event) {
+    this.appServe.doRefresh(event);
+  }
+
+  tickBox(value) {
+    if (value) {
+      console.log('Value: I have been checked.')
+    }
+
+    else {
+      console.log('not checked')
+    }
   }
 }
 

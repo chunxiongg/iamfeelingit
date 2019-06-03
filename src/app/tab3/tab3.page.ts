@@ -10,14 +10,5 @@ export class Tab3Page {
 
   constructor(private router: Router) {}
 
-  handleSwipeLeft() {
-    console.log('Page Swiped Left: Contact')
-    this.router.navigate(['/tabs/contact-us'])
-  }
-
-  handleSwipeRight() {
-    console.log('Page Swiped Right: Go Back To Previous')
-    this.router.navigate(['/tabs/food'])
-  }
 
 }

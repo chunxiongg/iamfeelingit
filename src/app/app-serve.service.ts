@@ -67,14 +67,16 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Nourishing dish that provides several health benefits.',
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
-      ingredients: [{ a: '500g pork trotter', b: '1 litre sweet vinegar', c: '500ml black rice vinegar', d: 'Hard-boiled eggs', e: '10 large pieces of old ginger' }]
+      ingredients: [{ a: '500g pork trotter', b: '1 litre sweet vinegar', c: '500ml black rice vinegar', d: 'Hard-boiled eggs', e: '10 large pieces of old ginger' }],
+      recipe: [{ Step: 'Wash ginger and dry it for a day.', image: 'assets/steps/1.png' }, { Step: 'Peel ginger and slice it into bite-size pieces.', image: 'assets/steps/2.png' }]
     },
     
     { image: 'assets/babi.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
       information: [{ title: 'Calories', figure: 30000 }, { title: 'Prep Time', figure: '23335m' }, { title: 'Cook Time', figure: '12335m' }],
       briefDes: 'Fresh nuts bring benefits.',
       des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
-      ingredients: [{ a: 'INGA', b: 'INGB' }]
+      ingredients: [{ a: 'INGA', b: 'INGB' }],
+      recipe: [{ Step: 'idk', image: 'assets/steps/1.png'}, { Step: 'step222', image: 'assets/steps/2.png' }]
     },
 
     { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',
@@ -134,11 +136,8 @@ export class AppServeService {
       // var d = new Date();
       // var x = d.toDateString();
       // document.getElementById('verse').innerHTML = x;
-    
     }, 2000)
-    
   }
-
 
   getQuizArr() {
     return this.mcqData;

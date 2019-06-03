@@ -3,25 +3,30 @@
   <ion-toolbar>
     <ion-title>PRACTICES</ion-title>
   </ion-toolbar>
+
+    <!-- Default Segment -->
+      
+    <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
+    
+        <ion-segment-button value="mvf" mode='md'>
+          Myth
+        </ion-segment-button>
+    
+        <ion-segment-button value="quiz" mode='md'>
+          Quiz
+        </ion-segment-button>
+
+        <ion-segment-button value="makan" mode='md'>
+          Food
+        </ion-segment-button>
+    
+      </ion-segment>
 </ion-header>
 
 <ion-content>
-  <!-- Default Segment -->
-      
-  <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
-    
-      <ion-segment-button value="mvf" mode='md'>
-        Myth
-      </ion-segment-button>
-  
-      <ion-segment-button value="quiz" mode='md'>
-        Quiz
-      </ion-segment-button>
-  
-    </ion-segment>
 
   <div [ngSwitch]="galleryType">
-    <div *ngSwitchCase="'mvf'" (swiperight)='handleSwipeRight()'>
+    <div *ngSwitchCase="'mvf'">
       <ion-card>
         <ion-card-content>
           hello mvf
@@ -29,7 +34,7 @@
       </ion-card> 
     </div>
 
-    <div *ngSwitchCase="'quiz'" (swipeleft)='handleSwipeLeft()'>
+    <div *ngSwitchCase="'quiz'">
       <ion-card class='noBorder'>
           <ion-card-content> 
               <img src='assets/x.png'>
@@ -39,10 +44,89 @@
               <ion-button color='danger' expand='full' routerLink='/tabs/tab2'>Take Quiz</ion-button>
           </ion-card-content>
         </ion-card>   
-
     </div>
-  </div>
-  
+
+    <!-- Food -->
+    <div *ngSwitchCase="'makan'">
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+      </ion-refresher>
+
+        <div *ngIf='isLoaded'>
+          <ion-card class='noBorder'>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-card-subtitle>
+                      <ion-text>Recipes</ion-text>
+                    </ion-card-subtitle>
+              </ion-col>
+
+              <ion-col>
+                  <ion-buttons justify-content-end>
+                      <ion-button (click)='presentPopover($event)'>
+                        <ion-icon color='warning' slot="icon-only" name="more"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+              </ion-col>
+            </ion-row>
+
+
+              <ion-row>
+
+                    <ion-slides pager="false" [options]="slideOpts"> 
+                        
+                        <ion-slide *ngFor='let makan of foodRecipe; let m = index' (click)='openRecipe(makan)'>
+                            <ion-card class="welcome-card">
+                                <ion-img [src]='makan.image'></ion-img>
+                                <ion-card-header class='ion-text-left'>
+                                  <ion-card-subtitle>{{ makan.name }}</ion-card-subtitle>
+                                  <br>
+                                  <ion-text>{{ makan.briefDes }} </ion-text>
+                                  <br>
+                                  <br>
+                                  <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
+                                </ion-card-header>
+                                
+                                <!-- <ion-card-content>
+                                  <ion-card-subtitle>Learn More</ion-card-subtitle>
+                                </ion-card-content>
+                -->
+                              </ion-card>
+                        </ion-slide>
+                
+                      </ion-slides>
+            </ion-row>
+          </ion-grid>
+          </ion-card>
+
+          <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-card-subtitle>
+                        <ion-text>Articles</ion-text>
+                      </ion-card-subtitle>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+
+          <br>
+
+          <ion-list>
+              <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
+                <ion-thumbnail slot="start">
+                  <img src="{{ read.image }}">
+                </ion-thumbnail>
+                <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
+                <ion-label>{{ read.name }} </ion-label>
+              </ion-item>
+          </ion-list>
+        </div>
+       
+
+    </div> <!-- End of Food Div-->
+  </div> <!-- End of main div -->
 
 </ion-content>
 

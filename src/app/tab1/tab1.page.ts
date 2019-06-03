@@ -35,8 +35,4 @@ export class Tab1Page {
     slidesPerView: 1.3
   };
 
-  handleSwipeLeft() {
-    this.router.navigate(['/tabs/practices']);
-    console.log('Page Swiped Left: Practices');
-  }
 }
