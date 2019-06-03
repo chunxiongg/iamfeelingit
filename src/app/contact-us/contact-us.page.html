@@ -7,14 +7,18 @@
 
 <br>
 
+<!-- <ion-content (swiperight)='handleSwipeRight()'> -->
+
 <ion-content>
-  <ion-card>
+  <div *ngIf='isLoaded'>
+  <ion-card class='noBorder'>
     
     <ion-card-content>
   
         <ion-text>
            We are a group of final-year students from Ngee Ann Polytechnic (Singapore) pursuing the Diploma of Chinese Media and Communication. We aim to raise awareness on the topic of Confinement to more females in the society through our final-year project. Do follow us on our social media for more exciting content! Thank you!
         </ion-text>
+        <br>
         <br>
          <ion-list lines='none'>
              <ion-item href='mailto:connectwithstillyoung@gmail.com' text-center>
@@ -27,7 +31,7 @@
          </ion-list>
  
          <ion-list lines='none'>
-             <ion-item href='https://www.facebook.com/project.stillyoung' text-center>
+             <ion-item (click)='openFacebook()' text-center>
                  <ion-label>
                    Facebook
                  </ion-label>
@@ -57,4 +61,102 @@
       <ion-img src='assets/sayocode.png' id='myImg'></ion-img>
     </ion-card-header>
   </ion-card>
+</div>
+
+
+  <!-- Skeleton -->
+  <div *ngIf='!isLoaded'>
+
+      <ion-card class='noBorder'>
+    
+          <ion-card-content>
+        
+              <ion-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+
+              </ion-text>
+              <br>
+               <ion-list lines='none'>
+                   <!-- <ion-item href='mailto:connectwithstillyoung@gmail.com' text-center>
+                       <ion-label>
+                         connectwithstillyoung <br> @gmail.com
+                       </ion-label>
+                       <ion-icon name='mail-open' slot='start'></ion-icon>
+
+                     </ion-item> -->
+
+                     <ion-item>
+                        <ion-thumbnail slot="start">
+                          <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-thumbnail>
+                        <ion-label>
+                          <h3>
+                            <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+                          </h3>
+                        </ion-label>
+                      </ion-item>
+
+               </ion-list>
+
+               <ion-list lines='none'>
+                  <!-- <ion-item href='mailto:connectwithstillyoung@gmail.com' text-center>
+                      <ion-label>
+                        connectwithstillyoung <br> @gmail.com
+                      </ion-label>
+                      <ion-icon name='mail-open' slot='start'></ion-icon>
+
+                    </ion-item> -->
+
+                    <ion-item>
+                       <ion-thumbnail slot="start">
+                         <ion-skeleton-text animated></ion-skeleton-text>
+                       </ion-thumbnail>
+                       <ion-label>
+                         <h3>
+                           <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+                         </h3>
+                       </ion-label>
+                     </ion-item>
+
+              </ion-list>
+
+              <ion-list lines='none'>
+                  <!-- <ion-item href='mailto:connectwithstillyoung@gmail.com' text-center>
+                      <ion-label>
+                        connectwithstillyoung <br> @gmail.com
+                      </ion-label>
+                      <ion-icon name='mail-open' slot='start'></ion-icon>
+
+                    </ion-item> -->
+
+                    <ion-item>
+                       <ion-thumbnail slot="start">
+                         <ion-skeleton-text animated></ion-skeleton-text>
+                       </ion-thumbnail>
+                       <ion-label>
+                         <h3>
+                           <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+                         </h3>
+                       </ion-label>
+                     </ion-item>
+
+              </ion-list>
+           
+           </ion-card-content>
+        </ion-card>
+      
+        <ion-card class='noBorder'>
+          <ion-card-header>
+              <ion-skeleton-text animated style="width: 50%; display: block; margin-left: auto; margin-right: auto"></ion-skeleton-text>
+         
+            <ion-skeleton-text animated style="width: 30%; display: block; margin-left: auto; margin-right: auto"></ion-skeleton-text>
+          </ion-card-header>
+        </ion-card>
+
+
+  </div>
 </ion-content>

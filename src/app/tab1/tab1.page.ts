@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
-// import { ScrollHideConfig } from '../parallax.directive';
+import { Router } from '@angular/router';
+import { ScrollHideConfig } from '../parallax.directive';
 
 @Component({
   selector: 'app-tab1',
@@ -9,10 +10,10 @@ import { AppServeService } from '../app-serve.service';
 })
 export class Tab1Page {
 
-  constructor(private appServe: AppServeService) { }
+  constructor(private appServe: AppServeService, private router: Router) { }
 
-  // footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
-  // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
+  footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
+  headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };
 
   doRefresh(event) {
     this.appServe.doRefresh(event);
@@ -34,4 +35,8 @@ export class Tab1Page {
     slidesPerView: 1.3
   };
 
+  handleSwipeLeft() {
+    this.router.navigate(['/tabs/practices']);
+    console.log('Page Swiped Left: Practices');
+  }
 }

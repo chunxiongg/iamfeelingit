@@ -9,4 +9,12 @@ a {
 
 .learnMore {
     text-align: center !important;
+    position: fixed;
+    bottom: 21px;
+    right: 0;
+    left: 0;
+}
+
+.welcome-card {
+    min-height: 350px;
 }

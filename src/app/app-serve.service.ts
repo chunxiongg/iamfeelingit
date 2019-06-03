@@ -64,41 +64,29 @@ export class AppServeService {
   public foodRecipe = [
     { image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
       website: 'Facebook', link: 'https://facebook.com',
-      information: [{
-        title: 'Calories',
-        figure: 100
-      },
-      {
-        title: 'Prep Time',
-        figure: '25m'
-      },
-      {
-        title: 'Cook Time',
-        figure: '125m'
-      }],
+      information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Nourishing dish that provides several health benefits.',
-      des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.' 
+      des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
+      ingredients: [{ a: '500g pork trotter', b: '1 litre sweet vinegar', c: '500ml black rice vinegar', d: 'Hard-boiled eggs', e: '10 large pieces of old ginger' }]
     },
     
-    { image: 'assets/nut.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
-      information: [{
-        title: 'Calories',
-        figure: 30000
-      },
-      {
-        title: 'Prep Time',
-        figure: '23335m'
-      },
-      {
-        title: 'Cook Time',
-        figure: '12335m'
-      }],
-      briefDes: 'Fresh nuts bring benefits.' ,
-      des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.'
+    { image: 'assets/babi.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
+      information: [{ title: 'Calories', figure: 30000 }, { title: 'Prep Time', figure: '23335m' }, { title: 'Cook Time', figure: '12335m' }],
+      briefDes: 'Fresh nuts bring benefits.',
+      des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
+      ingredients: [{ a: 'INGA', b: 'INGB' }]
     },
-    
-    { image: 'assets/night.svg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com' }
+
+    { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',
+      ingredients: [ 'A', 'B' ]
+    }
   ]
+
+  // getIngredients() {
+  //   for (var i = 0; i < this.foodRecipe.length; i++) {
+  //     console.log(this.foodRecipe[i]);
+  //   }
+  // }
 
   getRecipeArr() {
     return this.foodRecipe;
@@ -115,7 +103,8 @@ export class AppServeService {
   'For I know the thoughts that I think toward you, says the Lord, thoughts of peace and not of evil, to give you a future and a hope.',
   'And whatever you do, do it heartily, as to the Lord and not to men.' ,
   'I can do all things through Christ who strengthens me.',
-  'Put on the whole armor of God, that you may be able to stand against the wiles of the devil.'
+  'Put on the whole armor of God, that you may be able to stand against the wiles of the devil.',
+  'Rest in the Lord, and wait patiently for Him. Do not fret because of him who prospers in his way, Because of the man who brings wicked schemes to pass.'
   ]
 
   public randomChosen = [];
@@ -145,9 +134,11 @@ export class AppServeService {
       // var d = new Date();
       // var x = d.toDateString();
       // document.getElementById('verse').innerHTML = x;
+    
     }, 2000)
     
   }
+
 
   getQuizArr() {
     return this.mcqData;

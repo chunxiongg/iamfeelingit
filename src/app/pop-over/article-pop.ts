@@ -8,13 +8,13 @@ import { AppServeService } from '../app-serve.service';
     `
     <ion-header no-border>
         <ion-toolbar>
-        <ion-buttons>
-			<ion-button (click)="cancel()">
-				<ion-text>Close</ion-text>
-			</ion-button>
-        </ion-buttons>
-        
-            <ion-title>FOOD</ion-title>
+            <ion-buttons>
+                <ion-button (click)='cancel()'>
+                    <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+
+            <ion-title>{{ value[0].name }}</ion-title>
         </ion-toolbar>
     </ion-header>
 
@@ -22,7 +22,9 @@ import { AppServeService } from '../app-serve.service';
     <ion-content>
         <ion-card>
             <ion-card-content>
-            {{ value }}
+            <img src='{{ value[0].image }}'>
+            <br>
+            <ion-button href='{{ value[0].goLink }}' color='danger' expand="full" size='default' >Learn More</ion-button>
             </ion-card-content>
         </ion-card>
     </ion-content>

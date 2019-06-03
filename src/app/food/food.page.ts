@@ -26,12 +26,6 @@ export class FoodPage implements OnInit {
     return await popover.present();
   }
 
-  // public foodRecipe = [
-  //   { image: 'assets/night.svg', id: 1, name: 'Cucumber', website: 'Facebook', link: 'https://facebook.com' },
-  //   { image: 'assets/night.svg', id: 2, name: 'Carot', website: 'Twitter', link: 'https://twitter.com' },
-  //   { image: 'assets/night.svg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com' }
-  // ]
-  
   foodRecipe = [];
 
   ngOnInit() {
@@ -50,18 +44,43 @@ export class FoodPage implements OnInit {
   }
 
   readArticles = [
-    { id: 1, name: 'The Perfect Diet for a Mother during Confinement', image: 'assets/babi.jpg', link: 'https://pemconfinement.com/the-perfect-diet-for-a-mother-during-confinement/' },
-    { id: 1, name: 'Article B', image: 'assets/shapes.svg', link: 'https://facebook.com' }
+    { id: 1, name: 'The Perfect Diet', image: 'assets/babi.jpg' },
+    { id: 2, name: 'Article B', image: 'assets/shapes.svg' },
+    { id: 3, name: 'Postpartum Massage', image: 'assets/m.png', link: 'https://parenting.firstcry.com/articles/a-quick-guide-to-postnatal-massage/?fbclid=IwAR39EnrK-SIzc_RIbERLXYArsnO64k46bfzqwNPy1Z8D9sHoVVa0jCdM6as' }
   ]
 
   async presentModal(read) {
     console.log(read.name);
-    
     const modal = await this.modalController.create({
       component: ModalExample,
-      componentProps: { value: read.name }
+      componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
     });
     return await modal.present();
+  }
+
+  doRefresh(event) {
+    this.appServe.doRefresh(event);
+    this.ionViewWillEnter();
+  }
+  
+  isLoaded = false;
+
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.isLoaded = true;
+      console.log('yay, page loaded!')
+    }, 1000);
+  }
+
+
+  handleSwipeLeft() {
+    console.log('Page Swiped Left: Lactation')
+    this.router.navigate(['/tabs/tab3'])
+  }
+
+  handleSwipeRight() {
+    console.log('Page Swiped Right: Go Back To Previous')
+    this.router.navigate(['/tabs/practices'])
   }
 
 }

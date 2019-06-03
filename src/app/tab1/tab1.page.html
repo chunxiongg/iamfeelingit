@@ -1,19 +1,17 @@
 <!-- <ion-header no-border [scrollHide]="headerScrollConfig" [scrollContent]="pageContent"> -->
   <ion-header no-border>
-    <ion-toolbar>
-      <ion-title>
-        
-      </ion-title>
-      <ion-img src='assets/x.png' class='headerImg'></ion-img>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+    <ion-img src='assets/x.png' class='headerImg'></ion-img>
+  </ion-toolbar>
+</ion-header>
   
   <!-- <ion-content #pageContent fullscreen> -->
-  
-    <ion-content>
-  
+   <ion-content>
       <ion-refresher (ionRefresh)="doRefresh($event)">
-          <ion-refresher-content></ion-refresher-content>
+          <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
       </ion-refresher>
     
     <ion-grid>

@@ -4,8 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- <ion-content (swipeleft)='handleSwipeLeft()' (swiperight)='handleSwipeRight()'> -->
 <ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+    </ion-refresher>
 
+<div *ngIf='isLoaded'>
    <ion-card class='noBorder'>
 
     <ion-grid>
@@ -32,7 +37,7 @@
                   
                   <ion-slide *ngFor='let makan of foodRecipe; let m = index' (click)='openRecipe(makan)'>
                       <ion-card class="welcome-card">
-                          <ion-img [src]='makan.image' ></ion-img>
+                          <ion-img [src]='makan.image'></ion-img>
                           <ion-card-header class='ion-text-left'>
                             <ion-card-subtitle>{{ makan.name }}</ion-card-subtitle>
                             <br>
@@ -41,6 +46,7 @@
                             <br>
                             <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
                           </ion-card-header>
+                          
                           <!-- <ion-card-content>
                             <ion-card-subtitle>Learn More</ion-card-subtitle>
                           </ion-card-content>
@@ -51,18 +57,106 @@
                 </ion-slides>
       </ion-row>
     </ion-grid>
-
-
    </ion-card>
 
-   <ion-list lines='none'>
+   <ion-grid>
+      <ion-row>
+          <ion-col>
+              <ion-card-subtitle>
+                  <ion-text>Articles</ion-text>
+                </ion-card-subtitle>
+          </ion-col>
+        </ion-row>
+   </ion-grid>
+
+   <br>
+
+   <ion-list>
         <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
           <ion-thumbnail slot="start">
             <img src="{{ read.image }}">
           </ion-thumbnail>
+          <ion-icon slot='end' name='arrow-forward'></ion-icon>
           <ion-label>{{ read.name }} </ion-label>
         </ion-item>
    </ion-list>
+</div>
 
+<!-- Skeleton -->
+
+   <div *ngIf="!isLoaded">
+      <ion-card class='noBorder'>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-card-subtitle>
+                      <ion-text>Recipes</ion-text>
+                    </ion-card-subtitle>
+              </ion-col>
+      
+              <ion-col>
+                  <ion-buttons justify-content-end>
+                      <ion-button (click)='presentPopover($event)'>
+                        <ion-icon color='warning' slot="icon-only" name="more"></ion-icon>
+                      </ion-button>
+                    </ion-buttons>
+              </ion-col>
+            </ion-row>
+      
+      
+              <ion-row>
+      
+                    <ion-slides pager="false" [options]="slideOpts"> 
+                        
+                        <ion-slide *ngFor='let makan of foodRecipe; let m = index' (click)='openRecipe(makan)'>
+                            <ion-card class="welcome-card">
+                                <ion-img [src]='makan.image' ></ion-img>
+                                <ion-card-header class='ion-text-left'>
+                                  <ion-card-subtitle>{{ makan.name }}</ion-card-subtitle>
+                                  <br>
+                                  <ion-text>{{ makan.briefDes }} </ion-text>
+                                  <br>
+                                  <br>
+                                  <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
+                                </ion-card-header>
+                                
+                                <!-- <ion-card-content>
+                                  <ion-card-subtitle>Learn More</ion-card-subtitle>
+                                </ion-card-content>
+               -->
+                              </ion-card>
+                        </ion-slide>
+                
+                      </ion-slides>
+            </ion-row>
+          </ion-grid>
+         </ion-card>
+      
+         <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-card-subtitle>
+                        <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+                      </ion-card-subtitle>
+                </ion-col>
+              </ion-row>
+         </ion-grid>
+
+     
+
+      <ion-list>
+        <ion-item *ngFor='let read of readArticles'>
+          <ion-thumbnail slot="start">
+            <ion-skeleton-text animated ></ion-skeleton-text>
+          </ion-thumbnail>
+          <ion-label>
+            <h3>
+              <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+            </h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
 
 </ion-content>

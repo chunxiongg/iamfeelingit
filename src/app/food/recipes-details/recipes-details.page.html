@@ -1,6 +1,5 @@
 <ion-header>
 
-    <ion-title></ion-title>
     <!-- <ion-buttons justify-content-start >
         <ion-button routerLink='/tabs/food'>
           <ion-icon color='warning' slot="icon-only" name="arrow-back"></ion-icon>
@@ -15,63 +14,96 @@
     <ion-card-header>
       <ion-card-title> {{ getMakanOne.name }} </ion-card-title>
     </ion-card-header>
+
     <ion-card-content>
       <ion-text> {{ getMakanOne.des }} </ion-text>
-      <br>
-      <br>
-      <rating [rate]="rate"
+      <!-- <rating [rate]="rate"
       readonly="false" 
       size="default" 
       (rateChange)="onRateChange($event)">
-      </rating>
+      </rating> -->
 
-      <hr />
-
-    <ion-grid>
-
-        <ion-row>
-          <ion-col>
-              <p>{{ getMakanOne.information[0].title }}</p>
-              <p class='dark'>{{ getMakanOne.information[0].figure }}</p>
-          </ion-col>
-
-          <ion-col>
-              <p>{{ getMakanOne.information[1].title }}</p>
-              <p class='dark'>{{ getMakanOne.information[1].figure }}</p>
-          </ion-col>
-
-          <ion-col>
-              <p>{{ getMakanOne.information[2].title }}</p>
-              <p class='dark'>{{ getMakanOne.information[2].figure }}</p>
-          </ion-col>
-        </ion-row>
-        <br>
- 
-            <ion-button routerLink='/steps' color='danger' expand="full" size='default' >ADD TO STOMACH</ion-button>
-        
-      </ion-grid>
+      <!-- <hr /> -->
     </ion-card-content>
   </ion-card>
-<!-- 
-  <ion-card>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-            <p>Calories</p>
-            <p class='dark'>100</p>
-        </ion-col>
 
-        <ion-col>
-            <p>Prep Time</p>
-            <p class='dark'>25m</p>
-          </ion-col>
+  <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
+    <ion-segment-button value="ingredients" mode='md'>
+      Ingredients
+    </ion-segment-button>
 
-          <ion-col>
-              <p>Cook Time</p>
-              <p class='dark'>105m</p>
-          </ion-col>
+    <ion-segment-button value="recipes" mode='md'>
+      Recipes
+    </ion-segment-button>
+  </ion-segment>
 
-      </ion-row>
-    </ion-grid>
-  </ion-card> -->
+
+  <div [ngSwitch]="galleryType">
+    <div *ngSwitchCase="'ingredients'" (swiperight)='handleSwipeRight()'>
+      <ion-card class='noBorder'>
+        <ion-card-content>
+
+            <ion-list *ngFor='let value of finalArr'>
+                <ion-item>
+                  <ion-label>{{ value }}</ion-label>
+                  <ion-checkbox slot="start"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+
+             <!-- <ion-list>
+                <ion-item>
+                  <ion-label>{{ getMakanOne.ingredients[0].b }}</ion-label>
+                  <ion-checkbox slot="start"></ion-checkbox>
+                </ion-item>
+              </ion-list>
+
+              <ion-list>
+                  <ion-item>
+                    <ion-label>{{ getMakanOne.ingredients[0].c }}</ion-label>
+                    <ion-checkbox slot="start"></ion-checkbox>
+                  </ion-item>
+                </ion-list>
+
+              <ion-list>
+                  <ion-item>
+                    <ion-label>{{ getMakanOne.ingredients[0].d }}</ion-label>
+                    <ion-checkbox slot="start"></ion-checkbox>
+                  </ion-item>
+                </ion-list>  -->
+
+        </ion-card-content>
+      </ion-card> 
+    </div>
+
+    <div *ngSwitchCase="'recipes'" (swipeleft)='handleSwipeLeft()'>
+      <ion-card class='noBorder'>
+        <ion-card-content>
+          <ion-grid>
+
+              <ion-row>
+                <ion-col>
+                    <p>{{ getMakanOne.information[0].title }}</p>
+                    <p class='dark'>{{ getMakanOne.information[0].figure }}</p>
+                </ion-col>
+
+                <ion-col>
+                    <p>{{ getMakanOne.information[1].title }}</p>
+                    <p class='dark'>{{ getMakanOne.information[1].figure }}</p>
+                </ion-col>
+
+                <ion-col>
+                    <p>{{ getMakanOne.information[2].title }}</p>
+                    <p class='dark'>{{ getMakanOne.information[2].figure }}</p>
+                </ion-col>
+              </ion-row>
+              <br>
+      
+                  <!-- <ion-button routerLink='/tabs/steps' color='danger' expand="full" size='default' >ADD TO STOMACH</ion-button>
+              -->
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
 </ion-content>

@@ -80,6 +80,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'landing',
+        children: [
+          {
+            path: '',
+            loadChildren: '../landing-slide/landing-slide.module#LandingSlidePageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

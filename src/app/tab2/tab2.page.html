@@ -15,13 +15,6 @@
 
 <ion-content>
 
-  <ion-card>
-    <ion-card-content>
-      <img src='assets/x.png'>
-      <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
-    </ion-card-content>
-  </ion-card>
-
   <ion-card *ngFor='let qn of returnData; let i = index'>
     <ion-card-content >
         <ion-img [src]="qn.image"></ion-img>

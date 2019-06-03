@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import * as Hammer from 'hammerjs';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -9,11 +9,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 // import { ParallaxDirective } from './parallax.directive';
 
 // import { MyStyleDirective } from './my-style.directive';
 
+export class CustomeHammerConfig extends HammerGestureConfig {
+  overrides = {
+    'swipe': {
+      direction: Hammer.DIRECTION_ALL
+    }
+  }
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,10 +29,13 @@ import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
+    InAppBrowser,
     SplashScreen,
     NativePageTransitions,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: HAMMER_GESTURE_CONFIG, useClass: CustomeHammerConfig }
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
