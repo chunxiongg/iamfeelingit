@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollHideConfig } from '../parallax.directive';
 import { Router } from '@angular/router';
-import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { AppServeService } from '../app-serve.service';
+import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -15,7 +15,8 @@ export class ContactUsPage implements OnInit {
   // footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
   // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 100 };
 
-  constructor(private appServe: AppServeService, private router: Router, private iab: InAppBrowser, private emailComposer: EmailComposer) { }
+  constructor(private appServe: AppServeService, private router: Router,
+              private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs) { }
 
   ngOnInit() {
   }
@@ -30,11 +31,13 @@ export class ContactUsPage implements OnInit {
   }
 
   openFacebook() {
-    this.iab.create('https://www.facebook.com/project.stillyoung', '_blank');
+    this.coloredBrowserTabs.openTab('https://www.facebook.com/project.stillyoung', '#ffffff' )
+        .subscribe();
   }
 
   openInstagram() {
-    this.iab.create('https://www.instagram.com/project.stillyoung', '_blank');
+    this.coloredBrowserTabs.openTab('https://www.instagram.com/project.stillyoung', '#ffffff' )
+        .subscribe();
   }
 
   openMail() {
