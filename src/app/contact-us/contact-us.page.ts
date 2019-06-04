@@ -37,10 +37,12 @@ export class ContactUsPage implements OnInit {
   }
 
   openMail() {
-    this.emailComposer.isAvailable().then((available: boolean) =>{
-      if(available) {
-        //Now we know we can send
-      }
+    this.emailComposer.isAvailable()
+      .then((available: boolean) =>{
+        if (available) {
+          //Now we know we can send
+          console.log('Sending message...')
+        }
      });
      
      let email = {
