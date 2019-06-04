@@ -28,4 +28,13 @@ export class Tab2Page {
     this.appServe.getSelected(options);
     console.log('Selected:', options.name)
   }
+
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar'
+    }
+  };
 }

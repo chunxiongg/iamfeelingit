@@ -32,7 +32,11 @@ export class Tab1Page {
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    slidesPerView: 1.3
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+      hideOnClick: true
+    }
   };
 
 }

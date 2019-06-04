@@ -27,6 +27,9 @@ export class RecipesDetailsPage implements OnInit {
   newRecipe = [];
   finalRecipe = [];
 
+  newImage = [];
+  finalImage = [];
+
   ngOnInit() {
     this.foodRecipe = this.appServe.getRecipeArr(); // Get all the Recipes
     this.makanIndividual = +this.activatedRoute.snapshot.params['makan.id']
@@ -37,8 +40,18 @@ export class RecipesDetailsPage implements OnInit {
     console.log(Object.values(this.newArr[0]));
     this.finalArr = Object.values(this.newArr[0]);
 
-    console.log(this.getMakanOne.recipe[0].Step)
-    console.log(this.getMakanOne.recipe[0].image)
+    // console.log(this.getMakanOne.recipe)
+    for (var i = 0; i < this.getMakanOne.recipe.length; i++) {
+      this.newRecipe = Object.values(this.getMakanOne.recipe[i]);
+      this.finalRecipe.push(this.newRecipe)
+    }
+    console.log(this.finalRecipe);
+
+    for (var i = 0; i < this.getMakanOne.imageRecipe.length; i++) {
+      this.newImage = Object.values(this.getMakanOne.imageRecipe[i]);
+      this.finalImage.push(this.newImage)
+    }
+    console.log(this.finalImage);
 
   }
 
@@ -60,13 +73,7 @@ export class RecipesDetailsPage implements OnInit {
   }
 
   tickBox(value) {
-    if (value) {
-      console.log('Value: I have been checked.')
-    }
-
-    else {
-      console.log('not checked')
-    }
+    console.log(value)
   }
 }
 

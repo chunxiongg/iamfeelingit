@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { ContactUsPage } from './contact-us.page';
 
+import { ScrollHideDirective } from '../parallax.directive';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ContactUsPage]
+  declarations: [ContactUsPage, ScrollHideDirective]
 })
 export class ContactUsPageModule {}

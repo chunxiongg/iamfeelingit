@@ -3,6 +3,7 @@ import { ScrollHideConfig } from '../parallax.directive';
 import { Router } from '@angular/router';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { AppServeService } from '../app-serve.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,7 +15,7 @@ export class ContactUsPage implements OnInit {
   // footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
   // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 100 };
 
-  constructor(private router: Router, private iab: InAppBrowser, private emailComposer: EmailComposer) { }
+  constructor(private appServe: AppServeService, private router: Router, private iab: InAppBrowser, private emailComposer: EmailComposer) { }
 
   ngOnInit() {
   }
@@ -53,5 +54,10 @@ export class ContactUsPage implements OnInit {
      // Send a text message using default options
      this.emailComposer.open(email);
   }
+
+  doRefresh(event) {
+    this.appServe.doRefresh(event);
+  }
+
 
 }

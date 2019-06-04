@@ -1,4 +1,5 @@
 @import '../../theme/_HeaderImage';
+@import '../../theme/BoxShadowNone';
 
 .welcome-card ion-img {
   // max-height: 30vh;
@@ -13,4 +14,8 @@ ion-card {
   border-radius: 13px !important;
   max-height: 100vh !important;
   overflow: hidden !important;
+}
+
+.slides-ios {
+  --progress-bar-background-active: black !important;
 }

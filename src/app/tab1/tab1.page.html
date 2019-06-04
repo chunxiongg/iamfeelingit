@@ -15,16 +15,16 @@
       </ion-refresher>
     
     <ion-grid>
-      <ion-row>
+      <!-- <ion-row>
           <ion-card>
               <ion-card-content *ngFor='let random of randomQuote'>
                 <ion-card-subtitle id='verse'>Verse of the Day</ion-card-subtitle>
                 <ion-text>"{{ random }}"</ion-text>
               </ion-card-content>
             </ion-card>
-      </ion-row>
+      </ion-row> -->
   
-      <ion-row>
+      <!-- <ion-row>
         <ion-col style='color: #808080'>
           &nbsp; Latest
         </ion-col>
@@ -36,14 +36,14 @@
                 </ion-button>
               </ion-buttons>
         </ion-col>
-      </ion-row>
+      </ion-row> -->
   
       <ion-row>
-          <ion-slides pager="false" [options]="slideOpts"> 
+          <ion-slides pager="true" [options]="slideOpts"> 
             
               <ion-slide>
-                  <ion-card class="welcome-card">
-                      <ion-img [src]= 'returnData[1].image' ></ion-img>
+                  <ion-card class="welcome-card" class='noBorder'>
+                      <ion-img src='assets/stageOne.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Get Started</ion-card-subtitle>
                       </ion-card-header>
@@ -54,8 +54,8 @@
               </ion-slide>
       
               <ion-slide>
-                  <ion-card class="welcome-card">
-                      <ion-img [src]= 'returnData[1].image' ></ion-img>
+                  <ion-card class="welcome-card" class='noBorder'>
+                      <ion-img src='assets/stageTwo.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Get Started</ion-card-subtitle>
                       </ion-card-header>
@@ -66,8 +66,8 @@
               </ion-slide>
       
               <ion-slide>
-                  <ion-card class="welcome-card">
-                      <ion-img [src]= 'returnData[1].image' ></ion-img>
+                  <ion-card class="welcome-card" class='noBorder'>
+                      <ion-img src='assets/stageThree.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Get Started</ion-card-subtitle>
                       </ion-card-header>

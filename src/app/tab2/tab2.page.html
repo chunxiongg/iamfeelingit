@@ -8,12 +8,12 @@
         </ion-buttons>
 
     <ion-title>
-      this is the quiz page
+      Personality Quiz
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!-- <ion-content>
 
   <ion-card *ngFor='let qn of returnData; let i = index'>
     <ion-card-content >
@@ -28,10 +28,35 @@
 
     </ion-card-content>
   </ion-card>
-</ion-content>
+</ion-content> -->
 
-<ion-footer>
+<!-- <ion-footer>
     <ion-toolbar>
         <ion-button expand="full" (click)='submitBtn()' color='primary'>Submit</ion-button>
     </ion-toolbar>
-  </ion-footer>
+  </ion-footer> -->
+  
+<ion-content>
+  <ion-grid>
+      <ion-row>
+          <ion-slides pager="true" [options]="slideOpts"> 
+            
+              <ion-slide *ngFor='let qn of returnData; let i = index'>
+                  <ion-card class="welcome-card" class='noBorder'>
+                      <ion-img src='{{ qn.image }}'></ion-img>
+                      <ion-card-header>
+                        <ion-card-subtitle>{{ qn.question }} </ion-card-subtitle>
+                      </ion-card-header>
+                      <ion-card-content>
+                          <ion-card class='optionName' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
+                              {{ options.name }}
+                            </ion-card> 
+                      </ion-card-content>
+                    </ion-card>
+              </ion-slide>
+      
+            </ion-slides>
+          
+      </ion-row>
+  </ion-grid>
+</ion-content>

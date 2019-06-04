@@ -19,6 +19,13 @@ export class SplashQuotePage implements OnInit {
     this.randomQuote = this.appServe.returnChosen();
   }
 
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.router.navigate(['/tabs/tab1'])
+      console.log('Quote Page Loaded!')
+    }, 3000);
+  }
+
   onEnter() {
     this.router.navigate(['/tabs/tab1'])
   }

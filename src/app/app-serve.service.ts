@@ -10,8 +10,8 @@ export class AppServeService {
 
   public mcqData = [
     {
-      question: 'Your best friend is crying after a fight with someone, what do you do?',
-      image: 'assets/decide.svg',
+      question: '1. Your best friend is crying after a fight with someone, what do you do?',
+      image: 'assets/stageOne.svg',
       answerOption: [
         { id: 1, answer: 'a', name: "Say it's alright" },
         { id: 2, answer: 'b', name: 'Confront the person' },
@@ -20,8 +20,8 @@ export class AppServeService {
       ]
     },
     {
-      question: 'Which word best describes yourself?',
-      image: 'assets/read.svg',
+      question: '2. Which word best describes yourself?',
+      image: 'assets/stageTwo.svg',
       answerOption: [
         { id: 5, answer: 'a5', name: 'Dreamer' },
         { id: 6, answer: 'b6', name: 'Passionate' },
@@ -30,8 +30,8 @@ export class AppServeService {
       ]
     },
     {
-      question: 'You are preparing to leave the house to meet your date for a movie. It starts raining heavily, do you:',
-      image: 'assets/app.svg',
+      question: '3. You are preparing to leave the house to meet your date for a movie. It starts raining heavily, do you:',
+      image: 'assets/stageThree.svg',
       answerOption: [
         { id: 9, answer: 'a9', name: 'Call him/her to cancel the movie date' },
         { id: 10, answer: 'b10', name: 'Leave your date alone' },
@@ -40,7 +40,7 @@ export class AppServeService {
       ]
     },
     {
-      question: 'The weather is getting hot and you are thirsty. Which drink will you buy?',
+      question: '4. The weather is getting hot and you are thirsty. Which drink will you buy?',
       image: 'assets/app.svg',
       answerOption: [
         { id: 13, answer: 'a13', name: 'Mineral water' },
@@ -50,8 +50,8 @@ export class AppServeService {
       ]
     },
     {
-      question: 'You are feeling extremely stressed due to work piling up. What would you do?',
-      image: 'assets/app.svg',
+      question: '5. You are feeling extremely stressed due to work piling up. What would you do?',
+      image: 'assets/shapes.svg',
       answerOption: [
         { id: 17, answer: 'a17', name: 'Cry in anxiety' },
         { id: 18, answer: 'b18', name: 'Continue to procrastinate' },
@@ -86,7 +86,9 @@ export class AppServeService {
       briefDes: 'Nourishing dish that provides several health benefits.',
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
       ingredients: [{ a: '500g pork trotter', b: '1 litre sweet vinegar', c: '500ml black rice vinegar', d: 'Hard-boiled eggs', e: '10 large pieces of old ginger' }],
-      recipe: [{ Step: 'Wash ginger and dry it for a day.', image: 'assets/steps/1.png' }, { Step: 'Peel ginger and slice it into bite-size pieces.', image: 'assets/steps/2.png' }]
+      // recipe: [{ Step: 'Wash ginger and dry it for a day.', image: 'assets/steps/1.png' }, { Step: 'Peel ginger and slice it into bite-size pieces.', image: 'assets/steps/2.png' }]
+      recipe: [{ Step1: 'Wash the ginger and dry it for a day' }, { Step2: 'Peel the ginger and slice it into bite-size pieces.' }],
+      imageRecipe: [{ img1: 'assets/babi.jpg' }, { img2: 'assets/Still Young Logo.svg' }]
     },
     
     { image: 'assets/egg.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
@@ -94,7 +96,7 @@ export class AppServeService {
       briefDes: 'Fresh nuts bring benefits.',
       des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
       ingredients: [{ a: 'INGA', b: 'INGB' }],
-      recipe: [{ Step: 'idk', image: 'assets/steps/1.png'}, { Step: 'step222', image: 'assets/steps/2.png' }]
+      recipe: [{ Step1: 'idk', image: 'assets/steps/1.png'}, { Step2: 'step222', image: 'assets/steps/2.png' }]
     },
 
     { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',

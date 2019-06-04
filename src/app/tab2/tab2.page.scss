@@ -4,9 +4,15 @@
 // }
 
 .optionName {
-    background-color: #000;
-    color: white;
+    background-color: #B8D3D4;
+    color: #666666;
     border-radius: 0 !important;
     padding: 10px;
     text-align: center;
 }
+
+.slides-ios {
+    --progress-bar-background-active: black !important;
+  }
+  
+@import '../../theme/BoxShadowNone';

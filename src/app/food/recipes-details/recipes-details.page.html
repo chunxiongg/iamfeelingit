@@ -51,7 +51,7 @@
             <ion-list *ngFor='let value of finalArr; let i = index'>
                 <ion-item>
                   <ion-label>{{ value }}</ion-label>
-                  <ion-checkbox slot="start" (click)='tickBox(value)'></ion-checkbox>
+                  <ion-checkbox slot="start" [(ngModel)]='value.isChecked' (ionChange)='tickBox(value)'></ion-checkbox>
                 </ion-item>
             </ion-list>
 
@@ -83,18 +83,18 @@
               <br>
 
               <ion-row>
-                <ion-list *ngFor='let eat of newRecipe'>
+                <ion-list *ngFor='let eat of finalRecipe'>
                     <ion-item>
-                        <ion-thumbnail slot="start">
-                          <img src="{{ getMakanOne.recipe[0].image }}">
+                        <ion-thumbnail slot="start" *ngFor='let img of finalImage'>
+                          <img src="{{ img }}">
                         </ion-thumbnail>
-                        <ion-label>{{ getMakanOne.recipe[0].Step }}</ion-label>
+                        <ion-label>{{ eat }}</ion-label>
                       </ion-item>
                 </ion-list>
               </ion-row>
       
                   <!-- <ion-button routerLink='/tabs/steps' color='danger' expand="full" size='default' >ADD TO STOMACH</ion-button>
-              -->
+                  -->
             </ion-grid>
         </ion-card-content>
       </ion-card>
