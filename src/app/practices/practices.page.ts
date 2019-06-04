@@ -65,15 +65,27 @@ export class PracticesPage implements OnInit {
       setTimeout(() => {
       this.isLoaded = true;
       console.log('yay, page loaded!')
-      }, 1000);
+      }, 15000);
+    }
+
+    onAnswerBoolean(answer) {
+      console.log(answer)
+    }
+
+    onAnswerFact(answer) {
+      console.log(answer)
     }
 
 
     returnData = [];
+    NewMythFact = [];
 
     ngOnInit() {
       this.returnData = this.appServe.getQuizArr();
       this.foodRecipe = this.appServe.getRecipeArr();
+      this.NewMythFact = this.appServe.getMythFact();
+
+      console.log(this.NewMythFact)
     }
 
     submittedAns = [];

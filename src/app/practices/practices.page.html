@@ -9,7 +9,7 @@
     <ion-segment [(ngModel)]="galleryType" color="secondary" mode='md'>
     
         <ion-segment-button value="mvf" mode='md'>
-          Myth
+          Myth vs Fact
         </ion-segment-button>
     
         <ion-segment-button value="quiz" mode='md'>
@@ -27,9 +27,25 @@
 
   <div [ngSwitch]="galleryType">
     <div *ngSwitchCase="'mvf'">
-      <ion-card>
+      <ion-card class='noBorder'>
+        <ion-card-subtitle>
+            Myth Vs Fact
+          </ion-card-subtitle>
+      </ion-card>
+      <ion-card *ngFor='let answer of NewMythFact'>
         <ion-card-content>
-          hello mvf
+            <ion-label> {{ answer.qn }} </ion-label>
+
+            <ion-item>
+                <ion-label>{{ answer.options[0].ans }}</ion-label>
+                <ion-checkbox slot='start' [(ngModel)]='answer.checked' (ionChange)='onAnswerBoolean(answer)'></ion-checkbox>
+             </ion-item>
+
+             <ion-item>
+                <ion-label>{{ answer.options[1].ans }}</ion-label>
+                <ion-checkbox slot='start' [(ngModel)]='answer.factChecked' (ionChange)='onAnswerFact(answer)'></ion-checkbox>
+             </ion-item>
+            
         </ion-card-content>
       </ion-card> 
     </div>
@@ -37,7 +53,7 @@
     <div *ngSwitchCase="'quiz'">
       <ion-card class='noBorder'>
           <ion-card-content> 
-              <img src='assets/x.png'>
+              <img src='assets/Still Young Logo.svg'>
               <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
               <br>
               <br>
@@ -52,7 +68,7 @@
           <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
       </ion-refresher>
 
-        <div *ngIf='isLoaded'>
+        <div>
           <ion-card class='noBorder'>
 
           <ion-grid>

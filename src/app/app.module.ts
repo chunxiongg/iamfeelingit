@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 // import { ParallaxDirective } from './parallax.directive';
 
@@ -30,6 +31,7 @@ export class CustomeHammerConfig extends HammerGestureConfig {
   providers: [
     StatusBar,
     InAppBrowser,
+    EmailComposer,
     SplashScreen,
     NativePageTransitions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

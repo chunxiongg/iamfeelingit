@@ -61,6 +61,24 @@ export class AppServeService {
     }
   ]
 
+  public mythFact = [
+    {
+      id: 1,
+      qn: 'Water is good for health',
+      options: [{ id: 1, ans: 'Myth' }, { id: 2, ans: 'Fact' }]
+    },
+
+    {
+      id: 2,
+      qn: 'Chia seeds are bad for health',
+      options: [{ id: 1, ans: 'Myth', isCorrect: true}, { id: 2, ans: 'Fact', isCorrect: false}]
+    }
+  ]
+
+  getMythFact() {
+    return this.mythFact
+  }
+
   public foodRecipe = [
     { image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
       website: 'Facebook', link: 'https://facebook.com',
@@ -71,7 +89,7 @@ export class AppServeService {
       recipe: [{ Step: 'Wash ginger and dry it for a day.', image: 'assets/steps/1.png' }, { Step: 'Peel ginger and slice it into bite-size pieces.', image: 'assets/steps/2.png' }]
     },
     
-    { image: 'assets/babi.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
+    { image: 'assets/egg.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
       information: [{ title: 'Calories', figure: 30000 }, { title: 'Prep Time', figure: '23335m' }, { title: 'Cook Time', figure: '12335m' }],
       briefDes: 'Fresh nuts bring benefits.',
       des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
@@ -83,12 +101,6 @@ export class AppServeService {
       ingredients: [ 'A', 'B' ]
     }
   ]
-
-  // getIngredients() {
-  //   for (var i = 0; i < this.foodRecipe.length; i++) {
-  //     console.log(this.foodRecipe[i]);
-  //   }
-  // }
 
   getRecipeArr() {
     return this.foodRecipe;

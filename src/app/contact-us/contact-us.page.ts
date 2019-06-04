@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollHideConfig } from '../parallax.directive';
 import { Router } from '@angular/router';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -13,7 +14,7 @@ export class ContactUsPage implements OnInit {
   // footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
   // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 100 };
 
-  constructor(private router: Router, private iab: InAppBrowser) { }
+  constructor(private router: Router, private iab: InAppBrowser, private emailComposer: EmailComposer) { }
 
   ngOnInit() {
   }
@@ -36,7 +37,19 @@ export class ContactUsPage implements OnInit {
   }
 
   openMail() {
-    this.iab.create('mailto:connectwithstillyoung@gmail.com', '_self');
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available) {
+        //Now we know we can send
+      }
+     });
+     
+     let email = {
+       to: 'connectwithstillyoung@gmail.com',
+       isHtml: true
+     }
+     
+     // Send a text message using default options
+     this.emailComposer.open(email);
   }
 
 }
