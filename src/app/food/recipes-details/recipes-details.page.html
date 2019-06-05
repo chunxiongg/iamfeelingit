@@ -82,17 +82,16 @@
               </ion-row>
               <br>
 
-              <ion-row>
-                <ion-list *ngFor='let eat of finalRecipe'>
-                    <ion-item>
-                        <ion-thumbnail slot="start" *ngFor='let img of finalImage'>
-                          <img src="{{ img }}">
-                        </ion-thumbnail>
-                        <ion-label>{{ eat }}</ion-label>
-                      </ion-item>
-                </ion-list>
-              </ion-row>
-      
+                  <ion-row *ngFor='let steps of stepsArr'>
+                    <ion-col>
+                        <img class='stepsImg' src="{{ steps.img }}">
+                    </ion-col>
+
+                    <ion-col size="8">
+                        <ion-text>{{ steps.Step }}</ion-text>
+                    </ion-col>
+                  </ion-row>
+
                   <!-- <ion-button routerLink='/tabs/steps' color='danger' expand="full" size='default' >ADD TO STOMACH</ion-button>
                   -->
             </ion-grid>

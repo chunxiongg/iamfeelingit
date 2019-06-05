@@ -86,9 +86,17 @@ export class AppServeService {
       briefDes: 'Nourishing dish that provides several health benefits.',
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
       ingredients: [{ a: '500g pork trotter', b: '1 litre sweet vinegar', c: '500ml black rice vinegar', d: 'Hard-boiled eggs', e: '10 large pieces of old ginger' }],
-      // recipe: [{ Step: 'Wash ginger and dry it for a day.', image: 'assets/steps/1.png' }, { Step: 'Peel ginger and slice it into bite-size pieces.', image: 'assets/steps/2.png' }]
-      recipe: [{ Step1: 'Wash the ginger and dry it for a day' }, { Step2: 'Peel the ginger and slice it into bite-size pieces.' }],
-      imageRecipe: [{ img1: 'assets/babi.jpg' }, { img2: 'assets/Still Young Logo.svg' }]
+      recipe: [{ Step: 'Wash ginger and dry it for a day.', img: 'assets/steps/1.svg' }, 
+               { Step: 'Peel the ginger and slice it into bite-size pieces', img: 'assets/steps/2.svg' },
+               { Step: 'Stir fry ginger on high heat (no need to add oil).', img: 'assets/steps/3.svg' },
+               { Step: 'Using a large clay pot, pour sweet vinegar and bring it to boil on high heat.', img: 'assets/steps/4.svg' },
+               { Step: 'Next, add the stir fried ginger.', img: 'assets/steps/5.svg' },
+               { Step: 'Let it simmer for about 1 hour so that the ginger is cooked.', img: 'assets/steps/6.svg' },
+               { Step: 'Turn off heat and cover with lid to keep it warm.', img: 'assets/steps/7.svg' },
+               { Step: 'Blanch pork trotters quickly.', img: 'assets/steps/8.svg' },
+               { Step: 'Add pork trotters to sweet vinegar and then black rice vinegar for seasoning.', img: 'assets/steps/9.svg' },
+               { Step: 'Add in as many eggs as you want.', img: 'assets/steps/10.svg' },
+               { Step: 'Cover lid and let it simmer for about 30 minutes until cooked.', img: 'assets/steps/11.svg' }]
     },
     
     { image: 'assets/egg.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
@@ -96,11 +104,12 @@ export class AppServeService {
       briefDes: 'Fresh nuts bring benefits.',
       des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
       ingredients: [{ a: 'INGA', b: 'INGB' }],
-      recipe: [{ Step1: 'idk', image: 'assets/steps/1.png'}, { Step2: 'step222', image: 'assets/steps/2.png' }]
+      recipe: [{ Step: 'step1', img: 'assets/steps/1.svg'}, {Step: 'step2', img: 'assets/steps/2.svg'}, {Step: 'step3', img: 'assets/steps/3.svg' }]
     },
 
     { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',
-      ingredients: [ 'A', 'B' ]
+      ingredients: [ 'A', 'B' ],
+      recipe: [{ Step: 'step1', img: 'assets/steps/1.svg'}, {Step: 'step2', img: 'assets/steps/2.svg'}, {Step: 'step3', img: 'assets/steps/3.svg'} ]
     }
   ]
 

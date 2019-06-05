@@ -97,7 +97,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/splash-quote',
+    redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   }
 ];

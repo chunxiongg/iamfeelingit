@@ -27,8 +27,7 @@ export class RecipesDetailsPage implements OnInit {
   newRecipe = [];
   finalRecipe = [];
 
-  newImage = [];
-  finalImage = [];
+  stepsArr = [];
 
   ngOnInit() {
     this.foodRecipe = this.appServe.getRecipeArr(); // Get all the Recipes
@@ -39,19 +38,12 @@ export class RecipesDetailsPage implements OnInit {
     this.newArr.push(this.getMakanOne.ingredients[0]);
     console.log(Object.values(this.newArr[0]));
     this.finalArr = Object.values(this.newArr[0]);
-
-    // console.log(this.getMakanOne.recipe)
+    
     for (var i = 0; i < this.getMakanOne.recipe.length; i++) {
-      this.newRecipe = Object.values(this.getMakanOne.recipe[i]);
-      this.finalRecipe.push(this.newRecipe)
+      var details = this.getMakanOne.recipe[i]
+      this.stepsArr.push(details)
     }
-    console.log(this.finalRecipe);
-
-    for (var i = 0; i < this.getMakanOne.imageRecipe.length; i++) {
-      this.newImage = Object.values(this.getMakanOne.imageRecipe[i]);
-      this.finalImage.push(this.newImage)
-    }
-    console.log(this.finalImage);
+    console.log(this.stepsArr)
 
   }
 
