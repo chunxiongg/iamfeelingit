@@ -5,13 +5,15 @@
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
 
-ion-title {
+@import '../theme/ToolBarPadding';
+
+ion-title{
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     
 }
 
-ion-label {
+ion-label, ion-note {
     font-family: 'Raleway', sans-serif !important;
 }
 

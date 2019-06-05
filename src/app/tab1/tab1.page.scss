@@ -1,14 +1,6 @@
 @import '../../theme/_HeaderImage';
 @import '../../theme/BoxShadowNone';
-
-.welcome-card ion-img {
-  // max-height: 30vh;
-  // width: 50%;
-  // display: block;
-  // margin-left: auto;
-  // margin-right: auto;
-  //overflow: hidden;
-}
+@import '../../theme/ToolBarPadding';
 
 ion-card {
   border-radius: 13px !important;

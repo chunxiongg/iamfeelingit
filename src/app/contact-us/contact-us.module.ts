@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { ContactUsPage } from './contact-us.page';
 
 import { ScrollHideDirective } from '../parallax.directive';
+import { HideHeaderDirective } from '../hide-header.directive';
 
 const routes: Routes = [
   {
@@ -23,6 +24,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ContactUsPage, ScrollHideDirective]
+  declarations: [ContactUsPage, ScrollHideDirective, HideHeaderDirective]
 })
 export class ContactUsPageModule {}

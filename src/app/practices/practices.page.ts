@@ -14,7 +14,7 @@ export class PracticesPage implements OnInit {
 
   galleryType = 'mvf';
 
-  constructor(private appServe: AppServeService, private router: Router, 
+  constructor(private appServe: AppServeService, private router: Router,
               public popoverController: PopoverController, private modalController: ModalController) { }
 
   async presentPopover(ev: any) {
@@ -40,16 +40,24 @@ export class PracticesPage implements OnInit {
   }
 
   readArticles = [
-    { id: 1, name: 'The Perfect Diet', image: 'assets/babi.jpg' },
-    { id: 2, name: 'Article B', image: 'assets/shapes.svg' },
-    { id: 3, name: 'Postpartum Massage', image: 'assets/m.png', link: 'https://parenting.firstcry.com/articles/a-quick-guide-to-postnatal-massage/?fbclid=IwAR39EnrK-SIzc_RIbERLXYArsnO64k46bfzqwNPy1Z8D9sHoVVa0jCdM6as' }
+    { id: 1, name: 'Do\'s and Don\'ts of Asian Confinement', image: 'assets/warning.jpg', link: 'https://bit.ly/2WbQDyt',
+      details: 'There are many beliefs in Asia regarding confinement. Here\'s the lowdown: Confinement is a period for your body to recuperate and recover from childbirth. The idea of confinement is very familiar to Asians. Many Asian confinement beliefs and practices originate from culture, with little or no scientific backup. The different cultures\' confinement periods last for different durations: 30 days for the Chinese, 44 days for the Malays and 40 days for Indians. However, the common basis for these beliefs is that they help provide adequate replenishment and recuperation for mothers after delivery. Your elders mean well, but do discuss your preferences with them.' 
+    },
+    
+    { id: 2, name: 'Article B', image: 'assets/shapes.svg', link: '',
+      details: 'another details'
+    },
+    
+    { id: 3, name: 'Postpartum Massage', image: 'assets/m.png', link: 'https://parenting.firstcry.com/articles/a-quick-guide-to-postnatal-massage/?fbclid=IwAR39EnrK-SIzc_RIbERLXYArsnO64k46bfzqwNPy1Z8D9sHoVVa0jCdM6as',
+      details: 'another another details'
+    }
   ]
 
   async presentModal(read) {
     console.log(read.name);
     const modal = await this.modalController.create({
     component: ModalExample,
-    componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
+    componentProps: { value: [{ name: read.name, image: read.image, seeDetails: read.details, goLink: read.link }] }
     });
     return await modal.present();
   }

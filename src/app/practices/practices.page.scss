@@ -6,8 +6,6 @@
     text-align: center;
 }
 
-@import '../../theme/BoxShadowNone';
-
 a {
     text-decoration: none;
     color: darkblue;
@@ -24,3 +22,6 @@ a {
 .welcome-card {
     min-height: 350px;
 }
+
+@import '../../theme/BoxShadowNone';
+@import '../../theme/ToolBarPadding';

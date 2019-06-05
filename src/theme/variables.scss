@@ -5,9 +5,9 @@ ion-tab-button {
   --color-selected: #F5DDD0;
 }
 
-ion-toolbar {
-  --min-height: 100px !important;
-}
+// ion-toolbar {
+//   --min-height: 100px !important;
+// }
 
 /** Ionic CSS Variables **/
 :root {
@@ -65,15 +65,15 @@ ion-toolbar {
   --ion-color-danger-tint: #f25454;
 
   /** dark **/
-  --ion-color-dark: #222428;
+  --ion-color-dark: #303030;
   --ion-color-dark-rgb: 34, 34, 34;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
   --ion-color-dark-shade: #1e2023;
   --ion-color-dark-tint: #383a3e;
 
-  /** medium **/
-  --ion-color-medium: #989aa2;
+  /** medium - Still Young Color **/
+  --ion-color-medium: #B89764;
   --ion-color-medium-rgb: 152, 154, 162;
   --ion-color-medium-contrast: #ffffff;
   --ion-color-medium-contrast-rgb: 255, 255, 255;

@@ -81,7 +81,6 @@ export class AppServeService {
 
   public foodRecipe = [
     { image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
-      website: 'Facebook', link: 'https://facebook.com',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Nourishing dish that provides several health benefits.',
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
@@ -99,12 +98,20 @@ export class AppServeService {
                { Step: 'Cover lid and let it simmer for about 30 minutes until cooked.', img: 'assets/steps/11.svg' }]
     },
     
-    { image: 'assets/egg.jpg', id: 2, name: 'Just Nuts', website: 'Twitter', link: 'https://twitter.com',
-      information: [{ title: 'Calories', figure: 30000 }, { title: 'Prep Time', figure: '23335m' }, { title: 'Cook Time', figure: '12335m' }],
-      briefDes: 'Fresh nuts bring benefits.',
-      des: 'Cashew nuts and almond, when consumed fresh, help in breast milk production. Almond stands out among the many dry fruits. Their richness in vitamin E, fibre, carbohydrates and Vitamin B12 make them exceptional. Almonds also contain various minerals like potassium, magnesium, copper, and iron. A handful of almond is beneficial to any breastfeeding. Nuts are also rich in omega 3, which can greatly enhance brain development and protecting against heart disease for your newborn through the consumption of your breastmilk.',
-      ingredients: [{ a: 'INGA', b: 'INGB' }],
-      recipe: [{ Step: 'step1', img: 'assets/steps/1.svg'}, {Step: 'step2', img: 'assets/steps/2.svg'}, {Step: 'step3', img: 'assets/steps/3.svg' }]
+    { image: 'assets/chicken.jpg', id: 2, name: 'Steamed Chicken with Spices',
+      information: [{ title: 'Calories', figure: 3000 }, { title: 'Prep Time', figure: '30m' }, { title: 'Cook Time', figure: '165m' }],
+      briefDes: 'Healthy steamed chicken.',
+      des: 'Many ways to cook chicken and one is to enjoy it steamed and let it cooked in its own juices. It\'s also healthier than cooking it in oil! Here is a steamed chicken dish that can be prepared without hassle.',
+      ingredients: [{ a: '1 chicken whole leg', b: '2 tomatoes (sliced into 1-centimetre strips)', c: '1 onion (sliced into thin strips)', d: '1 red chili (remove the seeds)', e: '2 cloves of garlic', f: '1-inch piece of ginger root', g: '2 tablespoon of oyster sauce', h: '½ teaspoon of thick soy sauce', i: '1 tablespoon of hot water', j: '1 tablespoon of chopped scallions', k: 'Tin foil (enough to cover the chicken)' }],
+      recipe: [{ Step: 'Pound the red chili, garlic, and ginger root together until they form a paste.', img: 'assets/steps/1.svg'}, 
+               { Step: 'Transfer the paste into a bowl and add oyster sauce, soy sauce, and hot water to form a marinade for the chicken.', img: 'assets/steps/2.svg' }, 
+               { Step: 'Coat the chicken with the marinade and wrap it in the tin foil.', img: 'assets/steps/3.svg' },
+               { Step: 'Then, place the tin foil-wrapped chicken in a heat-proof plate.', img: 'assets/steps/4.svg' },
+               { Step: 'Leave the chicken in the fridge to soak in the flavor from the marinade for at least 60 minutes.', img: 'assets/steps/5.svg' },
+               { Step: 'Once chicken has been in marinade for a while, place the plate with the chicken in the steamer.', img: 'assets/steps/6.svg' },
+               { Step: 'Steam for 15 minutes, then add the tomato slices in with the chicken in the tin foil.', img: 'assets/steps/7.svg' },
+               { Step: 'Steam for another 15 minutes or until chicken is cooked.', img: 'assets/steps/8.svg' },
+               { Step: 'Serve and enjoy!', img: 'assets/steps/9.svg'}]
     },
 
     { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',
