@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2'
 import { AppServeService } from '../app-serve.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -10,7 +11,7 @@ import { AppServeService } from '../app-serve.service';
 
 export class Tab2Page {
 
-  constructor(private appServe: AppServeService) {}
+  constructor(private navController: NavController, private appServe: AppServeService) {}
 
   returnData = [];
 
@@ -37,4 +38,8 @@ export class Tab2Page {
       type: 'progressbar'
     }
   };
+
+  goBack() {
+    this.navController.navigateBack(['/tabs/practices'])
+  }
 }

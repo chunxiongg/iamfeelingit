@@ -4,16 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { PracticesPage } from './practices.page';
 
-import { PopoverPage } from '../pop-over/pop-over';
-import { ModalExample } from '../pop-over/article-pop';
-import { SharedModule } from './shared.module';
+import { CategoryDetailsPage } from './category-details.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PracticesPage
+    component: CategoryDetailsPage
   }
 ];
 
@@ -22,10 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PracticesPage, PopoverPage, ModalExample],
-  entryComponents: [PopoverPage, ModalExample]
+  declarations: [CategoryDetailsPage]
 })
-export class PracticesPageModule {}
+export class CategoryDetailsPageModule {}

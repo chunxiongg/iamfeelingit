@@ -53,7 +53,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'practices/recipes-details/:makan.id',
+        path: 'practices/category-details/recipes-details/:details.id',
         children: [
           {
             path: '',
@@ -85,6 +85,15 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../landing-slide/landing-slide.module#LandingSlidePageModule'
+          }
+        ]
+      },
+      {
+        path: 'practices/category-details/:makan.cat_id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../category-details/category-details.module#CategoryDetailsPageModule'
           }
         ]
       },

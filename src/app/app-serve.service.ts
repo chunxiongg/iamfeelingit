@@ -80,7 +80,9 @@ export class AppServeService {
   }
 
   public foodRecipe = [
-    { image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
+    { 
+      cat_id: 1, cat_name: 'Pork', cat_img: 'assets/babi.jpg',
+      image: 'assets/babi.jpg', id: 1, name: 'Pork Trotter in Black Rice Vinegar', 
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Nourishing dish that provides several health benefits.',
       des: 'A pig\'s trotter, is the culinary term used to refer to the foot of a pig. The cuts are used in various dishes around the world, and experienced a resurgence in the late 2000s.', 
@@ -98,9 +100,11 @@ export class AppServeService {
                { Step: 'Cover lid and let it simmer for about 30 minutes until cooked.', img: 'assets/steps/11.svg' }]
     },
     
-    { image: 'assets/chicken.jpg', id: 2, name: 'Steamed Chicken with Spices',
+    { 
+      cat_id: 2, cat_name: 'Chicken', cat_img: 'assets/chicken.jpg',
+      image: 'assets/chicken.jpg', id: 2, name: 'Steamed Chicken with Spices',
       information: [{ title: 'Calories', figure: 3000 }, { title: 'Prep Time', figure: '30m' }, { title: 'Cook Time', figure: '165m' }],
-      briefDes: 'Healthy steamed chicken.',
+      briefDes: 'Healthy steamed chicken. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aspernatur.',
       des: 'Many ways to cook chicken and one is to enjoy it steamed and let it cooked in its own juices. It\'s also healthier than cooking it in oil! Here is a steamed chicken dish that can be prepared without hassle.',
       ingredients: [{ a: '1 chicken whole leg', b: '2 tomatoes (sliced into 1-centimetre strips)', c: '1 onion (sliced into thin strips)', d: '1 red chili (remove the seeds)', e: '2 cloves of garlic', f: '1-inch piece of ginger root', g: '2 tablespoon of oyster sauce', h: '½ teaspoon of thick soy sauce', i: '1 tablespoon of hot water', j: '1 tablespoon of chopped scallions', k: 'Tin foil (enough to cover the chicken)' }],
       recipe: [{ Step: 'Pound the red chili, garlic, and ginger root together until they form a paste.', img: 'assets/steps/1.svg'}, 
@@ -114,9 +118,21 @@ export class AppServeService {
                { Step: 'Serve and enjoy!', img: 'assets/steps/9.svg'}]
     },
 
-    { image: 'assets/babi.jpg', id: 3, name: 'Tomato', website: 'Instagram', link: 'https://instagram.com',
-      ingredients: [ 'A', 'B' ],
-      recipe: [{ Step: 'step1', img: 'assets/steps/1.svg'}, {Step: 'step2', img: 'assets/steps/2.svg'}, {Step: 'step3', img: 'assets/steps/3.svg'} ]
+    { 
+      cat_id: 2, cat_name: 'Chicken', cat_img: 'assets/chicken.jpg',
+      image: 'assets/herbal.jpg', id: 3, name: 'Emperor Herbal Chicken',
+      briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
+      des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
+      ingredients: [{ a: '1 whole fresh chicken', b: '½ tbsp dark soya sauce', c: '2 pcs dang gui （当归)', d: '6 pcs dang shen (党参)', e: '3 pcs yu zhu (玉竹)', f: '10 pcs red dates (红枣)', g: '1 tbsp wolfberries (枸杞子)', h: '5 pcs dried scallops', i: '900ml water' }],
+      recipe: [{ Step: 'Wash and pat the chicken dry. Rub the chicken entirely with dark soya sauce.', img: 'assets/steps/1.svg'}, 
+               { Step: 'Using a sharp skewer, poke the chicken all over with it, in particular the thigh area. (As the thigh area is often the part where the meat tends to take longer to be cook through.)', img: 'assets/steps/2.svg' }, 
+               { Step: 'Rinse the herbs and soak them in water briefly.', img: 'assets/steps/3.svg' },
+               { Step: 'Add all the ingredients for the herbal broth into the water in a deep wok and allow it to boil.', img: 'assets/steps/4.svg' },
+               { Step: 'After the broth has boiled, add the chicken.', img: 'assets/steps/5.svg' },
+               { Step: 'Once chicken has been in marinade for a while, place the plate with the chicken in the steamer.', img: 'assets/steps/6.svg' },
+               { Step: 'Cover the wok and allow it simmer for a further 40 minutes on medium heat, turning the chicken once halfway through the cooking time.', img: 'assets/steps/7.svg' },
+               { Step: 'Add all the rest of the seasoning ingredients into the herbal broth and stir slightly to mix well.', img: 'assets/steps/8.svg' },
+               { Step: 'Serve and enjoy!', img: 'assets/steps/9.svg'}]
     }
   ]
 
@@ -124,6 +140,11 @@ export class AppServeService {
     return this.foodRecipe;
   }
 
+  getAllCategory(makanIndividual) {
+    return this.foodRecipe.find(e => e.cat_id === makanIndividual)
+  }
+
+  // Individual Food Id
   getIndividual(makanIndividual) {
     return this.foodRecipe.find(e => e.id === makanIndividual)
   }

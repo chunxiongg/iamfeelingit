@@ -13,9 +13,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
-// import { ParallaxDirective } from './parallax.directive';
-
-// import { MyStyleDirective } from './my-style.directive';
 
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {

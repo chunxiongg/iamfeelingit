@@ -29,10 +29,12 @@ export class RecipesDetailsPage implements OnInit {
 
   stepsArr = [];
 
+  arr = [];
   ngOnInit() {
     this.foodRecipe = this.appServe.getRecipeArr(); // Get all the Recipes
-    this.makanIndividual = +this.activatedRoute.snapshot.params['makan.id']
+    this.makanIndividual = +this.activatedRoute.snapshot.params['details.id']
     this.getMakanOne = this.appServe.getIndividual(this.makanIndividual);
+    console.log(this.getMakanOne)
 
     // Ingredients
     this.newArr.push(this.getMakanOne.ingredients[0]);
@@ -49,6 +51,10 @@ export class RecipesDetailsPage implements OnInit {
 
   onRateChange($event) {
     console.log('changed')
+  }
+
+  onTimer(steps) {
+    console.log(steps)
   }
 
   async presentModal(getMakanOne) {

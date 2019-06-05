@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="secondary">
+          <ion-button (click)='returnBack()'>
+            <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title>{{ getMakanOne.cat_name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+ <ion-card-subtitle>
+    <ion-text>
+      Cookbook
+    </ion-text>
+  </ion-card-subtitle>
+
+  <!-- <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines='none'>
+            <ion-thumbnail slot="start">
+              <img src="{{ details.image }}">
+            </ion-thumbnail>
+            <ion-note color='dark'>{{ details.name }}</ion-note>
+        </ion-item>
+    </ion-list>
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
+      <ion-img [src]='details.image'></ion-img>
+      <ion-card-header class='ion-text-left'>
+        <ion-card-subtitle>{{ details.name }}</ion-card-subtitle>
+        <br>
+        <ion-note color='dark'>{{ details.briefDes }} </ion-note>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
+      </ion-card-header>
+      
+    </ion-card>
+
+</ion-content>
+
+
+
