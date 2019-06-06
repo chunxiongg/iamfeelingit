@@ -123,7 +123,7 @@ export class AppServeService {
       image: 'assets/herbal.jpg', id: 3, name: 'Emperor Herbal Chicken',
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
-      ingredients: [{ a: '1 whole fresh chicken', b: '½ tbsp dark soya sauce', c: '2 pcs dang gui （当归)', d: '6 pcs dang shen (党参)', e: '3 pcs yu zhu (玉竹)', f: '10 pcs red dates (红枣)', g: '1 tbsp wolfberries (枸杞子)', h: '5 pcs dried scallops', i: '900ml water' }],
+      ingredients: [{ a: '1 whole fresh chicken', b: '½ tbsp dark soya sauce', c: '2 pcs dang gui (当归)', d: '6 pcs dang shen (党参)', e: '3 pcs yu zhu (玉竹)', f: '10 pcs red dates (红枣)', g: '1 tbsp wolfberries (枸杞子)', h: '5 pcs dried scallops', i: '900ml water' }],
       recipe: [{ Step: 'Wash and pat the chicken dry. Rub the chicken entirely with dark soya sauce.', img: 'assets/steps/1.svg'}, 
                { Step: 'Using a sharp skewer, poke the chicken all over with it, in particular the thigh area. (As the thigh area is often the part where the meat tends to take longer to be cook through.)', img: 'assets/steps/2.svg' }, 
                { Step: 'Rinse the herbs and soak them in water briefly.', img: 'assets/steps/3.svg' },
@@ -133,6 +133,10 @@ export class AppServeService {
                { Step: 'Cover the wok and allow it simmer for a further 40 minutes on medium heat, turning the chicken once halfway through the cooking time.', img: 'assets/steps/7.svg' },
                { Step: 'Add all the rest of the seasoning ingredients into the herbal broth and stir slightly to mix well.', img: 'assets/steps/8.svg' },
                { Step: 'Serve and enjoy!', img: 'assets/steps/9.svg'}]
+    },
+
+    {
+      cat_id: 3, cat_name: 'Soup', cat_img: 'assets/chickenSoup.png'
     }
   ]
 

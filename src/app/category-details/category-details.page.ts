@@ -22,7 +22,7 @@ export class CategoryDetailsPage implements OnInit {
     this.foodRecipe = this.appServe.getRecipeArr(); // Get all the Recipes
     this.makanIndividual = +this.activatedRoute.snapshot.params['makan.cat_id']
     this.getMakanOne = this.appServe.getAllCategory(this.makanIndividual);
-    console.log(this.getMakanOne.cat_id)
+    console.log('CategoryID: ' + this.getMakanOne.cat_id)
 
     for (var i = 0; i < this.foodRecipe.length; i++) {
       if (this.foodRecipe[i].cat_id === this.makanIndividual) {
@@ -51,6 +51,16 @@ export class CategoryDetailsPage implements OnInit {
   returnBack() {
     this.navController.navigateBack(['/tabs/practices'])
 
+  }
+
+
+  isLoaded = false;
+
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.isLoaded = true;
+      console.log('Category-details page loaded!')
+    }, 1300);
   }
 
 }

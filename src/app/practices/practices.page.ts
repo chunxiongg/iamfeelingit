@@ -50,7 +50,7 @@ export class PracticesPage implements OnInit {
     },
     
     { id: 3, name: 'Article 3', image: 'assets/steps/3.svg', link: '',
-      details: 'article 4 details'
+      details: 'article 3 details'
     },
 
     { id: 4, name: 'Article 4', image: 'assets/steps/4.svg', link: '',
@@ -77,7 +77,7 @@ export class PracticesPage implements OnInit {
     ionViewWillEnter() {
       setTimeout(() => {
       this.isLoaded = true;
-      console.log('yay, page loaded!')
+      console.log('Yay, page loaded!')
       }, 15000);
     }
 

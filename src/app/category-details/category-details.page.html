@@ -11,11 +11,12 @@
 
 <ion-content padding>
 
- <ion-card-subtitle>
-    <ion-text>
-      Cookbook
-    </ion-text>
-  </ion-card-subtitle>
+<div *ngIf='isLoaded'>
+  <ion-card-subtitle>
+      <ion-text>
+        Cookbook
+      </ion-text>
+    </ion-card-subtitle>
 
   <!-- <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
 
@@ -31,7 +32,7 @@
     </ion-card-content>
   </ion-card> -->
 
-  <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
+    <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
       <ion-img [src]='details.image'></ion-img>
       <ion-card-header class='ion-text-left'>
         <ion-card-subtitle>{{ details.name }}</ion-card-subtitle>
@@ -42,9 +43,32 @@
         <br>
         <br>
         <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
-      </ion-card-header>
-      
+      </ion-card-header> 
     </ion-card>
+  </div>
+
+    <!-- Skeleton Page -->
+  <div *ngIf='!isLoaded'>
+      <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
+          <!-- <ion-img [src]='details.image'></ion-img> -->
+          <div class='custom-skeleton'>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+          </div>
+
+          <ion-card-header class='ion-text-left'>
+            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+            <br>
+            <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            <br>
+            <br>
+            <ion-skeleton-text animated style="width: 30%; display: block; margin-left: auto; margin-right: auto"></ion-skeleton-text>
+          </ion-card-header> 
+        </ion-card>
+  </div>
 
 </ion-content>
 

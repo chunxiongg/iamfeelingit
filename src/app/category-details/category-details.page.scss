@@ -9,3 +9,12 @@ ion-text {
     right: 0;
     left: 0;
 }
+
+ion-skeleton-text {
+    line-height: 15px !important;
+}
+
+.custom-skeleton ion-skeleton-text {
+    line-height: 123px !important;
+    margin: 0 !important;
+  }
