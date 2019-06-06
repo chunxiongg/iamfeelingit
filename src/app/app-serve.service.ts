@@ -10,7 +10,9 @@ export class AppServeService {
 
   public mcqData = [
     {
-      question: '1. Your best friend is crying after a fight with someone, what do you do?',
+      qn_id: 1,
+      qn_number: 'Question 1',
+      question: 'Your best friend is crying after a fight with someone, what do you do?',
       image: 'assets/stageOne.svg',
       answerOption: [
         { id: 1, answer: 'a', name: "Say it's alright" },
@@ -20,44 +22,57 @@ export class AppServeService {
       ]
     },
     {
-      question: '2. Which word best describes yourself?',
+      qn_id: 2,
+      qn_number: 'Question 2',
+      question: 'Which word best describes yourself?',
       image: 'assets/stageTwo.svg',
       answerOption: [
         { id: 5, answer: 'a5', name: 'Dreamer' },
         { id: 6, answer: 'b6', name: 'Passionate' },
         { id: 7, answer: 'c7', name: 'Indecisive' },
-        { id: 8, answer: 'd8', name: 'Peacemaker'}
+        { id: 8, answer: 'd8', name: 'Peacemaker' }
       ]
     },
     {
-      question: '3. You are preparing to leave the house to meet your date for a movie. It starts raining heavily, do you:',
+      qn_id: 3,
+      qn_number: 'Question 3',
+      question: 'You are preparing to leave the house to meet your date for a movie. It starts raining heavily, do you:',
       image: 'assets/stageThree.svg',
       answerOption: [
         { id: 9, answer: 'a9', name: 'Call him/her to cancel the movie date' },
         { id: 10, answer: 'b10', name: 'Leave your date alone' },
         { id: 11, answer: 'c11', name: 'Suggest to watch at a later timing' },
-        { id: 12, answer: 'd12', name: 'Go ahead with the plan'}
+        { id: 12, answer: 'd12', name: 'Go ahead with the plan' }
       ]
     },
     {
-      question: '4. The weather is getting hot and you are thirsty. Which drink will you buy?',
+      qn_id: 4,
+      qn_number: 'Question 4',
+      question: 'The weather is getting hot and you are thirsty. Which drink will you buy?',
       image: 'assets/app.svg',
       answerOption: [
         { id: 13, answer: 'a13', name: 'Mineral water' },
         { id: 14, answer: 'b14', name: 'Soft drink' },
         { id: 15, answer: 'c15', name: 'Bubble tea' },
-        { id: 16, answer: 'd16', name: 'Coffee/Tea'}
+        { id: 16, answer: 'd16', name: 'Coffee/Tea' }
       ]
     },
     {
-      question: '5. You are feeling extremely stressed due to work piling up. What would you do?',
+      qn_id: 5,
+      qn_number: 'Question 5',
+      question: 'You are feeling extremely stressed due to work piling up. What would you do?',
       image: 'assets/shapes.svg',
       answerOption: [
         { id: 17, answer: 'a17', name: 'Cry in anxiety' },
         { id: 18, answer: 'b18', name: 'Continue to procrastinate' },
         { id: 19, answer: 'c19', name: 'What is stress?' },
-        { id: 20, answer: 'd20', name: 'Continue working at your own pace'}
+        { id: 20, answer: 'd20', name: 'Continue working at your own pace' }
       ]
+    },
+    {
+      final: 'You have completed the quiz!',
+      image: 'assets/tenor.gif',
+      resetBtn: 'Restart'
     }
   ]
 

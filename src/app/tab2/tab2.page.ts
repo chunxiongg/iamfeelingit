@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import Swal from 'sweetalert2'
 import { AppServeService } from '../app-serve.service';
 import { NavController } from '@ionic/angular';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -13,10 +14,13 @@ export class Tab2Page {
 
   constructor(private navController: NavController, private appServe: AppServeService) {}
 
+  @ViewChild('slides') slides: IonSlides;
+
   returnData = [];
 
   ngOnInit() {
     this.returnData = this.appServe.getQuizArr();
+    this.slides.lockSwipes(true)
   }
 
   submittedAns = [];
@@ -25,9 +29,27 @@ export class Tab2Page {
     this.appServe.submitBtn();
   }
 
+  ansArr = [];
+
+  progress = 0;
   selectAnswer(options) {
     this.appServe.getSelected(options);
     console.log('Selected:', options.name)
+    this.ansArr.push(options.name);
+    console.log(this.ansArr);
+
+    this.slides.lockSwipeToNext(false);
+    this.slides.lockSwipeToPrev(true);
+    this.slides.slideNext();
+    this.progress += 0.3;
+  }
+
+  restartQuiz() {
+    this.progress = 0;
+    this.ansArr.length = 0;
+    console.log(this.ansArr);
+    this.slides.lockSwipeToPrev(false);
+    this.slides.slideTo(this.slideOpts.initialSlide)
   }
 
   slideOpts = {
@@ -42,4 +64,5 @@ export class Tab2Page {
   goBack() {
     this.navController.navigateBack(['/tabs/practices'])
   }
+
 }

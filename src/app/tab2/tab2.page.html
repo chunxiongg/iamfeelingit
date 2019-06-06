@@ -11,11 +11,12 @@
       Personality Quiz
     </ion-title>
   </ion-toolbar>
+  <ion-progress-bar color='dark' [value]='progress'></ion-progress-bar>
 </ion-header>
 
-<!-- <ion-content>
-
-  <ion-card *ngFor='let qn of returnData; let i = index'>
+<ion-content>
+  
+  <!-- <ion-card *ngFor='let qn of returnData; let i = index'>
     <ion-card-content >
         <ion-img [src]="qn.image"></ion-img>
         <br>
@@ -27,8 +28,8 @@
       </ion-card> 
 
     </ion-card-content>
-  </ion-card>
-</ion-content> -->
+  </ion-card> 
+</ion-content>  -->
 
 <!-- <ion-footer>
     <ion-toolbar>
@@ -39,24 +40,32 @@
 <ion-content>
   <ion-grid>
       <ion-row>
-          <ion-slides pager="true" [options]="slideOpts"> 
+
+          <ion-slides pager="false" [options]="slideOpts" #slides> 
             
               <ion-slide *ngFor='let qn of returnData; let i = index'>
                   <ion-card class="welcome-card" class='noBorder'>
                       <ion-img src='{{ qn.image }}'></ion-img>
-                      <ion-card-header>
-                        <ion-card-subtitle>{{ qn.question }} </ion-card-subtitle>
+                      <ion-card-header class='ion-text-left'>
+                        <ion-card-subtitle> {{ qn.qn_number }} </ion-card-subtitle>
+                        <ion-text>{{ qn.question }} </ion-text>
+
                       </ion-card-header>
                       <ion-card-content>
                           <ion-card class='optionName' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
                               {{ options.name }}
                             </ion-card> 
+
+                            <ion-card-subtitle>{{ qn.final }} </ion-card-subtitle>
+                            <br>
+                            <ion-button color='dark' expand="full" *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
+
                       </ion-card-content>
-                    </ion-card>
+                    </ion-card> 
               </ion-slide>
       
             </ion-slides>
           
       </ion-row>
   </ion-grid>
-</ion-content>
+</ion-content> 

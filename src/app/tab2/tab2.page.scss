@@ -3,16 +3,25 @@
 //     box-shadow: none !important;
 // }
 
+
 .optionName {
-    background-color: #B8D3D4;
-    color: #666666;
+    background-color: #000;
+    color: #fff;
     border-radius: 0 !important;
-    padding: 10px;
+    padding: 13px;
     text-align: center;
+}
+
+ion-img {
+  width: 55% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .slides-ios {
     --progress-bar-background-active: black !important;
   }
   
+
 @import '../../theme/BoxShadowNone';

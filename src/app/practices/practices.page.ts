@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { PopoverController, ModalController } from '@ionic/angular';
 import { PopoverPage } from '../pop-over/pop-over';
 import { ModalExample } from '../pop-over/article-pop';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-practices',
@@ -14,7 +15,7 @@ export class PracticesPage implements OnInit {
 
   galleryType = 'makan';
 
-  constructor(private appServe: AppServeService, private router: Router,
+  constructor(private appServe: AppServeService, private router: Router, private navController: NavController,
               public popoverController: PopoverController, private modalController: ModalController) { }
 
   async presentPopover(ev: any) {
@@ -36,7 +37,7 @@ export class PracticesPage implements OnInit {
 
   openRecipe(makan) {
     // this.router.navigate(['/tabs/practices/recipes-details', makan.id])
-    this.router.navigate(['/tabs/practices/category-details', makan.cat_id])
+    this.navController.navigateForward(['/tabs/practices/category-details', makan.cat_id])
     //console.log(makan.id)
   }
 
