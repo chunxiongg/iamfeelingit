@@ -89,6 +89,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'myth',
+        children: [
+          {
+            path: '',
+            loadChildren: '../myth-page/myth-page.module#MythPagePageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

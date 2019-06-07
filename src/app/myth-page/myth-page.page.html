@@ -1,0 +1,47 @@
+<ion-header no-border>
+    <ion-toolbar >
+        <ion-buttons slot="secondary">
+            <ion-button (click)='goBack()'>
+              <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+  
+      <ion-title>
+        Myth VS Fact
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-slides pager="false" [options]="MythSlideOpts" #slides> 
+        <ion-slide *ngFor='let answer of NewMythFact'>
+          <ion-card class='mythCard'>
+
+            <img  *ngIf='answer.optionA' src='{{ answer.img }}'>
+            <br>
+              <ion-card-content>
+                  <ion-card-subtitle  *ngIf='answer.optionA' class='qnNo'>{{ answer.qn_number }}</ion-card-subtitle>
+                  <ion-text  *ngIf='answer.optionA' class='qnLeft'>{{ answer.qn }}</ion-text>
+     
+                    <br>
+                    <br>
+                    <ion-button class='options' *ngIf='answer.optionA' (click)='mythClick(answer)'>{{ answer.optionA }}</ion-button>
+                    <ion-button class='options' *ngIf='answer.optionB' (click)='factClick(answer)'>{{ answer.optionB }}</ion-button>
+                
+                <br>
+                <br>
+                <ion-card-subtitle class='reveal' *ngIf='answer.optionA' (click)='showAnswer(answer)'>Show Answer</ion-card-subtitle> 
+
+                <img src='{{ answer.image }}'>
+                <br>
+                <br>
+                <ion-card-subtitle>{{ answer.final }} </ion-card-subtitle>
+                <br>
+                <ion-button class='ans' *ngIf='answer.resetBtn' (click)='restartQuiz()'>{{ answer.resetBtn }} </ion-button>
+
+              </ion-card-content>
+          </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>

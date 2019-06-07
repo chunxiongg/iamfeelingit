@@ -15,6 +15,18 @@ a {
   padding-left: 2vh !important;
 }
 
+.mythCard {
+  min-height: 40vh !important;
+  width: 40vh !important;
+}
+
+.bottle {
+  width: 50% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .ans {
   --background: #F5DDD0;  /* fallback for old browsers */
   --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -22,6 +34,7 @@ a {
   --color: black;
   font-family: 'Raleway', sans-serif;
   --border-radius: 20px !important;
+  width: 50% !important;
 }
 
 .options {

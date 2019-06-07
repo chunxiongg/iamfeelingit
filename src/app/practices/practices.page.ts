@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { Router } from '@angular/router';
 import { PopoverController, ModalController } from '@ionic/angular';
@@ -6,6 +6,7 @@ import { PopoverPage } from '../pop-over/pop-over';
 import { ModalExample } from '../pop-over/article-pop';
 import { NavController } from '@ionic/angular';
 import Swal from 'sweetalert2';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 
 @Component({
   selector: 'app-practices',
@@ -16,8 +17,16 @@ export class PracticesPage implements OnInit {
 
   galleryType = 'makan';
 
-  constructor(private appServe: AppServeService, private router: Router, private navController: NavController,
+  constructor(private navCtrl: NavController, private nativePageTransitions: NativePageTransitions, private appServe: AppServeService, private router: Router, private navController: NavController,
               public popoverController: PopoverController, private modalController: ModalController) { }
+ 
+    returnData = [];
+    NewMythFact = [];
+
+    ngOnInit() {
+      this.returnData = this.appServe.getQuizArr();
+      this.foodRecipe = this.appServe.getRecipeArr();
+    }
 
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
@@ -27,6 +36,31 @@ export class PracticesPage implements OnInit {
     });
     return await popover.present();
   }
+  
+
+  onClickMyth() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navCtrl.navigateForward(['/tabs/myth'])
+  }
+
+  takeQuiz() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navCtrl.navigateForward(['/tabs/tab2'])
+  }
 
   foodRecipe = [];
 
@@ -35,6 +69,7 @@ export class PracticesPage implements OnInit {
     speed: 400,
     slidesPerView: 1.3
   };
+
 
   openRecipe(makan) {
     // this.router.navigate(['/tabs/practices/recipes-details', makan.id])
@@ -80,100 +115,97 @@ export class PracticesPage implements OnInit {
       setTimeout(() => {
       this.isLoaded = true;
       console.log('Yay, page loaded!')
-      }, 15000);
-    }
-    
-    returnData = [];
-    NewMythFact = [];
-
-    ngOnInit() {
-      this.returnData = this.appServe.getQuizArr();
-      this.foodRecipe = this.appServe.getRecipeArr();
-      this.NewMythFact = this.appServe.getMythFact();
-
-      console.log(this.NewMythFact)
+      }, 1000);
     }
 
-    revealAnswer = '';
+    //   MythSlideOpts = {
+    //     initialSlide: 0,
+    //     speed: 400,
+    //     slidesPerView: 1
+    //   };
 
-    showAnswer(answer) {
-      console.log(answer.revealAnswer);
-      this.revealAnswer = answer.revealAnswer;
 
-      Swal.fire({
-        text: this.revealAnswer,
-        animation: false,
-        customClass: {
-          popup: 'animated jackInTheBox'
-        }
-      })
-    }
+    // revealAnswer = '';
 
-    correctAns = [];
-    wrongAns = []
+    // showAnswer(answer) {
+    //   console.log(answer.revealAnswer);
+    //   this.revealAnswer = answer.revealAnswer;
 
-    // For MYTH
-    mythClick(answer) {
-      console.log('SELECTED: ' + answer.optionA + ' for Question ' + answer.id)
-      if (answer.id == 2 || answer.id == 3) {
-        console.log('Correct!')
-        Swal.fire({
-          type: 'success',
-          text: 'You\'re right! ' + answer.revealAnswer,
-          animation: false,
-          customClass: {
-            popup: 'animated heartBeat'
-          }
-        })
-        this.correctAns.push(answer.qn)
-        console.log(this.correctAns);
-      }
+    //   Swal.fire({
+    //     type: 'info',
+    //     text: this.revealAnswer,
+    //     animation: false,
+    //     customClass: {
+    //       popup: 'animated jackInTheBox'
+    //     }
+    //   })
+    // }
 
-      else {
-        console.log('Wrong')
-        Swal.fire({
-          type: 'error',
-          text: 'You\'re wrong! ' + answer.revealAnswer,
-          animation: false,
-          customClass: {
-            popup: 'animated rubberBand'
-          }
-        })
-        this.wrongAns.push(answer.qn)
-      }
+    // correctAns = [];
+    // wrongAns = []
 
-    }
+    // // For MYTH
+    // mythClick(answer) {
+    //   console.log('SELECTED: ' + answer.optionA + ' for Question ' + answer.id)
+    //   if (answer.id == 2 || answer.id == 3) {
+    //     console.log('Correct!')
+    //     Swal.fire({
+    //       type: 'success',
+    //       text: 'You\'re right! ' + answer.revealAnswer,
+    //       animation: false,
+    //       customClass: {
+    //         popup: 'animated heartBeat'
+    //       }
+    //     })
+    //     this.correctAns.push(answer.qn)
+    //     console.log(this.correctAns);
+    //   }
 
-    // FOR FACT 
-    factClick(answer) {
-      console.log('SELECTED: ' + answer.optionB + ' for Question ' + answer.id)
+    //   else {
+    //     console.log('Wrong')
+    //     Swal.fire({
+    //       type: 'error',
+    //       text: 'You\'re wrong! ' + answer.revealAnswer,
+    //       animation: false,
+    //       customClass: {
+    //         popup: 'animated rubberBand'
+    //       }
+    //     })
+    //     this.wrongAns.push(answer.qn)
+    //   }
 
-      if (answer.id == 1) {
-        console.log('Correct!')
-        Swal.fire({
-          type: 'success',
-          text: 'You\'re right! ' + answer.revealAnswer,
-          animation: false,
-          customClass: {
-            popup: 'animated heartBeat'
-          }
-        })
-        this.correctAns.push(answer.qn)
-        console.log(this.correctAns);
-      }
+    // }
 
-      else {
-        console.log('Wrong')
-        Swal.fire({
-          type: 'error',
-          text: 'You\'re wrong! ' + answer.revealAnswer,
-          animation: false,
-          customClass: {
-            popup: 'animated rubberBand'
-          }
-        })
-        this.wrongAns.push(answer.qn)
-      }
-    }
+    // // FOR FACT 
+    // factClick(answer) {
+    //   console.log('SELECTED: ' + answer.optionB + ' for Question ' + answer.id)
+
+    //   if (answer.id == 1) {
+    //     console.log('Correct!')
+    //     Swal.fire({
+    //       type: 'success',
+    //       text: 'You\'re right! ' + answer.revealAnswer,
+    //       animation: false,
+    //       customClass: {
+    //         popup: 'animated heartBeat'
+    //       }
+    //     })
+    //     this.correctAns.push(answer.qn)
+    //     console.log(this.correctAns);
+    //   }
+
+    //   else {
+    //     console.log('Wrong')
+    //     Swal.fire({
+    //       type: 'error',
+    //       text: 'You\'re wrong! ' + answer.revealAnswer,
+    //       animation: false,
+    //       customClass: {
+    //         popup: 'animated rubberBand'
+    //       }
+    //     })
+    //     this.wrongAns.push(answer.qn)
+    //   }
+    // }
     
 }

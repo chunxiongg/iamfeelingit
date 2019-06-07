@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'practices/category-details/recipes-details/:details.id', loadChildren: './food/recipes-details/recipes-details.module#RecipesDetailsPageModule' },
   { path: 'landing-slide', loadChildren: './landing-slide/landing-slide.module#LandingSlidePageModule' },
   { path: 'splash-quote', loadChildren: './splash-quote/splash-quote.module#SplashQuotePageModule' },
-  { path: 'practices/category-details/:makan.cat_id', loadChildren: './category-details/category-details.module#CategoryDetailsPageModule' }
+  { path: 'practices/category-details/:makan.cat_id', loadChildren: './category-details/category-details.module#CategoryDetailsPageModule' },
+  { path: 'myth-page', loadChildren: './myth-page/myth-page.module#MythPagePageModule' }
 ];
 @NgModule({
   imports: [

@@ -93,6 +93,8 @@ export class AppServeService {
   public mythFact = [
     {
       id: 1,
+      qn_number: 'Myth vs Fact 1',
+      img: 'assets/read.svg',
       qn: 'Water is good for health.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -101,6 +103,8 @@ export class AppServeService {
 
     {
       id: 2,
+      qn_number: 'Myth vs Fact 2',
+      img: 'assets/decide.svg',
       qn: 'Washing raw meat will help you get rid of bacteria.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -109,11 +113,19 @@ export class AppServeService {
 
     {
       id: 3,
+      qn_number: 'Myth vs Fact 3',
+      img: 'assets/app.svg',
       qn: 'You can\'t drink plain water at all during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
       revealAnswer: 'It\'s a myth. You\'re advised to drink adequate fluids especially if you\'re breastfeeding!'
     }, // MYTH
+
+    {
+      final: 'You have completed the myth vs fact!',
+      image: 'assets/tenor.gif',
+      resetBtn: 'Restart'
+    }
   ]
 
   getMythFact() {

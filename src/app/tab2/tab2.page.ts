@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 import { AppServeService } from '../app-serve.service';
 import { NavController } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 
 @Component({
   selector: 'app-tab2',
@@ -12,7 +13,7 @@ import { IonSlides } from '@ionic/angular';
 
 export class Tab2Page {
 
-  constructor(private navController: NavController, private appServe: AppServeService) {}
+  constructor(private nativePageTransitions: NativePageTransitions, private navController: NavController, private appServe: AppServeService) {}
 
   @ViewChild('slides') slides: IonSlides;
 
@@ -55,6 +56,14 @@ export class Tab2Page {
   };
 
   goBack() {
+    let options: NativeTransitionOptions = {
+      direction: 'right',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
     this.navController.navigateBack(['/tabs/practices'])
   }
 

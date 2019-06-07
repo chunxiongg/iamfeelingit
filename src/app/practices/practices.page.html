@@ -31,34 +31,16 @@
   <div [ngSwitch]="galleryType">
     
     <div *ngSwitchCase="'mvf'">
-      <ion-card class='noBorder'>
-        <ion-card-subtitle>
-            Myth Vs Fact
-          </ion-card-subtitle>
-      </ion-card>
-
-      <ion-card *ngFor='let answer of NewMythFact'>
-        <ion-card-content>
-          
-
-
-          <ion-radio-group>
-
-            <ion-list lines='none'>
-              <ion-list-header>
-                  <ion-text class='qn'>{{ answer.qn }}</ion-text>
-                </ion-list-header>
+        <ion-card class='noBorder'>
+            <ion-card-content> 
+                <img src='assets/tilted-bottle.svg' class='bottle'>
                 <br>
-                <ion-button class='options' (click)='mythClick(answer)'>{{ answer.optionA }}</ion-button>
-                <ion-button class='options' (click)='factClick(answer)'>{{ answer.optionB }}</ion-button>
-            </ion-list>
-          </ion-radio-group>
-          <br>
-          <ion-card-subtitle class='reveal' (click)='showAnswer(answer)'>Show Answer</ion-card-subtitle>
-        </ion-card-content>
-      </ion-card>
-
-
+                <ion-text>Myth Vs Fact Showdown!</ion-text>
+                <br>
+                <br>
+        <ion-button class='ans' (click)='onClickMyth()'>i'm in!</ion-button>
+      </ion-card-content>
+    </ion-card>  
     </div> <!-- end of  Myth vs Fact -->
 
 
@@ -70,7 +52,7 @@
               <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
               <br>
               <br>
-              <ion-button color='dark' expand='full' routerLink='/tabs/tab2'>Take Quiz</ion-button>
+              <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button>
           </ion-card-content>
         </ion-card>   
     </div> <!-- end of Quiz Div -->
@@ -105,31 +87,8 @@
               <ion-row>
 
                     <ion-slides pager="false" [options]="slideOpts"> 
-                        
-                        <!-- <ion-slide *ngFor='let makan of foodRecipe; let m = index' (click)='openRecipe(makan)'>
-                            <ion-card class="welcome-card">
-                                <ion-img [src]='makan.image'></ion-img>
-                                <ion-card-header class='ion-text-left'>
-                                  <ion-card-subtitle>{{ makan.name }}</ion-card-subtitle>
-                                  <br>
-                                  <ion-text>{{ makan.briefDes }} </ion-text>
-                                  <br>
-                                  <br>
-                                  <ion-card-subtitle class='learnMore'>Learn More</ion-card-subtitle>
-                                </ion-card-header>
-                                
-                              </ion-card>
-                        </ion-slide> -->
-
                         <!-- Category -->
                         <ion-slide *ngFor='let makan of foodRecipe | unique; let m = index' (click)='openRecipe(makan)'>
-                            <!-- <ion-card class="welcome-card">
-                                <ion-card-header class='ion-text-left'>
-                                  <ion-card-title>{{ makan.cat_name }}</ion-card-title>
-                                </ion-card-header>
-                                
-                              </ion-card> -->
-
                               <ion-card class="welcome-card">
 
                                 <img class='myPic' src='{{ makan.cat_img }}' class='cardImg'>
