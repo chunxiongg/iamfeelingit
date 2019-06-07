@@ -22,7 +22,7 @@ export class PracticesPage implements OnInit {
     const popover = await this.popoverController.create({
     component: PopoverPage,
     event: ev,
-    translucent: true
+    translucent: false
     });
     return await popover.present();
   }

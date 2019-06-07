@@ -34,7 +34,7 @@ export class Tab1Page {
     speed: 400,
     pagination: {
       el: '.swiper-pagination',
-      type: 'progressbar',
+      type: 'bullets',
       hideOnClick: true
     }
   };

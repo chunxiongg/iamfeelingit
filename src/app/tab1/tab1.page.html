@@ -1,10 +1,23 @@
 <!-- <ion-header no-border [scrollHide]="headerScrollConfig" [scrollContent]="pageContent"> -->
   <ion-header no-border>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-title>
       Home
     </ion-title>
-    <!-- <ion-img src='assets/x.png' class='headerImg'></ion-img> -->
+    <ion-img src='assets/x.png' class='headerImg'></ion-img>
+  </ion-toolbar> -->
+
+  <ion-toolbar>
+      <ion-row>
+          <ion-card>
+              <ion-card-content *ngFor='let random of randomQuote'>
+                <ion-card-subtitle id='verse'>Quote of the Day &nbsp;
+                <img src='assets/tilted-bottle.svg' class='milk'>
+                </ion-card-subtitle>
+                <ion-text>"{{ random }}"</ion-text>
+              </ion-card-content>
+            </ion-card>
+      </ion-row>
   </ion-toolbar>
 </ion-header>
   
@@ -15,14 +28,14 @@
       </ion-refresher>
     
     <ion-grid>
-      <ion-row>
+      <!-- <ion-row>
           <ion-card>
               <ion-card-content *ngFor='let random of randomQuote'>
                 <ion-card-subtitle id='verse'>Verse of the Day</ion-card-subtitle>
                 <ion-text>"{{ random }}"</ion-text>
               </ion-card-content>
             </ion-card>
-      </ion-row> 
+      </ion-row>  -->
 <!--   
       <ion-row>
         <ion-col style='color: #808080'>

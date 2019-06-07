@@ -62,15 +62,6 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'steps',
-        children: [
-          {
-            path: '',
-            loadChildren: '../food/recipes-details/recipes-steps/recipes-steps.module#RecipesStepsPageModule'
-          }
-        ]
-      },
-      {
         path: 'contact-us',
         children: [
           {

@@ -3,7 +3,9 @@ import Swal from 'sweetalert2';
 import { PopoverController } from '@ionic/angular';
 
 @Component({
+    styleUrls: ['./pop-over.scss'],
     template: `
+        <br>
         <ion-list>          
                 <ion-grid>
                     <ion-row>

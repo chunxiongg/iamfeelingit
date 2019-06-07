@@ -9,9 +9,6 @@
 
 <!-- <ion-content appHideHeader [header]="head"> -->
 <ion-content>
-    <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
-    </ion-refresher>
 
   <div *ngIf='isLoaded'>
   <ion-card class='noBorder'>

@@ -58,9 +58,4 @@ export class ContactUsPage implements OnInit {
      this.emailComposer.open(email);
   }
 
-  doRefresh(event) {
-    this.appServe.doRefresh(event);
-  }
-
-
 }

@@ -7,8 +7,6 @@ const routes: Routes = [
   { path: 'food', loadChildren: './food/food.module#FoodPageModule' },
   { path: 'contact-us', loadChildren: './contact-us/contact-us.module#ContactUsPageModule' },
   { path: 'practices/category-details/recipes-details/:details.id', loadChildren: './food/recipes-details/recipes-details.module#RecipesDetailsPageModule' },
-  // { path: 'practices/recipes-details/:makan.id', loadChildren: './food/recipes-details/recipes-details.module#RecipesDetailsPageModule' },
-  { path: 'recipes-steps', loadChildren: './food/recipes-details/recipes-steps/recipes-steps.module#RecipesStepsPageModule' },
   { path: 'landing-slide', loadChildren: './landing-slide/landing-slide.module#LandingSlidePageModule' },
   { path: 'splash-quote', loadChildren: './splash-quote/splash-quote.module#SplashQuotePageModule' },
   { path: 'practices/category-details/:makan.cat_id', loadChildren: './category-details/category-details.module#CategoryDetailsPageModule' }

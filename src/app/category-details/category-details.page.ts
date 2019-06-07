@@ -63,4 +63,9 @@ export class CategoryDetailsPage implements OnInit {
     }, 1300);
   }
 
+  doRefresh(event) {
+    this.appServe.doRefresh(event);
+  }
+ 
+
 }

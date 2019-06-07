@@ -1,3 +1,6 @@
+@import '../../theme/BoxShadowNone';
+@import '../../theme/ToolBarColor';
+
 ion-text {
     padding-left: 3vh !important;
 }
@@ -10,6 +13,10 @@ ion-text {
     left: 0;
 }
 
+ion-card {
+    min-height: 50vh !important;
+}
+
 ion-skeleton-text {
     line-height: 15px !important;
 }
@@ -18,3 +25,9 @@ ion-skeleton-text {
     line-height: 123px !important;
     margin: 0 !important;
   }
+
+.noBorder {
+    text-align: center !important;
+    font-size: 2vh !important;
+    padding-top: 10vh !important;
+}

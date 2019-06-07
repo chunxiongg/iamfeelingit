@@ -7,7 +7,7 @@
 
 @import '../theme/ToolBarPadding';
 
-ion-title{
+ion-title {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     
@@ -15,11 +15,6 @@ ion-title{
 
 ion-label, ion-note {
     font-family: 'Raleway', sans-serif !important;
-}
-
-ion-toolbar {
-    --background: #F5DDD0 !important;
-    // padding: 5px !important;
 }
 
 
