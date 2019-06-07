@@ -5,6 +5,7 @@ import { PopoverController, ModalController } from '@ionic/angular';
 import { PopoverPage } from '../pop-over/pop-over';
 import { ModalExample } from '../pop-over/article-pop';
 import { NavController } from '@ionic/angular';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-practices',
@@ -102,16 +103,86 @@ export class PracticesPage implements OnInit {
       console.log(this.NewMythFact)
     }
 
-    submittedAns = [];
+    revealAnswer = '';
 
-    submitBtn() {
-      this.appServe.submitBtn();
+    showAnswer(answer) {
+      console.log(answer.revealAnswer);
+      this.revealAnswer = answer.revealAnswer;
+
+      Swal.fire({
+        text: this.revealAnswer,
+        animation: false,
+        customClass: {
+          popup: 'animated jackInTheBox'
+        }
+      })
     }
 
-    selectAnswer(options) {
-      this.appServe.getSelected(options);
-      console.log('Selected:', options.name)
+    correctAns = [];
+    wrongAns = []
+
+    // For MYTH
+    mythClick(answer) {
+      console.log('SELECTED: ' + answer.optionA + ' for Question ' + answer.id)
+      if (answer.id == 2) {
+        console.log('Correct!')
+        Swal.fire({
+          type: 'success',
+          text: 'You\'re right! ' + answer.revealAnswer,
+          animation: false,
+          customClass: {
+            popup: 'animated heartBeat'
+          }
+        })
+        this.correctAns.push(answer.qn)
+        console.log(this.correctAns);
+      }
+
+      else {
+        console.log('Wrong')
+        Swal.fire({
+          type: 'error',
+          text: 'You\'re wrong! ' + answer.revealAnswer,
+          animation: false,
+          customClass: {
+            popup: 'animated rubberBand'
+          }
+        })
+        this.wrongAns.push(answer.qn)
+      }
+
     }
 
+    // FOR FACT 
+    factClick(answer) {
+      console.log('SELECTED: ' + answer.optionB + ' for Question ' + answer.id)
 
+      if (answer.id == 1) {
+        console.log('Correct!')
+        Swal.fire({
+          type: 'success',
+          text: 'You\'re right! ' + answer.revealAnswer,
+          animation: false,
+          customClass: {
+            popup: 'animated heartBeat'
+          }
+        })
+        this.correctAns.push(answer.qn)
+        console.log(this.correctAns);
+      }
+
+      else {
+        console.log('Wrong')
+        Swal.fire({
+          type: 'error',
+          text: 'You\'re wrong! ' + answer.revealAnswer,
+          animation: false,
+          customClass: {
+            popup: 'animated rubberBand'
+          }
+        })
+        this.wrongAns.push(answer.qn)
+      }
+    }
+    
 }

@@ -76,17 +76,35 @@ export class AppServeService {
     }
   ]
 
+  // public mythFact = [
+  //   {
+  //     id: 1,
+  //     qn: 'Water is good for health',
+  //     options: [{ id: 1, ans: 'Myth' }, { id: 2, ans: 'Fact' }]
+  //   },
+
+  //   {
+  //     id: 2,
+  //     qn: 'Chia seeds are bad for health',
+  //     options: [{ id: 1, ans: 'Myth', isCorrect: true}, { id: 2, ans: 'Fact', isCorrect: false}]
+  //   }
+  // ]
+
   public mythFact = [
     {
       id: 1,
       qn: 'Water is good for health',
-      options: [{ id: 1, ans: 'Myth' }, { id: 2, ans: 'Fact' }]
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a fact. Studies have shown that water is good for health!'
     },
 
     {
       id: 2,
-      qn: 'Chia seeds are bad for health',
-      options: [{ id: 1, ans: 'Myth', isCorrect: true}, { id: 2, ans: 'Fact', isCorrect: false}]
+      qn: 'Washing raw meat will help you get rid of bacteria.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a myth. Washing raw meat will not necessarily get rid of bacteria!'
     }
   ]
 
@@ -213,23 +231,5 @@ export class AppServeService {
     return this.mcqData;
   }
   
-  submittedAns = [];
-
-  getSelected(options) {
-    // console.log(options.name + ' selected');
-    if (options.name == 'Confront the person') {
-      this.submittedAns.push(options);
-    }
-    //this.submittedAns.push(options);
-  }
-
-  submitBtn() {
-    Swal.fire({
-      type: 'success',
-      title: 'Done!',
-      text: 'Your answers have been submitted',
-    })
-    console.log(this.submittedAns);
-  }
   
 }

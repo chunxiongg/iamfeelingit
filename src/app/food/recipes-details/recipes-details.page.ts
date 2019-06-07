@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppServeService } from 'src/app/app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
-
+import { timer } from 'rxjs'
 @Component({
   selector: 'app-recipes-details',
   templateUrl: './recipes-details.page.html',
@@ -47,7 +47,23 @@ export class RecipesDetailsPage implements OnInit {
     }
     console.log(this.stepsArr)
 
+
   }
+
+  // result: number
+  // startTiming;
+
+  // startTimer() {
+  //   this.startTiming = timer(0, 1000)
+  //     .subscribe(res => {
+  //       this.result = res
+  //       console.log(this.result)
+  //   });
+  // }
+
+  // stopTimer() {
+  //   this.startTiming.unsubscribe();
+  // }
 
   onRateChange($event) {
     console.log('changed')

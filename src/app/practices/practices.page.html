@@ -36,7 +36,8 @@
             Myth Vs Fact
           </ion-card-subtitle>
       </ion-card>
-      <ion-card *ngFor='let answer of NewMythFact'>
+
+      <!-- <ion-card *ngFor='let answer of NewMythFact'>
         <ion-card-content>
             <ion-label> {{ answer.qn }} </ion-label>
 
@@ -51,7 +52,36 @@
              </ion-item>
             
         </ion-card-content>
-      </ion-card> 
+      </ion-card>  -->
+
+      <ion-card *ngFor='let answer of NewMythFact'>
+        <ion-card-content>
+          <ion-radio-group>
+
+            <ion-list lines='none'>
+              <ion-list-header>
+                  <ion-text>{{ answer.qn }}</ion-text>
+                </ion-list-header>
+
+
+              <ion-item (click)='mythClick(answer)'>
+                  <ion-label>{{ answer.optionA }}</ion-label>
+                  <ion-radio slot="end" value="a"></ion-radio>
+              </ion-item>
+
+              <ion-item (click)='factClick(answer)'>
+                  <ion-label>{{ answer.optionB }}</ion-label>
+                  <ion-radio slot="end" value="b"></ion-radio>
+              </ion-item>
+            </ion-list>
+          </ion-radio-group>
+          <br>
+          <ion-button class='ans' (click)='showAnswer(answer)'>Reveal Answer</ion-button>
+
+        </ion-card-content>
+      </ion-card>
+
+
     </div> <!-- end of  Myth vs Fact -->
 
 

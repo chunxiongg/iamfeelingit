@@ -23,17 +23,10 @@ export class Tab2Page {
     this.slides.lockSwipes(true)
   }
 
-  submittedAns = [];
-
-  submitBtn() {
-    this.appServe.submitBtn();
-  }
-
   ansArr = [];
 
   progress = 0;
   selectAnswer(options) {
-    this.appServe.getSelected(options);
     console.log('Selected:', options.name)
     this.ansArr.push(options.name);
     console.log(this.ansArr);
