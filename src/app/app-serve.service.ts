@@ -93,11 +93,11 @@ export class AppServeService {
   public mythFact = [
     {
       id: 1,
-      qn: 'Water is good for health',
+      qn: 'Water is good for health.',
       optionA: 'Myth',
       optionB: 'Fact',
       revealAnswer: 'It\'s a fact. Studies have shown that water is good for health!'
-    },
+    }, // FACT
 
     {
       id: 2,
@@ -105,7 +105,15 @@ export class AppServeService {
       optionA: 'Myth',
       optionB: 'Fact',
       revealAnswer: 'It\'s a myth. Washing raw meat will not necessarily get rid of bacteria!'
-    }
+    }, // MYTH
+
+    {
+      id: 3,
+      qn: 'You can\'t drink plain water at all during confinement.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a myth. You\'re advised to drink adequate fluids especially if you\'re breastfeeding!'
+    }, // MYTH
   ]
 
   getMythFact() {

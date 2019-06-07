@@ -29,7 +29,7 @@ import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
             <br>
             <br>
             <ion-card-subtitle>
-            <ion-button expand='block' size="small" fill='outline' href='{{ value[0].goLink }}'>Learn More</ion-button>
+            <ion-button expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button>
             </ion-card-subtitle>
           
             </ion-card-content>
@@ -49,10 +49,18 @@ export class ModalExample {
     this.navParams.get('value');
   }
 
-//   openBrowser() {
-//     this.coloredBrowserTabs.openTab("https://{{ this.navParams.get('value') }}", '#ffffff' )
-//     .subscribe();
-//   }
+  accessIndividual;
+  
+  ngOnInit() {
+    var link = this.navParams.get('value')
+    this.accessIndividual = link[0].goLink
+    console.log(this.accessIndividual);
+  }
+
+  openBrowser() {
+    this.coloredBrowserTabs.openTab(this.accessIndividual, '#ffffff' )
+        .subscribe();
+  }
 
   cancel() {
       this.modalController.dismiss();

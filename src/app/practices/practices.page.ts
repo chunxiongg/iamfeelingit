@@ -82,16 +82,7 @@ export class PracticesPage implements OnInit {
       console.log('Yay, page loaded!')
       }, 15000);
     }
-
-    onAnswerBoolean(answer) {
-      console.log(answer)
-    }
-
-    onAnswerFact(answer) {
-      console.log(answer)
-    }
-
-
+    
     returnData = [];
     NewMythFact = [];
 
@@ -124,7 +115,7 @@ export class PracticesPage implements OnInit {
     // For MYTH
     mythClick(answer) {
       console.log('SELECTED: ' + answer.optionA + ' for Question ' + answer.id)
-      if (answer.id == 2) {
+      if (answer.id == 2 || answer.id == 3) {
         console.log('Correct!')
         Swal.fire({
           type: 'success',
