@@ -41,7 +41,7 @@ export class ContactUsPage implements OnInit {
      };
     
      this.nativePageTransitions.slide(options);
-     this.navController.navigateForward(['/tabs/about'])
+     this.navController.navigateForward(['/about'])
   }
 
 
@@ -54,7 +54,7 @@ export class ContactUsPage implements OnInit {
      };
     
      this.nativePageTransitions.slide(options);
-     this.navController.navigateForward(['/tabs/message'])
+     this.navController.navigateForward(['/message'])
   }
 
   

@@ -27,6 +27,11 @@ a {
   margin-right: auto !important;
 }
 
+.ActivitiesCard ion-card {
+  min-height: 50vh !important;
+  width: 100% !important;
+}
+
 .ans {
   --background: #F5DDD0;  /* fallback for old browsers */
   --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */

@@ -1,15 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="secondary">
+  <!-- <ion-toolbar [myScrollVanish]="scrollArea" > -->
+      <ion-toolbar>
+      <ion-buttons>
           <ion-button (click)='returnBack()'>
-            <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+        <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
           </ion-button>
-        </ion-buttons>
+      </ion-buttons>
     <ion-title>{{ getMakanOne.cat_name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content padding>
+
 
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>

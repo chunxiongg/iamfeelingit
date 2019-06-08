@@ -9,6 +9,7 @@ import { ContactUsPage } from './contact-us.page';
 
 import { ScrollHideDirective } from '../parallax.directive';
 import { HideHeaderDirective } from '../hide-header.directive';
+import { SharedModule } from '../practices/shared.module';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],

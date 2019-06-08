@@ -16,7 +16,8 @@ export class RecipesDetailsPage implements OnInit {
               private router: Router) { }
 
   galleryType = 'ingredients';
-
+  public tests = new Array(20);
+  
   makanIndividual = null;
   foodRecipe = [];
   getMakanOne;

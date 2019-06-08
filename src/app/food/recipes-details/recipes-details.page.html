@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
 
     <!-- <ion-buttons justify-content-start >
         <ion-button routerLink='/tabs/food'>
@@ -6,7 +6,10 @@
         </ion-button>
     </ion-buttons> -->
     
-  <img [src] = 'getMakanOne.image'>
+   
+        <img [src]='getMakanOne.image'>
+
+
 </ion-header>
 
 <ion-content>
@@ -25,7 +28,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-segment [(ngModel)]="galleryType" color="medium" mode='md'>
+  <ion-segment [(ngModel)]="galleryType" color="youngGold" mode='md'>
     <ion-segment-button value="ingredients" mode='md'>
       Ingredients
     </ion-segment-button>

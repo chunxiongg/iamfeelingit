@@ -18,8 +18,20 @@ ion-tab-button {
   }
 
   /** Custom Colors for Still Young **/
-
   --ion-color-youngGold: #B89764;
+  --ion-color-youngGold-rgb: 184,151,100;
+  --ion-color-youngGold-contrast: #fff;
+  --ion-color-youngGold-contrast-rgb: 0,0,0;
+  --ion-color-youngGold-shade: #a28558;
+  --ion-color-youngGold-tint: #bfa174;
+
+  /** Custom White Color **/
+  --ion-color-white: #ffffff;
+  --ion-color-white-rgb: 255,255,255;
+  --ion-color-white-contrast: #000000;
+  --ion-color-white-contrast-rgb: 0,0,0;
+  --ion-color-white-shade: #e0e0e0;
+  --ion-color-white-tint: #ffffff;
 
   /** primary **/
   --ion-color-primary: #3880ff;
@@ -97,4 +109,18 @@ ion-tab-button {
 
 .ion-color-youngGold {
   --ion-color-base: var(--ion-color-youngGold) !important;
+  --ion-color-base-rgb: var(--ion-color-youngGold-rgb) !important;
+  --ion-color-contrast: var(--ion-color-youngGold-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-youngGold-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-youngGold-shade) !important;
+  --ion-color-tint: var(--ion-color-youngGold-tint) !important;
+}
+
+.ion-color-white {
+  --ion-color-base: var(--ion-color-white) !important;
+  --ion-color-base-rgb: var(--ion-color-white-rgb) !important;
+  --ion-color-contrast: var(--ion-color-white-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-white-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-white-shade) !important;
+  --ion-color-tint: var(--ion-color-white-tint) !important;
 }

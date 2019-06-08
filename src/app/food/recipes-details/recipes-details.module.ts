@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { IonicRatingModule } from 'ionic4-rating';
 import { RecipesDetailsPage } from './recipes-details.page';
+import { SharedModule } from '../../practices/shared.module';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     IonicRatingModule,
     CommonModule,
     FormsModule,
+    SharedModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],

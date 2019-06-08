@@ -16,6 +16,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 export class PracticesPage implements OnInit {
 
   galleryType = 'makan';
+  // public tests = new Array(20);
 
   constructor(private navCtrl: NavController, private nativePageTransitions: NativePageTransitions, private appServe: AppServeService, private router: Router, private navController: NavController,
               public popoverController: PopoverController, private modalController: ModalController) { }
@@ -26,7 +27,13 @@ export class PracticesPage implements OnInit {
     ngOnInit() {
       this.returnData = this.appServe.getQuizArr();
       this.foodRecipe = this.appServe.getRecipeArr();
+
     }
+
+  // ionViewDidLeave() {
+  //   this.navCtrl.pop();
+  // }
+
 
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
@@ -47,7 +54,7 @@ export class PracticesPage implements OnInit {
      };
     
      this.nativePageTransitions.slide(options);
-     this.navCtrl.navigateForward(['/tabs/myth'])
+     this.navCtrl.navigateForward(['/myth'])
   }
 
   takeQuiz() {
@@ -59,12 +66,22 @@ export class PracticesPage implements OnInit {
      };
     
      this.nativePageTransitions.slide(options);
-     this.navCtrl.navigateForward(['/tabs/tab2'])
+     this.navCtrl.navigateForward(['/quiz'])
   }
 
   foodRecipe = [];
 
+
   slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    slidesPerView: 1.3
+    // autoplay: {
+    //   delay: 3000,
+    // }
+  };
+
+  slideOptsForActivities = {
     initialSlide: 0,
     speed: 400,
     slidesPerView: 1.3
@@ -73,7 +90,7 @@ export class PracticesPage implements OnInit {
 
   openRecipe(makan) {
     // this.router.navigate(['/tabs/practices/recipes-details', makan.id])
-    this.navController.navigateForward(['/tabs/practices/category-details', makan.cat_id])
+    this.navController.navigateForward(['/practices/category-details', makan.cat_id])
     //console.log(makan.id)
   }
 

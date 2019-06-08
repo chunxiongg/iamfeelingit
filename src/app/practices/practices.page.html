@@ -30,27 +30,34 @@
 
   <div [ngSwitch]="galleryType">
     
-    <div *ngSwitchCase="'mvf'">
-        <ion-card>
-            <ion-card-content> 
-                <img src='assets/tilted-bottle.svg' class='bottle'>
-                <br>
-                <ion-text>Myth Vs Fact Showdown!</ion-text>
-                <br>
-                <br>
-        <ion-button class='ans' (click)='onClickMyth()'>i'm in!</ion-button>
-      </ion-card-content>
-    </ion-card>  
+    <div *ngSwitchCase="'mvf'" class='ActivitiesCard'>
+        <ion-slides pager="false" [options]="slideOptsForActivities">  
+            <ion-slide>
+                <ion-card>
+                    <ion-card-content> 
+                    <img src='assets/tilted-bottle.svg' class='bottle'>
+                    <br>
+                    <ion-text>Myth Vs Fact Showdown!</ion-text>
+                    <br>
+                    <br>
+                    <ion-button class='ans' (click)='onClickMyth()'>Let's go!</ion-button>
+                  </ion-card-content>
+                </ion-card> 
+            </ion-slide>
 
-    <ion-card>
-        <ion-card-content> 
-            <img src='assets/Still Young Logo.svg'>
-            <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
-            <br>
-            <br>
-            <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button>
-        </ion-card-content>
-      </ion-card>   
+          <ion-slide>
+              <ion-card>
+                <ion-card-content> 
+                <img src='assets/Still Young Logo.svg' class='bottle'>
+                <br>
+                <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
+                <br>
+                <br>
+              <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button>
+                </ion-card-content>
+            </ion-card>  
+          </ion-slide>
+      </ion-slides> 
     </div> <!-- end of  Myth vs Fact -->
 
 

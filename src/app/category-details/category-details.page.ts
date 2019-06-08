@@ -45,7 +45,7 @@ export class CategoryDetailsPage implements OnInit {
 
   openFood(details) {
     console.log('ProductID: ' + details.id)
-    this.router.navigate(['/tabs/practices/category-details/recipes-details/', details.id])
+    this.router.navigate(['/practices/category-details/recipes-details/', details.id])
   }
 
   returnBack() {

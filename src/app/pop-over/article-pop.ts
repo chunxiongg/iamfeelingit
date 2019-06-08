@@ -12,7 +12,7 @@ import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
         <ion-toolbar>
             <ion-buttons>
                 <ion-button (click)='cancel()'>
-                    <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+                    <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
                 </ion-button>
             </ion-buttons>
 

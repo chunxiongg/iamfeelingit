@@ -1,5 +1,6 @@
 @import '../../../theme/BoxShadowNone';
 
+
 hr {
     background: grey !important;
     display: block !important;
@@ -7,6 +8,14 @@ hr {
     opacity: .2 !important;
     visibility: visible !important;
   }
+
+
+ion-toolbar {
+    --padding-top: 0vh !important;
+    --padding-bottom: 0vh !important;
+    --padding-start: 0vh !important;
+    --padding-end: 0vh !important;
+}
 
 .stepsImg {
     width: 35% !important;
