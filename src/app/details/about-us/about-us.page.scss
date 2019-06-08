@@ -1,0 +1,14 @@
+@import '../../../theme/_BoxShadowNone';
+@import '../../../theme/_HeaderImage';
+@import '../../../theme/ToolBarColor';
+
+ion-skeleton-text {
+    line-height: 20px !important;
+}
+
+.custom-skeleton ion-skeleton-text {
+    line-height: 323px !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }  

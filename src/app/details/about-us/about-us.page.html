@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="secondary">
+          <ion-button (click)='goBack()'>
+            <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+    <ion-title>About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf='isLoaded'>
+  <ion-card>
+      <ion-img src='assets/team.jpg'></ion-img>
+      <ion-card-content>
+          <ion-text>
+             We are a group of final-year students from Ngee Ann Polytechnic (Singapore) pursuing the Diploma of Chinese Media and Communication. We aim to raise awareness on the topic of Confinement to more females in the society through our final-year project. Do follow us on our social media for more exciting content! Thank you!
+          </ion-text>
+      </ion-card-content>
+  </ion-card>
+</div>
+
+    <div *ngIf='!isLoaded'>
+
+      <ion-card class='noBorder'>
+          <div class='custom-skeleton'>
+              <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+            </div>   
+
+          <ion-card-content>             
+        
+              <ion-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                  <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+
+              </ion-text>
+          </ion-card-content>
+      </ion-card>
+
+    </div>
+
+</ion-content>

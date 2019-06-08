@@ -10,7 +10,7 @@
       Personality Quiz
     </ion-title>
   </ion-toolbar>
-  <ion-progress-bar color='medium' [value]='progress'></ion-progress-bar>
+  <ion-progress-bar color='youngGold' [value]='progress'></ion-progress-bar>
 </ion-header>
 
 <ion-content>
@@ -61,7 +61,7 @@
 
                             <ion-card-subtitle>{{ qn.final }} </ion-card-subtitle>
                             <br>
-                            <ion-button class='ans' expand="full" *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
+                            <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
 
                       </ion-card-content>
                     </ion-card> 

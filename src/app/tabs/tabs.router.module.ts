@@ -98,6 +98,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'about',
+        children: [
+          {
+            path: '',
+            loadChildren: '../details/about-us/about-us.module#AboutUsPageModule'
+          }
+        ]
+      },
+      {
+        path: 'message',
+        children: [
+          {
+            path: '',
+            loadChildren: '../details/message-us/message-us.module#MessageUsPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

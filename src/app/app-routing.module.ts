@@ -10,7 +10,9 @@ const routes: Routes = [
   { path: 'landing-slide', loadChildren: './landing-slide/landing-slide.module#LandingSlidePageModule' },
   { path: 'splash-quote', loadChildren: './splash-quote/splash-quote.module#SplashQuotePageModule' },
   { path: 'practices/category-details/:makan.cat_id', loadChildren: './category-details/category-details.module#CategoryDetailsPageModule' },
-  { path: 'myth-page', loadChildren: './myth-page/myth-page.module#MythPagePageModule' }
+  { path: 'myth-page', loadChildren: './myth-page/myth-page.module#MythPagePageModule' },
+  { path: 'about-us', loadChildren: './details/about-us/about-us.module#AboutUsPageModule' },
+  { path: 'message-us', loadChildren: './details/message-us/message-us.module#MessageUsPageModule' }
 ];
 @NgModule({
   imports: [

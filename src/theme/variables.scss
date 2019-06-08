@@ -11,11 +11,15 @@ ion-tab-button {
 
 /** Ionic CSS Variables **/
 :root {
-
+  
   ion-tab-bar {
     border: none !important;
     box-shadow: 10px 10px 15px grey !important;
   }
+
+  /** Custom Colors for Still Young **/
+
+  --ion-color-youngGold: #B89764;
 
   /** primary **/
   --ion-color-primary: #3880ff;
@@ -74,12 +78,12 @@ ion-tab-button {
   --ion-color-dark-tint: #383a3e;
 
   /** medium - Still Young Color **/
-  --ion-color-medium: #B89764; // Gold 
-  --ion-color-medium-rgb: 152, 154, 162;
-  --ion-color-medium-contrast: #ffffff;
-  --ion-color-medium-contrast-rgb: 255, 255, 255;
-  --ion-color-medium-shade: #86888f;
-  --ion-color-medium-tint: #a2a4ab;
+  // --ion-color-medium: #B89764; // Gold 
+  // --ion-color-medium-rgb: 152, 154, 162;
+  // --ion-color-medium-contrast: #ffffff;
+  // --ion-color-medium-contrast-rgb: 255, 255, 255;
+  // --ion-color-medium-shade: #86888f;
+  // --ion-color-medium-tint: #a2a4ab;
 
   /** light **/
   --ion-color-light: #f4f5f8;
@@ -88,4 +92,9 @@ ion-tab-button {
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+
+.ion-color-youngGold {
+  --ion-color-base: var(--ion-color-youngGold) !important;
 }

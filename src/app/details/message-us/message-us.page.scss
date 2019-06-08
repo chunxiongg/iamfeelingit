@@ -1,0 +1,33 @@
+@import '../../../theme/_BoxShadowNone';
+@import '../../../theme/_HeaderImage';
+@import '../../../theme/ToolBarColor';
+
+img {
+    width: 12%;
+}
+
+ion-skeleton-text {
+    line-height: 18px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+ion-label {
+    font-size: 15px !important;
+}
+
+#myImg {
+    width: 25% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-card-header {
+    font-family: 'Raleway', sans-serif !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    color: #8936ff !important;
+}

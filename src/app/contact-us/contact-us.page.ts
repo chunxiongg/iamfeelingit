@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { AppServeService } from '../app-serve.service';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
+import { NavController } from '@ionic/angular';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -15,7 +17,7 @@ export class ContactUsPage implements OnInit {
   // footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
   // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 100 };
 
-  constructor(private appServe: AppServeService, private router: Router,
+  constructor(private navController: NavController, private nativePageTransitions: NativePageTransitions, private appServe: AppServeService, private router: Router,
               private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs) { }
 
   ngOnInit() {
@@ -30,6 +32,32 @@ export class ContactUsPage implements OnInit {
     }, 1000);
   }
 
+  goToAbout() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navController.navigateForward(['/tabs/about'])
+  }
+
+
+  goToContact() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navController.navigateForward(['/tabs/message'])
+  }
+
+  
   openFacebook() {
     this.coloredBrowserTabs.openTab('https://www.facebook.com/project.stillyoung', '#ffffff' )
         .subscribe();

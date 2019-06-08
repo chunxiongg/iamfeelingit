@@ -8,13 +8,16 @@
 @import '../theme/ToolBarPadding';
 
 ion-title {
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
+    // font-family: 'Raleway', sans-serif;
+    // letter-spacing: 1px;
+    font-family: 'Caveat', cursive;
+    font-size: 3.3vh;
     
 }
 
 ion-label, ion-note {
     font-family: 'Raleway', sans-serif !important;
+    //font-family: 'Cantarell', sans-serif;
 }
 
 

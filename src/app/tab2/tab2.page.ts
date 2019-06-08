@@ -48,11 +48,7 @@ export class Tab2Page {
 
   slideOpts = {
     initialSlide: 0,
-    speed: 400,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'progressbar'
-    }
+    speed: 400
   };
 
   goBack() {

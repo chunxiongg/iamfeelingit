@@ -1,46 +1,20 @@
-<ion-header no-border> 
+<ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
-    <ion-img src='assets/Still Young Logo.svg' class='headerImg'></ion-img>
+    <ion-buttons slot="secondary">
+        <ion-button (click)='goBack()'>
+          <ion-icon color='dark' slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Contact</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<br>
-
-<!-- <ion-content appHideHeader [header]="head"> -->
 <ion-content>
-
-    <ion-list lines='none'>
-        <ion-item (click)='goToAbout()'>
-          <ion-icon name='information-circle' color='dark' slot='start'></ion-icon>
-          <ion-label>About Us</ion-label>
-          <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-        </ion-item>
-
-        <ion-item (click)='goToContact()'>
-          <ion-icon name='chatboxes' slot='start' color='dark'></ion-icon>
-          <ion-label>Contact Us</ion-label>
-          <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-        </ion-item>
-
-        <ion-item>
-            <ion-icon name='help-circle' slot='start' color='dark'></ion-icon>
-          <ion-label>FAQ</ion-label>
-          <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-        </ion-item>
-
-      </ion-list>
-
-  <!-- <div *ngIf='isLoaded'>
+  <div *ngIf='isLoaded'>
   <ion-card class='noBorder'>
     
     <ion-card-content>
-  
-        <ion-text>
-           We are a group of final-year students from Ngee Ann Polytechnic (Singapore) pursuing the Diploma of Chinese Media and Communication. We aim to raise awareness on the topic of Confinement to more females in the society through our final-year project. Do follow us on our social media for more exciting content! Thank you!
-        </ion-text>
-        <br>
-        <br>
+      
          <ion-list lines='none'>
              <ion-item (click)='openMail()' text-center>
                  <ion-label>
@@ -82,11 +56,10 @@
       <ion-img src='assets/sayocode.png' id='myImg'></ion-img>
     </ion-card-header>
   </ion-card>
-</div> -->
+</div>
 
-
-  <!-- Skeleton -->
-  <!-- <div *ngIf='!isLoaded'>
+<!-- Skeleton -->
+  <div *ngIf='!isLoaded'>
 
       <ion-card class='noBorder'>
     
@@ -161,5 +134,7 @@
         </ion-card>
 
 
-  </div> -->
+  </div> 
+
+
 </ion-content>
