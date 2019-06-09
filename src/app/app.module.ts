@@ -15,7 +15,7 @@ import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
-import { ScrollVanishDirective } from './scroll-vanish.directive';
+import { Vibration } from '@ionic-native/vibration/ngx';
 
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -34,6 +34,7 @@ export class CustomeHammerConfig extends HammerGestureConfig {
     InAppBrowser,
     EmailComposer,
     DatePicker,
+    Vibration,
     ThemeableBrowser,
     NativeAudio,
     ColoredBrowserTabs,

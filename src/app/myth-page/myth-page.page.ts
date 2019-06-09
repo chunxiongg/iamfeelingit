@@ -4,6 +4,7 @@ import { AppServeService } from '../app-serve.service';
 import { IonSlides } from '@ionic/angular';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
 
 @Component({
   selector: 'app-myth-page',
@@ -12,7 +13,8 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 })
 export class MythPagePage implements OnInit {
 
-  constructor(private nativePageTransitions: NativePageTransitions, private navController: NavController, private appServe: AppServeService) { }
+  constructor(private nativePageTransitions: NativePageTransitions, private navController: NavController, 
+              private appServe: AppServeService, private vibration: Vibration) { }
 
   @ViewChild('slides') slides: IonSlides;
   NewMythFact = [];
@@ -20,7 +22,7 @@ export class MythPagePage implements OnInit {
   ngOnInit() {
     this.NewMythFact = this.appServe.getMythFact();
     console.log(this.NewMythFact)
-    this.slides.lockSwipes(true);
+    this.slides.lockSwipes(true);  
     
   }
 
@@ -143,9 +145,8 @@ goBack() {
     iosdelay: 50
    };
   
-   this.nativePageTransitions.slide(options);
+  this.nativePageTransitions.slide(options);
   this.navController.navigateBack(['/tabs/practices'])
 }
-
 
 }
