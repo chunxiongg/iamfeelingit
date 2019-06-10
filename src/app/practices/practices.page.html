@@ -6,7 +6,7 @@
 
     <!-- Default Segment -->
   <ion-toolbar>
-    <ion-segment [(ngModel)]="galleryType" color="youngGold" mode='md'>
+    <ion-segment [(ngModel)]="galleryType" color="dark" mode='md' (ionChange)='segmentChanged()'>
     
        <ion-segment-button value="makan" mode='md'>
           Food
@@ -24,40 +24,40 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content class="card-background-page" padding>
+<ion-content class="card-background-page">
 
   <!-- Myth Vs Fact -->
 
   <div [ngSwitch]="galleryType">
     
-    <div *ngSwitchCase="'mvf'" class='ActivitiesCard'>
-
+    <div *ngSwitchCase="'mvf'" class='ActivitiesCard' padding>
+        <br>
         <ion-card-subtitle class='info'>Series of activities that you can complete</ion-card-subtitle>
         <ion-slides pager="false" [options]="slideOptsForActivities">  
             <ion-slide>
-                <ion-card>
+                <ion-card (click)='onClickMyth()'>
                     <ion-card-content> 
                     <img src='assets/tilted-bottle.svg' class='bottle'>
                     <br>
                     <ion-text>Myth Vs Fact Showdown! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, porro.</ion-text>
                     <br>
                     <br>
-                    <ion-button class='ans' (click)='onClickMyth()'>Let's go!</ion-button>
-
+                    <!-- <ion-button class='ans' (click)='onClickMyth()'>Let's go!</ion-button> -->
+       
                   </ion-card-content>
                 </ion-card> 
             </ion-slide>
 
           <ion-slide>
-              <ion-card>
+              <ion-card (click)='takeQuiz()'>
                 <ion-card-content> 
                 <img src='assets/Still Young Logo.svg' class='bottle'>
                 <br>
                 <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
                 <br>
                 <br>
-              <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button>
-
+              <!-- <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button> -->
+ 
                 </ion-card-content>
             </ion-card>  
           </ion-slide>
@@ -99,7 +99,7 @@
               <ion-col>
                   <ion-buttons justify-content-end>
                       <ion-button (click)='presentPopover($event)'>
-                        <ion-icon color='warning' slot="icon-only" name="more"></ion-icon>
+                        <ion-icon color='warning' class='moreIcon' slot="icon-only" name="more"></ion-icon>
                       </ion-button>
                     </ion-buttons>
               </ion-col>

@@ -71,8 +71,10 @@ export class AppServeService {
     },
     {
       final: 'You have completed the quiz!',
-      image: 'assets/tenor.gif',
-      resetBtn: 'Restart'
+      pic: 'assets/read.svg',
+      results: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatum voluptatem ducimus magni. Quos, rerum?',
+      resetBtn: 'Restart',
+      home: 'Go Home'
     }
   ]
 
@@ -123,8 +125,10 @@ export class AppServeService {
 
     {
       final: 'You have completed the myth vs fact!',
-      image: 'assets/tenor.gif',
-      resetBtn: 'Restart'
+      pic: 'assets/read.svg',
+      results: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatum voluptatem ducimus magni. Quos, rerum?',
+      resetBtn: 'Restart',
+      home: 'Go Home'
     }
   ]
 
@@ -174,6 +178,7 @@ export class AppServeService {
     { 
       cat_id: 2, cat_name: 'Chicken', cat_img: 'assets/chicken.jpg',
       image: 'assets/herbal.jpg', id: 3, name: 'Emperor Herbal Chicken',
+      information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       ingredients: [{ a: '1 whole fresh chicken', b: '½ tbsp dark soya sauce', c: '2 pcs dang gui (当归)', d: '6 pcs dang shen (党参)', e: '3 pcs yu zhu (玉竹)', f: '10 pcs red dates (红枣)', g: '1 tbsp wolfberries (枸杞子)', h: '5 pcs dried scallops', i: '900ml water' }],

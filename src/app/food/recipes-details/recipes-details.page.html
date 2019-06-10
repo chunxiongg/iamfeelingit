@@ -1,10 +1,10 @@
 <ion-header no-border>
 
-    <!-- <ion-buttons justify-content-start >
-        <ion-button routerLink='/tabs/food'>
-          <ion-icon color='warning' slot="icon-only" name="arrow-back"></ion-icon>
-        </ion-button>
-    </ion-buttons> -->
+    <!-- <ion-toolbar [myScrollVanish]="scrollArea">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons> 
+      </ion-toolbar> -->
     
    
         <img [src]='getMakanOne.image'>
@@ -14,10 +14,6 @@
 
 <ion-content>
 
-    <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
-    </ion-refresher>
-
   <ion-card class='noBorder'>
     <ion-card-header>
       <ion-card-title> {{ getMakanOne.name }} </ion-card-title>
@@ -26,6 +22,23 @@
     <ion-card-content>
       <ion-text> {{ getMakanOne.des }} </ion-text>
     </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+          <p>{{ getMakanOne.information[0].title }}</p>
+          <p class='dark'>{{ getMakanOne.information[0].figure }}</p>
+      </ion-col>
+
+      <ion-col>
+          <p>{{ getMakanOne.information[1].title }}</p>
+          <p class='dark'>{{ getMakanOne.information[1].figure }}</p>
+      </ion-col>
+
+      <ion-col>
+          <p>{{ getMakanOne.information[2].title }}</p>
+          <p class='dark'>{{ getMakanOne.information[2].figure }}</p>
+      </ion-col>
+    </ion-row>
   </ion-card>
 
   <ion-segment [(ngModel)]="galleryType" color="youngGold" mode='md'>
@@ -67,7 +80,7 @@
                 <ion-button color='primary' (click)='stopTimer()'>Stop Timer</ion-button>
                 
               </ion-row> -->
-              <ion-row>
+              <!-- <ion-row>
                 <ion-col>
                     <p>{{ getMakanOne.information[0].title }}</p>
                     <p class='dark'>{{ getMakanOne.information[0].figure }}</p>
@@ -82,7 +95,7 @@
                     <p>{{ getMakanOne.information[2].title }}</p>
                     <p class='dark'>{{ getMakanOne.information[2].figure }}</p>
                 </ion-col>
-              </ion-row>
+              </ion-row> -->
               <br>
 
                   <ion-row *ngFor='let steps of stepsArr'>

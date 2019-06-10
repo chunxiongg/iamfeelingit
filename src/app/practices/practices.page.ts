@@ -72,10 +72,14 @@ export class PracticesPage implements OnInit {
   foodRecipe = [];
 
 
+  segmentChanged() {
+    console.log(true);
+  }
+  
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    slidesPerView: 1.3
+    slidesPerView: 1.3,
     // autoplay: {
     //   delay: 3000,
     // }

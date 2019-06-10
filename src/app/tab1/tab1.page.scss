@@ -3,18 +3,52 @@
 @import '../../theme/ToolBarPadding';
 
 ion-card {
-  border-radius: 13px !important;
-  max-height: 100vh !important;
+  // min-height: 100vh !important;
   overflow: hidden !important;
+  min-width: 95% !important;
+  min-height: 50vh !important;
+  
+}
+
+ion-img {
+  width: 50% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.dateTxt {
+  padding-right: 3vh !important;
+}
+
+.morningTxt {
+  width: 150% !important;
+  font-size: 3vh !important;
+}
+
+.myIcon {
+  padding-bottom: 2vh !important;
+}
+
+.threeStages {
+  padding-left: 1vh !important;
 }
 
 .slides-ios {
   --progress-bar-background-active: black !important;
 }
 
-.milk {
-  width: 8%;
-  display: inline-block;
-  position: relative;
-  top: .8vh;
+.toolBarText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
+
+.getMsg {
+  color: #000 !important;
+  font-family: 'Acme', sans-serif;  
+  letter-spacing: 0.05vh !important;
+}
+

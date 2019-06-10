@@ -39,7 +39,7 @@ export class ScrollVanishDirective implements OnInit {
         "transition",
         "linear .8s"
       );
-      this.renderer.setStyle(this.element.nativeElement, "height", "50px");
+      this.renderer.setStyle(this.element.nativeElement, "height", "250px");
     });
   }
 
@@ -56,7 +56,7 @@ export class ScrollVanishDirective implements OnInit {
 
   show() {
     this.domCtrl.write(() => {
-      this.renderer.setStyle(this.element.nativeElement, "height", "50px");
+      this.renderer.setStyle(this.element.nativeElement, "height", "250px");
       this.renderer.removeStyle(this.element.nativeElement, "opacity");
       this.renderer.removeStyle(this.element.nativeElement, "min-height");
       this.renderer.removeStyle(this.element.nativeElement, "padding");

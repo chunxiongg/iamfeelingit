@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonTabs } from '@ionic/angular';
+import { IonTabs, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs',
@@ -8,6 +8,10 @@ import { IonTabs } from '@ionic/angular';
 })
 export class TabsPage {
   
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
+
+  // ionViewDidLeave(){
+  //   this.navCtrl.navigateRoot('/tabs/contact-us')
+  // }
 
 }

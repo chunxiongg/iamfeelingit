@@ -3,6 +3,7 @@ import { NavParams } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { AppServeService } from '../app-serve.service';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
+import { ScrollDetail } from '@ionic/core';
 
 @Component({
     styleUrls: ['./pop-over.scss'],

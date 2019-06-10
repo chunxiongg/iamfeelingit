@@ -6,19 +6,17 @@
     </ion-title>
     <ion-img src='assets/x.png' class='headerImg'></ion-img>
   </ion-toolbar> -->
- 
+  <img src='assets/theme.svg'>
 
 
-  <ion-toolbar>
-      <ion-list lines='none'>
-          <ion-item>
-            <ion-label>Select Language</ion-label>
-            <ion-select placeholder="Select One" interface='popover'>
-              <ion-select-option value="f">English</ion-select-option>
-              <ion-select-option value="m">Chinese</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
+
+        <div class='toolBarText'>
+          <div class='getMsg'>
+            <ion-card-title class='morningTxt'>{{ text }}</ion-card-title>
+            <ion-text class='dateTxt'>{{ today | date:'fullDate' }}</ion-text>
+          </div>
+        </div>
+
       <!-- <ion-row>
           <ion-card>
               <ion-card-content *ngFor='let random of randomQuote'>
@@ -29,14 +27,24 @@
               </ion-card-content>
             </ion-card>
       </ion-row> -->
-  </ion-toolbar>
+ 
 </ion-header>
   
   <!-- <ion-content #pageContent fullscreen> -->
-   <ion-content>
+   <ion-content padding>
       <ion-refresher (ionRefresh)="doRefresh($event)">
           <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
       </ion-refresher>
+
+      <!-- <ion-list lines='none'>
+        <ion-item>
+          <ion-label>Select Language</ion-label>
+          <ion-select placeholder="Select One" interface='popover'>
+            <ion-select-option value="f">English</ion-select-option>
+            <ion-select-option value="m">Chinese</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list> -->
     
     <ion-grid>
       <!-- <ion-row>
@@ -62,40 +70,56 @@
         </ion-col>
       </ion-row> -->
       <ion-row>
-          <ion-slides pager="true" [options]="slideOpts"> 
+
+        <ion-col size='8'>
+        <ion-card-subtitle color='dark' class='threeStages'>3 Stages of Confinement</ion-card-subtitle>
+      </ion-col>
+
+      <ion-col>
+        <ion-buttons justify-content-end class='threeStagesBtn'>
+            <ion-button (click)='presentActionSheet()'>
+              <ion-icon color='warning' class='myIcon' slot="icon-only" name="more"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+
+          <ion-slides pager="false" [options]="slideOpts"> 
             
               <ion-slide>
-                  <ion-card class="welcome-card" class='noBorder'>
+                  <ion-card class="welcome-card">
+                    <br>
                       <ion-img src='assets/stageOne.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Womb Recovery</ion-card-subtitle>
                       </ion-card-header>
                       <ion-card-content>
-                        
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel esse, voluptatum necessitatibus maiores atque.
                       </ion-card-content>
                     </ion-card>
               </ion-slide>
       
               <ion-slide>
-                  <ion-card class="welcome-card" class='noBorder'>
+                  <ion-card class="welcome-card">
+                    <br>
                       <ion-img src='assets/stageTwo.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Replenishment of Qi and Blood</ion-card-subtitle>
                       </ion-card-header>
                       <ion-card-content>
-                          
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quasi natus distinctio, ut reprehenderit rerum.
                         </ion-card-content>
                     </ion-card>
               </ion-slide>
       
               <ion-slide>
-                  <ion-card class="welcome-card" class='noBorder'>
+                  <ion-card class="welcome-card">
+                    <br>
                       <ion-img src='assets/stageThree.svg'></ion-img>
                       <ion-card-header>
                         <ion-card-subtitle>Boost and Regain Vitality</ion-card-subtitle>
                       </ion-card-header>
                       <ion-card-content>
-                          
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias corrupti officia, laboriosam animi dolorem itaque.
                         </ion-card-content>
                     </ion-card>
               </ion-slide>

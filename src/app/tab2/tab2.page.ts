@@ -46,6 +46,10 @@ export class Tab2Page {
     this.slides.slideTo(this.slideOpts.initialSlide)
   }
 
+  goHome() {
+    this.navController.navigateBack('/tabs/practices')
+  }
+
   slideOpts = {
     initialSlide: 0,
     speed: 400

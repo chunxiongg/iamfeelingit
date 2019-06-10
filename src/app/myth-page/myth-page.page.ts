@@ -26,6 +26,10 @@ export class MythPagePage implements OnInit {
     
   }
 
+  goHome() {
+    this.navController.navigateBack('/tabs/practices')
+  }
+
   MythSlideOpts = {
     initialSlide: 0,
     speed: 400,
@@ -52,6 +56,8 @@ showAnswer(answer) {
 correctAns = [];
 wrongAns = []
 
+progress = 0;
+
 // For MYTH
 mythClick(answer) {
   console.log('SELECTED: ' + answer.optionA + ' for Question ' + answer.id)
@@ -69,6 +75,7 @@ mythClick(answer) {
     }).then((result) => {
       if (result.value) {
         this.correctAns.push(answer.qn)
+        this.progress += 0.35;
         console.log(this.correctAns);
         this.slides.lockSwipeToNext(false);
         this.slides.lockSwipeToPrev(true);
@@ -110,6 +117,7 @@ factClick(answer) {
       if (result.value) {
         this.correctAns.push(answer.qn)
         console.log(this.correctAns);
+        this.progress += 0.35;
         this.slides.lockSwipeToNext(false);
         this.slides.lockSwipeToPrev(true);
         this.slides.slideNext();
@@ -133,6 +141,7 @@ factClick(answer) {
 }
 
 restartQuiz() {
+  this.progress = 0;
   this.slides.lockSwipeToPrev(false);
   this.slides.slideTo(this.MythSlideOpts.initialSlide)
 }

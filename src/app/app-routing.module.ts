@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'practices/category-details/:makan.cat_id', loadChildren: './category-details/category-details.module#CategoryDetailsPageModule' },
   { path: 'myth', loadChildren: './myth-page/myth-page.module#MythPagePageModule' },
   { path: 'about', loadChildren: './details/about-us/about-us.module#AboutUsPageModule' },
-  { path: 'message', loadChildren: './details/message-us/message-us.module#MessageUsPageModule' }
+  { path: 'message', loadChildren: './details/message-us/message-us.module#MessageUsPageModule' },
+  { path: 'tab1-pop', loadChildren: './pop-over/tab1-pop/tab1-pop.module#Tab1PopPageModule' }
 ];
 @NgModule({
   imports: [

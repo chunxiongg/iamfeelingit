@@ -16,6 +16,8 @@ import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -35,7 +37,9 @@ export class CustomeHammerConfig extends HammerGestureConfig {
     EmailComposer,
     DatePicker,
     Vibration,
+    HTTP,
     ThemeableBrowser,
+    SocialSharing,
     NativeAudio,
     ColoredBrowserTabs,
     SplashScreen,
