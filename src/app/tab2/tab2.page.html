@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header>
   <ion-toolbar >
       <ion-buttons slot='secondary'>
           <ion-button (click)='goBack()'>
@@ -44,23 +44,25 @@
             
               <ion-slide *ngFor='let qn of returnData; let i = index'>
                   <ion-card class="welcome-card" class='noBorder'>
-                    <br>
+                    <ion-card-content>
                       <ion-img *ngIf='qn.image' src='{{ qn.image }}'></ion-img>
-                      <ion-card-header *ngIf='qn.image' class='ion-text-left'>
-                        <ion-card-subtitle> {{ qn.qn_number }} </ion-card-subtitle>
-                        <ion-text>{{ qn.question }} </ion-text>
+                      <br *ngIf='qn.image'>
+                     
+                        <ion-card-subtitle *ngIf='qn.image'> {{ qn.qn_number }} </ion-card-subtitle>
+                        <ion-text *ngIf='qn.image'>{{ qn.question }} </ion-text>
 
-                      </ion-card-header>
-                      <ion-card-content>
+                
+
                           <!-- <ion-card class='optionName' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
                               {{ options.name }}
                             </ion-card>  -->
 
-                            <ion-button class='ans' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
+                            <ion-card class='ans' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
                               {{ options.name }}
-                            </ion-button>
+                            </ion-card>
 
-                            <!-- Results -->
+                            <ion-card class='resetCard' *ngIf='qn.resetBtn'>
+                                                   <!-- Results -->
                             <img src=' {{ qn.pic }} ' *ngIf='qn.resetBtn'>
                             <br *ngIf='qn.resetBtn'>
                             <ion-card-subtitle *ngIf='qn.resetBtn'>{{ qn.final }} </ion-card-subtitle>
@@ -70,16 +72,17 @@
                             <br *ngIf='qn.resetBtn'>
                             
                             <ion-grid>
-                              <ion-row>
-                                <ion-col>
-                                  <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
-                                </ion-col>
+                                <ion-row>
+                                  <ion-col>
+                                    <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
+                                  </ion-col>
 
-                                <ion-col>
-                                  <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='goHome()'>{{ qn.home }}</ion-button>
-                                </ion-col>
-                              </ion-row>
-                            </ion-grid>
+                                  <ion-col>
+                                    <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='goHome()'>{{ qn.home }}</ion-button>
+                                  </ion-col>
+                                </ion-row>
+                              </ion-grid>
+                            </ion-card>
 
                       </ion-card-content>
                     </ion-card> 

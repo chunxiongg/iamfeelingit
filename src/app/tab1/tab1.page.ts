@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewChildren } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { Router } from '@angular/router';
 import { ScrollHideConfig } from '../parallax.directive';
@@ -8,6 +8,7 @@ import { PopoverController, NavController } from '@ionic/angular';
 import { Tab1PopPage } from '../pop-over/tab1-pop/tab1-pop.page';
 import { ActionSheetController } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tab1',
@@ -42,9 +43,8 @@ export class Tab1Page {
   }
 
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400,
-    slidesPerView: 1.3,
     centeredSlides: true
     // pagination: {
     //   el: '.swiper-pagination',
@@ -74,6 +74,7 @@ export class Tab1Page {
     }
   }
 
+  galleryType = 'a';
 
   // async presentPopover(ev: any) {
   //   const popover = await this.popoverController.create({
@@ -115,5 +116,10 @@ export class Tab1Page {
     });
     await actionSheet.present();
   }  
+
+  
+  openMilk() {
+
+  }
 
 }

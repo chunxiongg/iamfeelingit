@@ -35,7 +35,7 @@ export class Tab2Page {
     this.slides.lockSwipeToNext(false);
     this.slides.lockSwipeToPrev(true);
     this.slides.slideNext();
-    this.progress += 0.2;
+    this.progress += 0.1;
   }
 
   restartQuiz() {

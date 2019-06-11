@@ -1,74 +1,84 @@
-<!-- <ion-header no-border [scrollHide]="headerScrollConfig" [scrollContent]="pageContent"> -->
+
+<!-- <ion-row>
+    <ion-card>
+        <ion-card-content *ngFor='let random of randomQuote'>
+          <ion-card-subtitle id='verse'>Quote of the Day &nbsp;
+          <img src='assets/tilted-bottle.svg' class='milk'>
+          </ion-card-subtitle>
+          <ion-text>"{{ random }}"</ion-text>
+        </ion-card-content>
+      </ion-card>
+</ion-row> -->
+
   <ion-header no-border>
-  <!-- <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
-    <ion-img src='assets/x.png' class='headerImg'></ion-img>
-  </ion-toolbar> -->
-  <img src='assets/theme.svg'>
+      <ion-toolbar>
+            <ion-buttons justify-content-end>
+                    <ion-button (click)='openMilk()'>
+                  
+                  <ion-icon color='dark' slot='icon-only' src='assets/tilted-bottle.svg'></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+    
+        <ion-title>Still Young</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
+<div padding class='datePadding'>
+          <ion-note color='dark'>{{ text }}</ion-note> <br>
+          <ion-note color='dark'>{{ today | date:'fullDate' }}</ion-note>
+</div>
 
+<div class='segButton'>
+    <ion-segment [(ngModel)]="galleryType" color="dark" mode='md'>
+        <ion-segment-button value="a" mode='md'>
+          Stage A
+        </ion-segment-button>
+    
+        <ion-segment-button value="b" mode='md'>
+          Stage B
+        </ion-segment-button>
+    
+        <ion-segment-button value="c" mode='md'>
+            Stage C
+        </ion-segment-button>
+      </ion-segment>
+</div>
 
-        <div class='toolBarText'>
-          <div class='getMsg'>
-            <ion-card-title class='morningTxt'>{{ text }}</ion-card-title>
-            <ion-text class='dateTxt'>{{ today | date:'fullDate' }}</ion-text>
-          </div>
+<!-- NEW -->
+<ion-content padding>
+
+    <div [ngSwitch]="galleryType">
+        <div *ngSwitchCase="'a'">
+          <img src='assets/moon.svg' class='moon'>
+          <ion-card padding>
+            Explanation of A
+          </ion-card>
         </div>
 
-      <!-- <ion-row>
-          <ion-card>
-              <ion-card-content *ngFor='let random of randomQuote'>
-                <ion-card-subtitle id='verse'>Quote of the Day &nbsp;
-                <img src='assets/tilted-bottle.svg' class='milk'>
-                </ion-card-subtitle>
-                <ion-text>"{{ random }}"</ion-text>
-              </ion-card-content>
-            </ion-card>
-      </ion-row> -->
- 
-</ion-header>
+        <div *ngSwitchCase="'b'">
+          <img src='assets/night.svg' class='moon'>
+          <ion-card padding>
+            Explanation of B
+          </ion-card>
+        </div>
+
+        <div *ngSwitchCase="'c'">
+          <img src='assets/not-found.svg' class='moon'>
+          <ion-card padding>
+            Explanation of C
+          </ion-card>
+        </div>
+    </div>
+
+</ion-content>
   
   <!-- <ion-content #pageContent fullscreen> -->
-   <ion-content padding>
+   <!-- <ion-content padding>
       <ion-refresher (ionRefresh)="doRefresh($event)">
           <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
       </ion-refresher>
 
-      <!-- <ion-list lines='none'>
-        <ion-item>
-          <ion-label>Select Language</ion-label>
-          <ion-select placeholder="Select One" interface='popover'>
-            <ion-select-option value="f">English</ion-select-option>
-            <ion-select-option value="m">Chinese</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list> -->
-    
     <ion-grid>
-      <!-- <ion-row>
-          <ion-card>
-              <ion-card-content *ngFor='let random of randomQuote'>
-                <ion-card-subtitle id='verse'>Verse of the Day</ion-card-subtitle>
-                <ion-text>"{{ random }}"</ion-text>
-              </ion-card-content>
-            </ion-card>
-      </ion-row>  -->
-<!--   
-      <ion-row>
-        <ion-col style='color: #808080'>
-          &nbsp; Latest
-        </ion-col>
-  
-        <ion-col>
-            <ion-buttons justify-content-end>
-                <ion-button routerLink="/tabs/practices">
-                  <ion-icon color='warning' slot="icon-only" name="more"></ion-icon>
-                </ion-button>
-              </ion-buttons>
-        </ion-col>
-      </ion-row> -->
       <ion-row>
 
         <ion-col size='8'>
@@ -83,7 +93,7 @@
           </ion-buttons>
         </ion-col>
 
-          <ion-slides pager="false" [options]="slideOpts"> 
+          <ion-slides pager="true" [options]="slideOpts" color='dark'> 
             
               <ion-slide>
                   <ion-card class="welcome-card">
@@ -132,4 +142,4 @@
   
   
   </ion-content>
-  
+   -->

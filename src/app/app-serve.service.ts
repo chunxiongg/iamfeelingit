@@ -12,63 +12,115 @@ export class AppServeService {
     {
       qn_id: 1,
       qn_number: 'Question 1',
-      question: 'Your best friend is crying after a fight with someone, what do you do?',
-      image: 'assets/stageOne.svg',
+      question: 'Your best friend accidentally broke your go-to eyeshadow palette, what will you do?',
+      image: 'assets/steps/1.svg',
       answerOption: [
-        { id: 1, answer: 'a', name: "Say it's alright" },
-        { id: 2, answer: 'b', name: 'Confront the person' },
-        { id: 3, answer: 'c', name: 'Be there and listen to him/her' },
-        { id: 4, answer: 'd', name: 'Not sure what to do' }
+        { id: 1, answer: 'a', name: "Say “It’s okay, I can always get a new one" },
+        { id: 2, answer: 'b', name: 'Will be angry but will get over it' },
+        { id: 3, answer: 'c', name: 'Argue with your friend and hold a grudge for a long time' },
       ]
     },
     {
       qn_id: 2,
       qn_number: 'Question 2',
-      question: 'Which word best describes yourself?',
-      image: 'assets/stageTwo.svg',
+      question: 'It’s raining heavily and you realised that you didn’t bring your umbrella. Do you...',
+      image: 'assets/steps/2.svg',
       answerOption: [
-        { id: 5, answer: 'a5', name: 'Dreamer' },
-        { id: 6, answer: 'b6', name: 'Passionate' },
-        { id: 7, answer: 'c7', name: 'Indecisive' },
-        { id: 8, answer: 'd8', name: 'Peacemaker' }
+        { id: 5, answer: 'a5', name: 'Run in the rain' },
+        { id: 6, answer: 'b6', name: 'Wait for the rain to get smaller and walk under the rain' },
+        { id: 7, answer: 'c7', name: 'Buy an umbrella' }
       ]
     },
     {
       qn_id: 3,
       qn_number: 'Question 3',
-      question: 'You are preparing to leave the house to meet your date for a movie. It starts raining heavily, do you:',
-      image: 'assets/stageThree.svg',
+      question: 'Knowing that you will be caught for wearing ankle socks, what will you do?',
+      image: 'assets/steps/3.svg',
       answerOption: [
-        { id: 9, answer: 'a9', name: 'Call him/her to cancel the movie date' },
-        { id: 10, answer: 'b10', name: 'Leave your date alone' },
-        { id: 11, answer: 'c11', name: 'Suggest to watch at a later timing' },
-        { id: 12, answer: 'd12', name: 'Go ahead with the plan' }
+        { id: 9, answer: 'a9', name: 'I will just wear ankle socks' },
+        { id: 10, answer: 'b10', name: 'Pull the socks up and down again after' },
+        { id: 11, answer: 'c11', name: 'I will wear the proper sock length' }
       ]
     },
     {
       qn_id: 4,
       qn_number: 'Question 4',
-      question: 'The weather is getting hot and you are thirsty. Which drink will you buy?',
-      image: 'assets/app.svg',
+      question: 'If you have an important job interview the next day and you realized that you do not have a suitable outfit, will you...',
+      image: 'assets/steps/4.svg',
       answerOption: [
-        { id: 13, answer: 'a13', name: 'Mineral water' },
-        { id: 14, answer: 'b14', name: 'Soft drink' },
-        { id: 15, answer: 'c15', name: 'Bubble tea' },
-        { id: 16, answer: 'd16', name: 'Coffee/Tea' }
+        { id: 13, answer: 'a13', name: 'Just wear whatever that’s comfortable' },
+        { id: 14, answer: 'b14', name: 'Try to mix and match existing clothing to make it formal looking' },
+        { id: 15, answer: 'c15', name: 'Rush out of your house to buy a set of formal outfit' }
       ]
     },
     {
       qn_id: 5,
       qn_number: 'Question 5',
-      question: 'You are feeling extremely stressed due to work piling up. What would you do?',
-      image: 'assets/shapes.svg',
+      question: 'You see your bus approaching the bus stop across the road and the next bus is coming in 10 mins, but the traffic light is not turning green, do you...',
+      image: 'assets/steps/5.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Cry in anxiety' },
-        { id: 18, answer: 'b18', name: 'Continue to procrastinate' },
-        { id: 19, answer: 'c19', name: 'What is stress?' },
-        { id: 20, answer: 'd20', name: 'Continue working at your own pace' }
+        { id: 17, answer: 'a17', name: 'Dash across the road' },
+        { id: 18, answer: 'b18', name: 'Start pressing the button vigorously' },
+        { id: 19, answer: 'c19', name: 'Wait for the traffic to turn green' },
       ]
     },
+    {
+      qn_id: 6,
+      qn_number: 'Question 6',
+      question: 'You have a very bad sore throat but you are craving for something spicy, do you...',
+      image: 'assets/steps/6.svg',
+      answerOption: [
+        { id: 17, answer: 'a17', name: 'Go ahead and order' },
+        { id: 18, answer: 'b18', name: 'Order with less spice' },
+        { id: 19, answer: 'c19', name: 'Not order' },
+      ]
+    },
+    {
+      qn_id: 7,
+      qn_number: 'Question 7',
+      question: 'Your friends describe you as...',
+      image: 'assets/steps/7.svg',
+      answerOption: [
+        { id: 17, answer: 'a17', name: 'Chill' },
+        { id: 18, answer: 'b18', name: 'Indecisive' },
+        { id: 19, answer: 'c19', name: 'Careful' },
+      ]
+    },
+    {
+      qn_id: 8,
+      qn_number: 'Question 8',
+      question: 'Your wisdom tooth is growing but you have no time to visit the doctor, do you...',
+      image: 'assets/steps/8.svg',
+      answerOption: [
+        { id: 17, answer: 'a17', name: 'Self-medicate' },
+        { id: 18, answer: 'b18', name: 'Wait for a few days to see if the pain persists' },
+        { id: 19, answer: 'c19', name: 'Clear my schedule to visit the dentists straight away' },
+      ]
+    },
+    {
+      qn_id: 9,
+      qn_number: 'Question 9',
+      question: 'How do you arrange your closet?',
+      image: 'assets/steps/9.svg',
+      answerOption: [
+        { id: 17, answer: 'a17', name: 'I don’t organise and fold my clothes' },
+        { id: 18, answer: 'b18', name: 'I just fold my clothes and place it in the closet randomly' },
+        { id: 19, answer: 'c19', name: 'I organise it by colours or style' },
+      ]
+    },
+    {
+      qn_id: 10,
+      qn_number: 'Question 10',
+      question: 'How do you feel if you do not follow all the rules to confinement?',
+      image: 'assets/steps/10.svg',
+      answerOption: [
+        { id: 17, answer: 'a17', name: 'Does it matter?' },
+        { id: 18, answer: 'b18', name: 'Umm, I’m not sure.' },
+        { id: 19, answer: 'c19', name: 'I think it would be the best to follow it.' },
+      ]
+    },
+ 
+
     {
       final: 'You have completed the quiz!',
       pic: 'assets/read.svg',
@@ -78,50 +130,87 @@ export class AppServeService {
     }
   ]
 
-  // public mythFact = [
-  //   {
-  //     id: 1,
-  //     qn: 'Water is good for health',
-  //     options: [{ id: 1, ans: 'Myth' }, { id: 2, ans: 'Fact' }]
-  //   },
-
-  //   {
-  //     id: 2,
-  //     qn: 'Chia seeds are bad for health',
-  //     options: [{ id: 1, ans: 'Myth', isCorrect: true}, { id: 2, ans: 'Fact', isCorrect: false}]
-  //   }
-  // ]
-
   public mythFact = [
     {
       id: 1,
       qn_number: 'Myth vs Fact 1',
       img: 'assets/read.svg',
-      qn: 'Water is good for health.',
+      qn: 'I can drink plain water.',
       optionA: 'Myth',
       optionB: 'Fact',
-      revealAnswer: 'It\'s a fact. Studies have shown that water is good for health!'
+      revealAnswer: 'It\'s a fact. It is totally fine for you to consume plain water. However, water consumed should be boiled warm or hot in temperature.',
+      explaination: 'Consuming confinement meals can by heaty for the body, which explains the importance of water. Fluids ​are also essential for breastfeeding mothers as breast milk is mostly made up of water.',
+      tip: 'Consuming red dates tea in moderation can help to boost blood circulation and reduces water retention. Water should not be cold or room temperature when consumed'
     }, // FACT
-
     {
       id: 2,
       qn_number: 'Myth vs Fact 2',
-      img: 'assets/decide.svg',
-      qn: 'Washing raw meat will help you get rid of bacteria.',
+      img: 'assets/read.svg',
+      qn: 'I cannot workout during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
-      revealAnswer: 'It\'s a myth. Washing raw meat will not necessarily get rid of bacteria!'
-    }, // MYTH
+      revealAnswer: 'It\'s a fact. Mothers should not over exert themselves or engage in strenuous activities.'
+    }, // FACT
 
     {
       id: 3,
       qn_number: 'Myth vs Fact 3',
-      img: 'assets/app.svg',
-      qn: 'You can\'t drink plain water at all during confinement.',
+      img: 'assets/decide.svg',
+      qn: 'I cannot bathe and wash my hair for one month.',
       optionA: 'Myth',
       optionB: 'Fact',
-      revealAnswer: 'It\'s a myth. You\'re advised to drink adequate fluids especially if you\'re breastfeeding!'
+      revealAnswer: 'It\'s a myth. It is important to keep yourself hygienic at all times. Personal comfort should be prioritized to reduce the chances of rashes and wound infection, especially at the genital area.'
     }, // MYTH
+
+    {
+      id: 4,
+      qn_number: 'Myth vs Fact 4',
+      img: 'assets/app.svg',
+      qn: 'I must avoid all sources of wind, including fans and air conditioners.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a myth. Mothers are encouraged to use the air conditioner instead of the fan as long as they are not directly exposed to the wind or cold air.'
+    }, // MYTH
+
+    {
+      id: 5,
+      qn_number: 'Myth vs Fact 5',
+      img: 'assets/app.svg',
+      qn: 'I must consume alcohol in my confinement meals.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a myth. Alcohol helps to promote blood circulation but it is NOT a must to consume them.'
+    }, // MYTH
+
+    {
+      id: 6,
+      qn_number: 'Myth vs Fact 6',
+      img: 'assets/app.svg',
+      qn: 'All my confinement meals should have ginger.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a myth. Ginger is advised to be included but not necessary for all meals.'
+    }, // MYTH
+
+    {
+      id: 7,
+      qn_number: 'Myth vs Fact 7',
+      img: 'assets/app.svg',
+      qn: 'I must get plenty of bed rest during confinement.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a fact. Having sufficient bed rest enables the body to recuperate and subsequently regain its pre-pregnancy state.'
+    }, // FACT
+
+    {
+      id: 8,
+      qn_number: 'Myth vs Fact 8',
+      img: 'assets/app.svg',
+      qn: 'I should avoid seafood like shellfish.',
+      optionA: 'Myth',
+      optionB: 'Fact',
+      revealAnswer: 'It\'s a fact. Shellfish such as clams and oysters should not be consumed during confinement.'
+    }, // FACT
 
     {
       final: 'You have completed the myth vs fact!',
@@ -256,5 +345,34 @@ export class AppServeService {
     return this.mcqData;
   }
   
+  public lactationData = [
+    {
+      Card_id: 1,
+      Card: 'Card A',
+      info: 'Card A info'
+    },
+
+    {
+      Card_id: 2,
+      Card: 'Card B',
+      info: 'Card B info'
+    },
+
+    {
+      Card_id: 3,
+      Card: 'Card C',
+      info: 'Card C info'
+    },
+
+    {
+      Card_id: 4,
+      Card: 'Card D',
+      info: 'Card D info'
+    }
+  ]
+
+  getLactation() {
+    return this.lactationData;
+  }
   
 }

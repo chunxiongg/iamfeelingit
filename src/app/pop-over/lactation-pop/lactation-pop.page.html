@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons>
+          <ion-button (click)='cancel()'>
+              <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title>{{ getValue[0].cardName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ {{ getValue[0].cardInfo }}
+</ion-content>

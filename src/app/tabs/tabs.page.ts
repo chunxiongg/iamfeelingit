@@ -10,8 +10,10 @@ export class TabsPage {
   
   constructor(private navCtrl: NavController) { }
 
-  // ionViewDidLeave(){
-  //   this.navCtrl.navigateRoot('/tabs/contact-us')
-  // }
+  ionChange(tab) {
+    if (tab.getSelected()) {
+      console.log('Tab Selected: ' + tab.getSelected());
+    }
+}
 
 }

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
+import { AppServeService } from '../app-serve.service';
+import { ModalController } from '@ionic/angular';
+import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
 
 @Component({
   selector: 'app-tab3',
@@ -8,10 +11,13 @@ import { HTTP } from '@ionic-native/http/ngx';
 })
 export class Tab3Page {
 
-  constructor(private http: HTTP) {}
+  constructor(private modalController: ModalController, private http: HTTP, private appServe: AppServeService) {}
+
+  LactationArr = [];
 
   ngOnInit() {
-
+    this.LactationArr = this.appServe.getLactation();
+    console.log(this.LactationArr)
   }
 
   getData() {
@@ -19,6 +25,15 @@ export class Tab3Page {
       .then((data) => {
          console.log(data)
       })
+  }
+
+  async presentModal(data) {
+    console.log(data.Card_id);
+    const modal = await this.modalController.create({
+    component: LactationPopPage,
+    componentProps: { value: [{ cardID: data.Card_id, cardName: data.Card, cardInfo: data.info }] }
+    });
+    return await modal.present();
   }
 
 }

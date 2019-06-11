@@ -9,7 +9,7 @@ import { ScrollDetail } from '@ionic/core';
     styleUrls: ['./pop-over.scss'],
     template: 
     `
-    <ion-header no-border>
+    <ion-header>
         <ion-toolbar>
             <ion-buttons>
                 <ion-button (click)='cancel()'>

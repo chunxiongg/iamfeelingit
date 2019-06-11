@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -30,7 +31,8 @@ export class CustomeHammerConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [ 
+    FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     InAppBrowser,

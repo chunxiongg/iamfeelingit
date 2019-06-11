@@ -3,6 +3,7 @@ import { AppServeService } from 'src/app/app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { timer } from 'rxjs'
+
 @Component({
   selector: 'app-recipes-details',
   templateUrl: './recipes-details.page.html',

@@ -1,16 +1,32 @@
 @import '../../theme/_HeaderImage';
 @import '../../theme/BoxShadowNone';
 @import '../../theme/ToolBarPadding';
+//@import '../../theme/ToolBarColor';
 
 ion-card {
   // min-height: 100vh !important;
   overflow: hidden !important;
-  min-width: 95% !important;
-  min-height: 50vh !important;
+  min-height: 30vh !important;
   
 }
 
 ion-img {
+  width: 50% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.datePadding {
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 15vh;
+  text-align: center;
+  padding-top: 4.5vh;  
+}
+
+.moon {
   width: 50% !important;
   display: block !important;
   margin-left: auto !important;
@@ -22,8 +38,8 @@ ion-img {
 }
 
 .morningTxt {
-  width: 150% !important;
-  font-size: 3vh !important;
+  letter-spacing: .1vh !important;
+  font-size: 3vh;
 }
 
 .myIcon {
@@ -38,17 +54,16 @@ ion-img {
   --progress-bar-background-active: black !important;
 }
 
-.toolBarText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+// .getMsg {
+//   color: #000 !important;
+//   font-family: 'Acme', sans-serif;  
+//   letter-spacing: 0.05vh !important;
+//   text-align: center !important;
+  
+// }
 
-}
 
-.getMsg {
-  color: #000 !important;
-  font-family: 'Acme', sans-serif;  
-  letter-spacing: 0.05vh !important;
+ion-slide {
+  padding-bottom: 4vh !important;
 }
 
