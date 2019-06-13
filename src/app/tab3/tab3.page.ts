@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
 import { AppServeService } from '../app-serve.service';
 import { ModalController } from '@ionic/angular';

@@ -22,10 +22,12 @@ export class LactationPopPage implements OnInit {
     var retrieveCardInfo = this.getValue[0].cardInfo;
     console.log(retrieveCardName)
     console.log(retrieveCardInfo)
+
   }
 
   cancel() {
     this.modalController.dismiss();
   }
+
 
 }

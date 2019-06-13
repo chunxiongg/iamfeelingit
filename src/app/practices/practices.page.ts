@@ -7,6 +7,7 @@ import { ModalExample } from '../pop-over/article-pop';
 import { NavController } from '@ionic/angular';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-practices',
@@ -19,7 +20,8 @@ export class PracticesPage implements OnInit {
   // public tests = new Array(20);
 
   constructor(private navCtrl: NavController, private nativePageTransitions: NativePageTransitions, private appServe: AppServeService, private router: Router, private navController: NavController,
-              public popoverController: PopoverController, private modalController: ModalController) { }
+              public popoverController: PopoverController, private modalController: ModalController,
+              private actionSheetController: ActionSheetController) { }
  
     returnData = [];
     NewMythFact = [];
@@ -35,14 +37,44 @@ export class PracticesPage implements OnInit {
   // }
 
 
-  async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
-    component: PopoverPage,
-    event: ev,
-    translucent: false
+  // async presentPopover(ev: any) {
+  //   const popover = await this.popoverController.create({
+  //   component: PopoverPage,
+  //   event: ev,
+  //   translucent: false
+  //   });
+  //   return await popover.present();
+  // }
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'More',
+      buttons: [ 
+      
+        {
+        text: 'Share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, 
+      
+      {
+        text: 'Favourite',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }, 
+      
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
     });
-    return await popover.present();
-  }
+    await actionSheet.present();
+  }  
   
 
   onClickMyth() {

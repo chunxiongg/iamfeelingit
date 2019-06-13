@@ -44,18 +44,11 @@
             
               <ion-slide *ngFor='let qn of returnData; let i = index'>
                   <ion-card class="welcome-card" class='noBorder'>
-                    <ion-card-content>
                       <ion-img *ngIf='qn.image' src='{{ qn.image }}'></ion-img>
-                      <br *ngIf='qn.image'>
-                     
+                    <ion-card-content>
+
                         <ion-card-subtitle *ngIf='qn.image'> {{ qn.qn_number }} </ion-card-subtitle>
                         <ion-text *ngIf='qn.image'>{{ qn.question }} </ion-text>
-
-                
-
-                          <!-- <ion-card class='optionName' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
-                              {{ options.name }}
-                            </ion-card>  -->
 
                             <ion-card class='ans' *ngFor='let options of qn.answerOption; let a = index' (click)='selectAnswer(options)'>
                               {{ options.name }}
