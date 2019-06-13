@@ -15,7 +15,7 @@ export class AppServeService {
       question: 'Your best friend accidentally broke your go-to eyeshadow palette, what will you do?',
       image: 'assets/steps/1.svg',
       answerOption: [
-        { id: 1, answer: 'a', name: "Say “It’s okay, I can always get a new one" },
+        { id: 1, answer: 'aa', name: "Say “It’s okay, I can always get a new one" },
         { id: 2, answer: 'b', name: 'Will be angry but will get over it' },
         { id: 3, answer: 'c', name: 'Argue with your friend and hold a grudge for a long time' },
       ]
