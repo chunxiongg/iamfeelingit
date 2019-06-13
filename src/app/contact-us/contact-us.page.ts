@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ScrollHideConfig } from '../parallax.directive';
+// import { ScrollHideConfig } from '../parallax.directive';
 import { Router } from '@angular/router';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { AppServeService } from '../app-serve.service';
