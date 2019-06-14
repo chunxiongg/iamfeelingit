@@ -2,6 +2,10 @@
 @import '../../theme/_HeaderImage';
 @import '../../theme/ToolBarColor';
 
+ion-label {
+    padding: .8vh !important;
+}
+
 img {
     width: 12%;
 }
@@ -17,9 +21,10 @@ a {
 .headerImg {
     width: 70% !important;
 }
-ion-label {
-    font-size: 15px !important;
-}
+
+// ion-label {
+//     font-size: 15px !important;
+// }
 
 #myImg {
     width: 25% !important;
