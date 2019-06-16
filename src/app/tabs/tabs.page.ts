@@ -10,10 +10,10 @@ export class TabsPage {
   
   constructor(private navCtrl: NavController) { }
 
-  ionChange(tab) {
-    if (tab.getSelected()) {
-      console.log('Tab Selected: ' + tab.getSelected());
-    }
-}
+//   ionChange(tab) {
+//     if (tab.getSelected()) {
+//       console.log('Tab Selected: ' + tab.getSelected());
+//     }
+// }
 
 }

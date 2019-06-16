@@ -19,6 +19,7 @@ import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { HTTP } from '@ionic-native/http/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { Shake } from '@ionic-native/shake/ngx';
 
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -40,6 +41,7 @@ export class CustomeHammerConfig extends HammerGestureConfig {
     DatePicker,
     Vibration,
     HTTP,
+    Shake,
     ThemeableBrowser,
     SocialSharing,
     NativeAudio,

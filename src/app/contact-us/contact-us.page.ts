@@ -6,6 +6,7 @@ import { AppServeService } from '../app-serve.service';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
 import { NavController } from '@ionic/angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { Shake } from '@ionic-native/shake/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -18,7 +19,8 @@ export class ContactUsPage implements OnInit {
   // headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 100 };
 
   constructor(private navController: NavController, private nativePageTransitions: NativePageTransitions, private appServe: AppServeService, private router: Router,
-              private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs) { }
+              private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs,
+              private shake: Shake) { }
 
   ngOnInit() {
   }

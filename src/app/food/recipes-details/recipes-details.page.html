@@ -44,7 +44,7 @@
 
   </ion-card>
 
-  <ion-segment [(ngModel)]="galleryType" color="youngGold" mode='md'>
+  <ion-segment [(ngModel)]="galleryType" color="dark" mode='md'>
     <ion-segment-button value="ingredients" mode='md'>
       Ingredients
     </ion-segment-button>
@@ -63,7 +63,7 @@
             <ion-list *ngFor='let value of finalArr; let i = index' lines='none'>
                 <ion-item>
                   <ion-note color='dark'>{{ value }}</ion-note>
-                  <ion-checkbox color='youngGold' slot="start" [(ngModel)]='value.isChecked' (ionChange)='tickBox(value)'></ion-checkbox>
+                  <ion-checkbox color='dark' slot="start" [(ngModel)]='value.isChecked' (ionChange)='tickBox(value)'></ion-checkbox>
                 </ion-item>
             </ion-list>
 
