@@ -24,9 +24,12 @@ import { ScrollDetail } from '@ionic/core';
     <ion-content>
         <ion-card class='noBorder'>
             <ion-card-content>
-            <img src='{{ value[0].image }}'>
-            <br>
             <ion-text> {{ value[0].seeDetails }} </ion-text>
+            <br>
+            <br>
+            <ion-text> {{ value[0].detailsBreak }} </ion-text>
+            <br>
+            <ion-text> {{ value[0].detailsBreak1 }} </ion-text>
             <br>
             <br>
             <ion-card-subtitle>
