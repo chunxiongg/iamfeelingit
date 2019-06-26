@@ -227,8 +227,8 @@ export class AppServeService {
 
   public foodRecipe = [
     { 
-      cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 1, name: 'Sheng Hua Soup 生化汤', 
+      cat_id: 1, cat_name: 'Common', cat_img: 'assets/Food/steamed-cod-fish.png',
+      image: 'assets/Food/shenghua-soup.png', id: 1, name: 'Sheng Hua Soup 生化汤', 
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Sheng Hua Tang (生化汤) is a Chinese herbal soup formula designed for mothers after childbirth to aid uterus recovery in clearing blood stasis and tissue from the uterus.',
       des: 'Sheng Hua Tang is a popular TCM remedy which confinement nannies usually prepare as part of confinement meal to mothers during her first week of confinement. It improves blood circulation, warming the channels to relieve pain, treating retention of placental fragments within uterus and helping the uterus to contract.', 
@@ -244,7 +244,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 2, name: 'Dang Gui Nourishing Soup',
+      image: 'assets/Food/dang-gui-soup.png', id: 2, name: 'Dang Gui Nourishing Soup',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -258,7 +258,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 3, name: 'Motherwort Herbal Soup',
+      image: 'assets/Food/motherwort-herbal-soup.png', id: 3, name: 'Motherwort Herbal Soup',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -272,7 +272,7 @@ export class AppServeService {
     
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 4, name: 'Homemade Chicken Essence',
+      image: 'assets/Food/chicken-essence.png', id: 4, name: 'Homemade Chicken Essence',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -291,7 +291,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 5, name: 'Steamed Cod Fish',
+      image: 'assets/Food/steamed-cod-fish.png', id: 5, name: 'Steamed Cod Fish',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -307,7 +307,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 6, name: 'Meat Braised Vinegar',
+      image: 'assets/Food/meat-braised-vinegar.png', id: 6, name: 'Meat Braised Vinegar',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -374,7 +374,7 @@ export class AppServeService {
     }, // Common
 
     { 
-      cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
+      cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/Food/steak.png',
       image: 'assets/chicken.jpg', id: 10, name: 'Seaweed Soup Korean',
       information: [{ title: 'Calories', figure: 3000 }, { title: 'Prep Time', figure: '30m' }, { title: 'Cook Time', figure: '165m' }],
       briefDes: 'Healthy steamed chicken. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aspernatur.',
@@ -440,7 +440,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 14, name: 'Steak (Western)',
+      image: 'assets/Food/steak.png', id: 14, name: 'Steak (Western)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -485,7 +485,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 17, name: 'Stew Pumpkin with Meat',
+      image: 'assets/Food/pumpkin-with-meat-stew.png', id: 17, name: 'Stew Pumpkin with Meat',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -518,7 +518,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 19, name: 'Osmanthus Cake',
+      image: 'assets/Food/osmanthus-cake.png', id: 19, name: 'Osmanthus Cake',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -536,7 +536,7 @@ export class AppServeService {
     },
 
     {
-      cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
+      cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/Food/ABC-Soup.png',
       image: 'assets/herbal.jpg', id: 20, name: 'Ginger Fried Rice',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
@@ -579,7 +579,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 23, name: 'Pumpkin Rice',
+      image: 'assets/Food/pumpkin-rice.png', id: 23, name: 'Pumpkin Rice',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -607,7 +607,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 25, name: 'Peanut Lotus Soup',
+      image: 'assets/Food/peanut-lotus-soup.png', id: 25, name: 'Peanut Lotus Soup',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -620,7 +620,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 26, name: 'Black Glutinous Rice Porridge',
+      image: 'assets/Food/black-glutinous-rice-porridge.png', id: 26, name: 'Black Glutinous Rice Porridge',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -636,7 +636,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 27, name: 'ABC Soup',
+      image: 'assets/Food/ABC-Soup.png', id: 27, name: 'ABC Soup',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
