@@ -26,9 +26,9 @@ export class AppServeService {
       question: 'It’s raining heavily and you realised that you didn’t bring your umbrella. Do you...',
       image: 'assets/steps/2.svg',
       answerOption: [
-        { id: 5, answer: 'a5', name: 'Run in the rain' },
-        { id: 6, answer: 'b6', name: 'Wait for the rain to get smaller and walk under the rain' },
-        { id: 7, answer: 'c7', name: 'Buy an umbrella' }
+        { id: 1, answer: 'a5', name: 'Run in the rain' },
+        { id: 2, answer: 'b6', name: 'Wait for the rain to get smaller and walk under the rain' },
+        { id: 3, answer: 'c7', name: 'Buy an umbrella' }
       ]
     },
     {
@@ -37,9 +37,9 @@ export class AppServeService {
       question: 'Knowing that you will be caught for wearing ankle socks, what will you do?',
       image: 'assets/steps/3.svg',
       answerOption: [
-        { id: 9, answer: 'a9', name: 'I will just wear ankle socks' },
-        { id: 10, answer: 'b10', name: 'Pull the socks up and down again after' },
-        { id: 11, answer: 'c11', name: 'I will wear the proper sock length' }
+        { id: 1, answer: 'a9', name: 'I will just wear ankle socks' },
+        { id: 2, answer: 'b10', name: 'Pull the socks up and down again after' },
+        { id: 3, answer: 'c11', name: 'I will wear the proper sock length' }
       ]
     },
     {
@@ -48,9 +48,9 @@ export class AppServeService {
       question: 'If you have an important job interview the next day and you realized that you do not have a suitable outfit, will you...',
       image: 'assets/steps/4.svg',
       answerOption: [
-        { id: 13, answer: 'a13', name: 'Just wear whatever that’s comfortable' },
-        { id: 14, answer: 'b14', name: 'Try to mix and match existing clothing to make it formal looking' },
-        { id: 15, answer: 'c15', name: 'Rush out of your house to buy a set of formal outfit' }
+        { id: 1, answer: 'a13', name: 'Just wear whatever that’s comfortable' },
+        { id: 2, answer: 'b14', name: 'Try to mix and match existing clothing to make it formal looking' },
+        { id: 3, answer: 'c15', name: 'Rush out of your house to buy a set of formal outfit' }
       ]
     },
     {
@@ -59,9 +59,9 @@ export class AppServeService {
       question: 'You see your bus approaching the bus stop across the road and the next bus is coming in 10 mins, but the traffic light is not turning green, do you...',
       image: 'assets/steps/5.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Dash across the road' },
-        { id: 18, answer: 'b18', name: 'Start pressing the button vigorously' },
-        { id: 19, answer: 'c19', name: 'Wait for the traffic to turn green' },
+        { id: 1, answer: 'a17', name: 'Dash across the road' },
+        { id: 2, answer: 'b18', name: 'Start pressing the button vigorously' },
+        { id: 3, answer: 'c19', name: 'Wait for the traffic to turn green' },
       ]
     },
     {
@@ -70,9 +70,9 @@ export class AppServeService {
       question: 'You have a very bad sore throat but you are craving for something spicy, do you...',
       image: 'assets/steps/6.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Go ahead and order' },
-        { id: 18, answer: 'b18', name: 'Order with less spice' },
-        { id: 19, answer: 'c19', name: 'Not order' },
+        { id: 1, answer: 'a17', name: 'Go ahead and order' },
+        { id: 2, answer: 'b18', name: 'Order with less spice' },
+        { id: 3, answer: 'c19', name: 'Not order' },
       ]
     },
     {
@@ -81,9 +81,9 @@ export class AppServeService {
       question: 'Your friends describe you as...',
       image: 'assets/steps/7.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Chill' },
-        { id: 18, answer: 'b18', name: 'Indecisive' },
-        { id: 19, answer: 'c19', name: 'Careful' },
+        { id: 1, answer: 'a17', name: 'Chill' },
+        { id: 2, answer: 'b18', name: 'Indecisive' },
+        { id: 3, answer: 'c19', name: 'Careful' },
       ]
     },
     {
@@ -92,9 +92,9 @@ export class AppServeService {
       question: 'Your wisdom tooth is growing but you have no time to visit the doctor, do you...',
       image: 'assets/steps/8.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Self-medicate' },
-        { id: 18, answer: 'b18', name: 'Wait for a few days to see if the pain persists' },
-        { id: 19, answer: 'c19', name: 'Clear my schedule to visit the dentists straight away' },
+        { id: 1, answer: 'a17', name: 'Self-medicate' },
+        { id: 2, answer: 'b18', name: 'Wait for a few days to see if the pain persists' },
+        { id: 3, answer: 'c19', name: 'Clear my schedule to visit the dentists straight away' },
       ]
     },
     {
@@ -103,9 +103,9 @@ export class AppServeService {
       question: 'How do you arrange your closet?',
       image: 'assets/steps/9.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'I don’t organise and fold my clothes' },
-        { id: 18, answer: 'b18', name: 'I just fold my clothes and place it in the closet randomly' },
-        { id: 19, answer: 'c19', name: 'I organise it by colours or style' },
+        { id: 1, answer: 'a17', name: 'I don’t organise and fold my clothes' },
+        { id: 2, answer: 'b18', name: 'I just fold my clothes and place it in the closet randomly' },
+        { id: 3, answer: 'c19', name: 'I organise it by colours or style' },
       ]
     },
     {
@@ -114,17 +114,17 @@ export class AppServeService {
       question: 'How do you feel if you do not follow all the rules to confinement?',
       image: 'assets/steps/10.svg',
       answerOption: [
-        { id: 17, answer: 'a17', name: 'Does it matter?' },
-        { id: 18, answer: 'b18', name: 'Umm, I’m not sure.' },
-        { id: 19, answer: 'c19', name: 'I think it would be the best to follow it.' },
+        { id: 1, answer: 'a17', name: 'Does it matter?' },
+        { id: 2, answer: 'b18', name: 'Umm, I’m not sure.' },
+        { id: 3, answer: 'c19', name: 'I think it would be the best to follow it.' },
       ]
     },
  
 
     {
       final: 'You have completed the quiz!',
-      pic: 'assets/read.svg',
-      results: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatum voluptatem ducimus magni. Quos, rerum?',
+      pic: 'assets/complete-task.svg',
+      //results: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatum voluptatem ducimus magni. Quos, rerum?',
       resetBtn: 'Restart',
       home: 'Go Home'
     }
@@ -134,18 +134,16 @@ export class AppServeService {
     {
       id: 1,
       qn_number: 'Myth vs Fact 1',
-      img: 'assets/read.svg',
+      img: 'assets/Myth-SVG/preparation.svg',
       qn: 'I can drink plain water.',
       optionA: 'Myth',
       optionB: 'Fact',
-      revealAnswer: 'It\'s a fact. It is totally fine for you to consume plain water. However, water consumed should be boiled warm or hot in temperature.',
-      explaination: 'Consuming confinement meals can by heaty for the body, which explains the importance of water. Fluids ​are also essential for breastfeeding mothers as breast milk is mostly made up of water.',
-      tip: 'Consuming red dates tea in moderation can help to boost blood circulation and reduces water retention. Water should not be cold or room temperature when consumed'
+      revealAnswer: 'It\'s a fact. It is totally fine for you to consume plain water. However, water consumed should be boiled warm or hot in temperature.'
     }, // FACT
     {
       id: 2,
       qn_number: 'Myth vs Fact 2',
-      img: 'assets/read.svg',
+      img: 'assets/Myth-SVG/cards.svg',
       qn: 'I cannot workout during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -155,7 +153,7 @@ export class AppServeService {
     {
       id: 3,
       qn_number: 'Myth vs Fact 3',
-      img: 'assets/decide.svg',
+      img: 'assets/Myth-SVG/happy.svg',
       qn: 'I cannot bathe and wash my hair for one month.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -165,7 +163,7 @@ export class AppServeService {
     {
       id: 4,
       qn_number: 'Myth vs Fact 4',
-      img: 'assets/app.svg',
+      img: 'assets/Myth-SVG/saying.svg',
       qn: 'I must avoid all sources of wind, including fans and air conditioners.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -175,7 +173,7 @@ export class AppServeService {
     {
       id: 5,
       qn_number: 'Myth vs Fact 5',
-      img: 'assets/app.svg',
+      img: 'assets/Myth-SVG/selfie.svg',
       qn: 'I must consume alcohol in my confinement meals.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -325,7 +323,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 7, name: 'Sesame Braised Chicken',
+      image: 'assets/Food/meat-braised-vinegar.png', id: 7, name: 'Sesame Braised Chicken',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -343,7 +341,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 8, name: 'Steamed Threadfin',
+      image: 'assets/Food/meat-braised-vinegar.png', id: 8, name: 'Steamed Threadfin',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -358,7 +356,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/babi.jpg', id: 9, name: 'Stir-fried meat',
+      image: 'assets/Food/meat-braised-vinegar.png', id: 9, name: 'Stir-fried meat',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -749,26 +747,86 @@ export class AppServeService {
   public lactationData = [
     {
       Card_id: 1,
-      Card: 'Card A',
-      info: 'Card A info'
+      Card: 'Many women do not produce enough milk',
+      info: 'Most women produce more than enough milk, even an oversupply of milk is common. The reason why most babies who gain weight slowly or lose weight is not because their mother does not have enough milk, but because the baby does not absorb the milk from the mother, this is usually due to poor latching onto the breast.'
     },
 
     {
       Card_id: 2,
-      Card: 'Card B',
-      info: 'Card B info'
+      Card: 'It is normal for breastfeeding to hurt',
+      info: 'During the first few days of Breastfeeding, some form of tenderness is relatively common, this should only be a temporary situation that lasts for a few days. Any pain that is more than mild is abnormal and probably due to poor latching onto the breast. Any nipple pain that is not getting better by day 3 or 4 or lasts beyond 5 or 6 days should not be ignored. Limiting feeding time does not prevent soreness. You should visit the lactation consultant when this happens.'
     },
 
     {
       Card_id: 3,
-      Card: 'Card C',
+      Card: 'There is no or not enough milk during the first three to four days after birth',
       info: 'Card C info'
     },
 
     {
       Card_id: 4,
-      Card: 'Card D',
-      info: 'Card D info'
+      Card: 'A baby should be on the breast 20 (10, 15, 7.6) minutes on each side',
+      info: 'There is no fixed amount of time which the baby should be on each breast. The baby should be latched on properly and should actually be drinking, to ensure a better and longer breastfeeding process.'
+    },
+
+    {
+      Card_id: 5,
+      Card: 'A breastfeeding baby needs extra water in hot weather',
+      info: 'All the water a baby needs is in Breastmilk.'
+    },
+
+    {
+      Card_id: 6,
+      Card: 'A mother should wash her nipples each time before feeding the baby',
+      info: 'Breast Milk protects the baby against infection. Washing of nipples before each feeding will only make breastfeeding unnecessarily complicated and wash away protective oils from the nipple.'
+    },
+
+    {
+      Card_id: 7,
+      Card: 'Pumping is a good way of knowing how much milk the mother has',
+      info: 'Pumping can only tell you how much you can pump. The amount of milk pumped depends on various factors, including the mother’s stress level and if a baby breastfeeds well, the baby can get much more milk than the mother can pump.'
+    },
+
+    {
+      Card_id: 8,
+      Card: 'It is easier to bottle feed than to breastfeed',
+      info: 'Breastfeeding and bottle feeding requires the baby to use different muscles. While breastfeeding might be difficult, bottle feeding can confuse the baby. A poor start can be conquered, and breastfeeding usually becomes easier as time goes by. Mothers can read-up on breastfeeding materials before birth and visit a lactation consultant when in doubt.'
+    },
+
+    {
+      Card_id: 9,
+      Card: 'Breastfeeding ties the mother down',
+      info: 'A baby can be breastfed anywhere, anytime so breastfeeding is actually liberating for the mother. If the baby is not around with the mother, the mother can bring an electronic pump out to pump her breast milk.'
+    },
+
+    {
+      Card_id: 10,
+      Card: 'There is no way to know how much Breast Milk the baby is getting',
+      info: 'The methods are not easy but it does not mean that the Mother cannot know how much breast milk the baby is getting. The best way to find out is when the baby actually drinks (open mouth wide - pause - close mouth type of suck) at the breast for several minutes each feeding.'
+    },
+
+    {
+      Card_id: 11,
+      Card: 'Modern formulas are almost the same as breast milk',
+      info: 'Modern formulas are only superficially similar to breast milk. Formulas are inexact copies based on outdated and incomplete knowledge of what breast milk is. A mother’s Breast Milk is specially tailored to suit the baby, but formulas do not vary and are made to suit every baby. Formulas succeed only at making babies grow, but there is more to breastfeeding than just nutrients.'
+    },
+
+    {
+      Card_id: 12,
+      Card: 'If the mother has an infection she should stop breastfeeding',
+      info: 'The baby’s best protection against getting the infection is actually for the mother to continue breastfeeding. Breast Infections, including Breast Abscess, though painful, are not reasons to stop breastfeeding. Indeed, the infection is likely to settle more quickly if the mother continues breastfeeding on the affected side.'
+    },
+
+    {
+      Card_id: 13,
+      Card: 'If the baby has diarrhea or vomiting, the mother should stop breastfeeding',
+      info: 'The best medicine for a baby\'s gut infection is breastfeeding. Stop other foods for a short time, but the mother should continue breastfeeding. Breast Milk is the only fluid your baby requires when he / she has diarrhea and / or vomiting, except under exceptional circumstances.'
+    },
+
+    {
+      Card_id: 14,
+      Card: 'If the mother is taking medicine she should not breastfeed',
+      info: 'There are very few medicines that the mother should not take when breastfeeding. A very small amount of most medicines might appear in the milk, but usually in such small quantities that it is of no concern. If a medicine is truly of concern, there should be equally effective alternatives that are safer. The mother should highlight to the doctor that she is breastfeeding and thus be prescribed breastfeeding-friendly medication.'
     }
   ]
 

@@ -2,7 +2,8 @@
   <ion-toolbar>
       <ion-buttons>
           <ion-button (click)='cancel()'>
-              <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
+              <!-- src='assets/icon/arrow.svg' -->
+              <ion-icon color='dark' name='md-close' slot='icon-only'></ion-icon>
           </ion-button>
       </ion-buttons>
     <ion-title>{{ getValue[0].cardName }}</ion-title>
@@ -11,5 +12,5 @@
 
 <ion-content padding>
 
- {{ getValue[0].cardInfo }}
+    <ion-text> {{ getValue[0].cardInfo }} </ion-text>
 </ion-content>

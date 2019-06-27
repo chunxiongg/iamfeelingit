@@ -15,7 +15,10 @@ const routes: Routes = [
   { path: 'about', loadChildren: './details/about-us/about-us.module#AboutUsPageModule' },
   { path: 'message', loadChildren: './details/message-us/message-us.module#MessageUsPageModule' },
   { path: 'tab1-pop', loadChildren: './pop-over/tab1-pop/tab1-pop.module#Tab1PopPageModule' },
-  { path: 'lactation-pop', loadChildren: './pop-over/lactation-pop/lactation-pop.module#LactationPopPageModule' }
+  { path: 'lactation-pop', loadChildren: './pop-over/lactation-pop/lactation-pop.module#LactationPopPageModule' },
+  { path: 'first', loadChildren: './personalities/first/first.module#FirstPageModule' },
+  { path: 'second', loadChildren: './personalities/second/second.module#SecondPageModule' },
+  { path: 'third', loadChildren: './personalities/third/third.module#ThirdPageModule' }
 ];
 @NgModule({
   imports: [

@@ -59,13 +59,17 @@
                             <img src=' {{ qn.pic }} ' *ngIf='qn.resetBtn'>
                             <br *ngIf='qn.resetBtn'>
                             <ion-card-subtitle *ngIf='qn.resetBtn'>{{ qn.final }} </ion-card-subtitle>
-                            <br *ngIf='qn.resetBtn'>
-                            <ion-text *ngIf='qn.resetBtn'>{{ qn.results }}</ion-text>
+          
                             <br *ngIf='qn.resetBtn'>
                             <br *ngIf='qn.resetBtn'>
                             
                             <ion-grid>
                                 <ion-row>
+
+                                  <ion-col>
+                                    <ion-button class='ansMe' (click)='getArrSum()'>View Result</ion-button>
+                                  </ion-col>
+
                                   <ion-col>
                                     <ion-button class='ansMe' *ngIf='qn.resetBtn' (click)='restartQuiz()'>{{ qn.resetBtn }} </ion-button>
                                   </ion-col>

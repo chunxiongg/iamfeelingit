@@ -107,7 +107,7 @@ factClick(answer) {
     console.log('Correct!')
     Swal.fire({
       type: 'success',
-      text: 'You\'re right! ' + answer.revealAnswer + ' ' + answer.explaination + ' ' + answer.tip,
+      text: 'You\'re right! ' + answer.revealAnswer,
       animation: false,
       customClass: {
         popup: 'animated heartBeat'

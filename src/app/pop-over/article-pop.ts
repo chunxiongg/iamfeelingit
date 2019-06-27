@@ -13,7 +13,7 @@ import { ScrollDetail } from '@ionic/core';
         <ion-toolbar>
             <ion-buttons>
                 <ion-button (click)='cancel()'>
-                    <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
+                    <ion-icon color='dark' name='md-close' slot='icon-only'></ion-icon>
                 </ion-button>
             </ion-buttons>
 
@@ -27,11 +27,14 @@ import { ScrollDetail } from '@ionic/core';
             <ion-text> {{ value[0].seeDetails }} </ion-text>
             <br>
             <br>
-            <ion-text> {{ value[0].detailsBreak }} </ion-text>
+            <ion-text> {{ value[0].detailsBreak1a }} </ion-text>
             <br>
-            <ion-text> {{ value[0].detailsBreak1 }} </ion-text>
+            <ion-text> {{ value[0].detailsBreak1b }} </ion-text>
             <br>
             <br>
+            <ion-text> {{ value[0].detailsBreak2a }} </ion-text>
+            <br>
+            <ion-text> {{ value[0].detailsBreak1b }} </ion-text>
             <ion-card-subtitle>
             <ion-button expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button>
             </ion-card-subtitle>

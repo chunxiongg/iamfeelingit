@@ -133,22 +133,16 @@ export class PracticesPage implements OnInit {
   readArticles = [
     { id: 1, name: 'Food to Avoid', image: 'assets/warning.jpg', link: 'https://pemconfinement.com/foods-to-avoid-during-confinement-period/',
       details: 'Due to the ‘Qi’ and blood loss during the giving process, it is important for mothers to have the right diet during confinement to ensure that they replenish their body needs, especially when their bodies are weak after giving birth. One of the confinement’s principles stated that it would be important for mothers to consume “the right medicine” to replenish their body. Hence, apart from consuming nutritious food, it is also important for mothers to avoid foods that may cause harm to their body.',
-      detailsBreak: 'Shellfish',
-      detailsBreak1: 'Seafood like Crabs, Prawn are considered the ‘cold’ element which may easily cause allergic reactions, diarrhea or abdominal pain as mothers immune system and stomach are considered weak after giving birth. Also, shellfish food are considered to be ’poisonous’ food which may cause infection to the wound or even slow down the healing process of the wound. Last but not least, the toxins in seafood will affect the mother’s breast milk which may easily cause their children to have eczema due to weak immune system.'
+      detailsBreak1a: 'Shellfish',
+      detailsBreak1b: 'Seafood like Crabs, Prawn are considered the ‘cold’ element which may easily cause allergic reactions, diarrhea or abdominal pain as mothers immune system and stomach are considered weak after giving birth. Also, shellfish food are considered to be ’poisonous’ food which may cause infection to the wound or even slow down the healing process of the wound. Last but not least, the toxins in seafood will affect the mother’s breast milk which may easily cause their children to have eczema due to weak immune system.',
+      detailsBreak2a: 'High in Mercury Content Seafood',
+      detailsBreak2b: 'Many mothers may think or consider Salmon and Tuna to be very nutritional as it may help in producing breast milk. However, Salmon and Tuna are found to be high in mercury content which may cause digestive systems to be in discomfort. This may then cause mothers to have diarrhea and vomiting, which slows down the healing process.',
     },
     
     { id: 2, name: 'Methods of Cooking', image: 'assets/steps/2.svg', link: '',
       details: 'Mothers are encouraged to choose healthier food during confinement period to ensure that they absorb enough nutrients and vitamins. Other than using fresh ingredients, the cooking methods play important roles in dish preparations too.',
       detailsBreak: 'Methods of cooking affect the nutritional content of a dish and thus, it is very important to choose the right method to cook the food. Here, we recommend you 4 different cooking methods which mothers can learn and prepare confinement food for themselves.',
       detailsBreak1: '1. Boiling (Blanching)'
-    },
-    
-    { id: 3, name: 'Article 3', image: 'assets/steps/3.svg', link: '',
-      details: 'article 3 details'
-    },
-
-    { id: 4, name: 'Article 4', image: 'assets/steps/4.svg', link: '',
-    details: 'article 4 details'
     }
   ]
 
@@ -156,8 +150,8 @@ export class PracticesPage implements OnInit {
     console.log(read.name);
     const modal = await this.modalController.create({
     component: ModalExample,
-    componentProps: { value: [{ name: read.name, image: read.image, seeDetails: read.details, detailsBreak: read.detailsBreak, detailsBreak1: read.detailsBreak1, goLink: read.link }] }
-    });
+    componentProps: { value: [{ name: read.name, image: read.image, seeDetails: read.details, detailsBreak1a: read.detailsBreak1a, detailsBreak1b: read.detailsBreak1b, goLink: read.link }] }
+});
     return await modal.present();
   }
 

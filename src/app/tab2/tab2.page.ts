@@ -25,17 +25,43 @@ export class Tab2Page {
   }
 
   ansArr = [];
+  sum = 0;
 
   progress = 0;
   selectAnswer(options) {
     console.log('Selected:', options.name)
-    this.ansArr.push(options.name);
+    console.log('ID: ' + options.id)
+    this.ansArr.push(options.id);
     console.log(this.ansArr);
 
     this.slides.lockSwipeToNext(false);
     this.slides.lockSwipeToPrev(true);
     this.slides.slideNext();
     this.progress += 0.1;
+  }
+
+  getArrSum() {
+    this.sum = 0;
+    for (var i = 0; i < this.ansArr.length; i++) {
+      this.sum = this.sum + this.ansArr[i];
+    }
+
+    console.log(this.sum)
+
+    if (this.sum > 0 && this.sum <= 10) {
+      console.log('Score is between 0 to 10 -> First Practice')
+      this.navController.navigateForward(['/first'])
+    }
+
+    else if (this.sum > 10 && this.sum <= 20) {
+      console.log('Score is between 11 to 20 -> Second Practice')
+      this.navController.navigateForward(['/second'])
+    }
+
+    else if (this.sum > 20 && this.sum <= 30) {
+      console.log('Score is between 20 to 30 -> Third Practice')
+      this.navController.navigateForward(['/third'])
+    }
   }
 
   restartQuiz() {
@@ -45,6 +71,10 @@ export class Tab2Page {
     this.slides.lockSwipeToPrev(false);
     this.slides.slideTo(this.slideOpts.initialSlide)
   }
+
+  // viewResult() {
+  //   this.navController.navigateForward('/first')
+  // }
 
   goHome() {
     this.navController.navigateBack('/tabs/practices')

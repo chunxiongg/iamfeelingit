@@ -6,18 +6,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
+<div padding class='datePadding'>
+  <ion-note color='dark'>Myths Surrounding Lactation</ion-note> <br>
+</div>
+
+<ion-content class="card-background-page">
+
 
    <ion-grid>
     <ion-row>
       <ion-col size='6' *ngFor='let data of LactationArr; let i = index'>
           <ion-card (click)='presentModal(data)' text-center>
-              <ion-card-subtitle padding>
+              <!-- <ion-card-subtitle padding>
             
 
                 {{ data.Card }}
-              </ion-card-subtitle>
+              </ion-card-subtitle> -->
+
+              <div class="card-title" padding>{{ data.Card }}</div>
             </ion-card>
       </ion-col>
     </ion-row>

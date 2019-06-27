@@ -12,6 +12,7 @@ export class CategoryDetailsPage implements OnInit {
 
   constructor(private navController: NavController, private appServe: AppServeService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
+
   makanIndividual = null;
   foodRecipe = [];
   getMakanOne;
