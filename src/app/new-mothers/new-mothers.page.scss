@@ -1,0 +1,14 @@
+ion-text {
+    font-family: 'Raleway', sans-serif;
+    line-height: 4vh;
+}
+
+.ans {
+    --background: #F5DDD0;  /* fallback for old browsers */
+    --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
+    --background: linear-gradient(to bottom, #ffdde1, #F5DDD0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --color: black;
+    font-family: 'Raleway', sans-serif;
+    --border-radius: 0px !important;
+    width: 100% !important;
+  }

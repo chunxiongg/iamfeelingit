@@ -27,7 +27,7 @@ export class SplashQuotePage implements OnInit {
      };
     
      this.nativePageTransitions.slide(options);
-     this.navController.navigateForward(['/tabs/tab1'])
+     this.navController.navigateForward(['/new-mothers'])
 
   }
 

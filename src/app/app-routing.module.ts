@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'lactation-new', loadChildren: './lactation-new/lactation-new.module#LactationNewPageModule' },
   { path: 'practices-pop', loadChildren: './pop-over/practices-pop/practices-pop.module#PracticesPopPageModule' },
   { path: 'breastfeeding-before', loadChildren: './pop-over/breastfeeding-before/breastfeeding-before.module#BreastfeedingBeforePageModule' },
-  { path: 'lactation-bg-info', loadChildren: './pop-over/lactation-bg-info/lactation-bg-info.module#LactationBgInfoPageModule' }
+  { path: 'lactation-bg-info', loadChildren: './pop-over/lactation-bg-info/lactation-bg-info.module#LactationBgInfoPageModule' },
+  { path: 'new-mothers', loadChildren: './new-mothers/new-mothers.module#NewMothersPageModule' }
 ];
 @NgModule({
   imports: [
