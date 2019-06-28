@@ -21,6 +21,12 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Shake } from '@ionic-native/shake/ngx';
 
+import { ConfinementFoodPageModule } from './pop-over/confinement-food/confinement-food.module';
+import { PracticesPopPageModule } from './pop-over/practices-pop/practices-pop.module';
+import { LactationBgInfoPageModule } from './pop-over/lactation-bg-info/lactation-bg-info.module';
+import { LactationPopPageModule } from './pop-over/lactation-pop/lactation-pop.module';
+import { BreastfeedingBeforePageModule } from './pop-over/breastfeeding-before/breastfeeding-before.module';
+
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {
     'swipe': {
@@ -33,7 +39,8 @@ export class CustomeHammerConfig extends HammerGestureConfig {
   declarations: [AppComponent],
   entryComponents: [],
   imports: [ 
-    FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+    LactationBgInfoPageModule, BreastfeedingBeforePageModule, LactationPopPageModule, PracticesPopPageModule, ConfinementFoodPageModule],
   providers: [
     StatusBar,
     InAppBrowser,

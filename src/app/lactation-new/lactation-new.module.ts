@@ -22,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LactationNewPage, LactationBgInfoPage],
-  entryComponents: [LactationBgInfoPage]
+  declarations: [LactationNewPage]
+  // entryComponents: [LactationBgInfoPage]
 })
 export class LactationNewPageModule {}

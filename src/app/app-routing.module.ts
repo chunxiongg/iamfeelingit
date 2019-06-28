@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'myth', loadChildren: './myth-page/myth-page.module#MythPagePageModule' },
   { path: 'about', loadChildren: './details/about-us/about-us.module#AboutUsPageModule' },
   { path: 'message', loadChildren: './details/message-us/message-us.module#MessageUsPageModule' },
-  { path: 'tab1-pop', loadChildren: './pop-over/tab1-pop/tab1-pop.module#Tab1PopPageModule' },
   { path: 'lactation-pop', loadChildren: './pop-over/lactation-pop/lactation-pop.module#LactationPopPageModule' },
   { path: 'first', loadChildren: './personalities/first/first.module#FirstPageModule' },
   { path: 'second', loadChildren: './personalities/second/second.module#SecondPageModule' },
@@ -25,7 +24,9 @@ const routes: Routes = [
   { path: 'practices-pop', loadChildren: './pop-over/practices-pop/practices-pop.module#PracticesPopPageModule' },
   { path: 'breastfeeding-before', loadChildren: './pop-over/breastfeeding-before/breastfeeding-before.module#BreastfeedingBeforePageModule' },
   { path: 'lactation-bg-info', loadChildren: './pop-over/lactation-bg-info/lactation-bg-info.module#LactationBgInfoPageModule' },
-  { path: 'new-mothers', loadChildren: './new-mothers/new-mothers.module#NewMothersPageModule' }
+  { path: 'new-mothers', loadChildren: './new-mothers/new-mothers.module#NewMothersPageModule' },
+  { path: 'article-pop2', loadChildren: './pop-over/article-pop2/article-pop2.module#ArticlePop2PageModule' },
+  { path: 'article-pop3', loadChildren: './pop-over/article-pop3/article-pop3.module#ArticlePop3PageModule' }
 ];
 @NgModule({
   imports: [

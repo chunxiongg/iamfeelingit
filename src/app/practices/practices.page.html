@@ -152,12 +152,20 @@
           
           
           <ion-list lines='none'>
-              <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
+              <ion-item (click)='presentModal()'>
                 <!-- <ion-thumbnail slot="start">
                   <img src="{{ read.image }}">
                 </ion-thumbnail> -->
                 <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-                <ion-label>{{ read.name }} </ion-label>
+                <ion-label>Food to Avoid </ion-label>
+              </ion-item>
+
+              <ion-item (click)='presentCooking()'>
+                <!-- <ion-thumbnail slot="start">
+                  <img src="{{ read.image }}">
+                </ion-thumbnail> -->
+                <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
+                <ion-label>Methods of Cooking </ion-label>
               </ion-item>
               
           </ion-list>

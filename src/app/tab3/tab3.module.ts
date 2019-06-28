@@ -13,7 +13,7 @@ import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
-  declarations: [Tab3Page, LactationPopPage],
-  entryComponents: [LactationPopPage]
+  declarations: [Tab3Page]
+  // entryComponents: [LactationPopPage]
 })
 export class Tab3PageModule {}

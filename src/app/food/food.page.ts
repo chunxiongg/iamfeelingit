@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController, ModalController } from '@ionic/angular';
-import { PopoverPage } from '../pop-over/pop-over';
 import { Router } from '@angular/router';
 import { AppServeService } from '../app-serve.service';
-import { ModalExample } from '../pop-over/article-pop';
 
 @Component({
   selector: 'app-food',
@@ -18,14 +16,6 @@ export class FoodPage implements OnInit {
               private appServe: AppServeService,
               private modalController: ModalController) { }
 
-  async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
-      component: PopoverPage,
-      event: ev,
-      translucent: true
-    });
-    return await popover.present();
-  }
 
   foodRecipe = [];
 
@@ -49,15 +39,6 @@ export class FoodPage implements OnInit {
     { id: 2, name: 'Article B', image: 'assets/shapes.svg' },
     { id: 3, name: 'Postpartum Massage', image: 'assets/m.png', link: 'https://parenting.firstcry.com/articles/a-quick-guide-to-postnatal-massage/?fbclid=IwAR39EnrK-SIzc_RIbERLXYArsnO64k46bfzqwNPy1Z8D9sHoVVa0jCdM6as' }
   ]
-
-  async presentModal(read) {
-    console.log(read.name);
-    const modal = await this.modalController.create({
-      component: ModalExample,
-      componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
-    });
-    return await modal.present();
-  }
 
   doRefresh(event) {
     this.appServe.doRefresh(event);

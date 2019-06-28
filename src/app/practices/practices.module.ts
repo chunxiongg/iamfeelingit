@@ -6,8 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { PracticesPage } from './practices.page';
 
-import { PopoverPage } from '../pop-over/pop-over';
-import { ModalExample } from '../pop-over/article-pop';
 import { SharedModule } from './shared.module';
 
 import { ConfinementFoodPage } from '../pop-over/confinement-food/confinement-food.page'
@@ -28,7 +26,8 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PracticesPage, PopoverPage, ModalExample, ConfinementFoodPage, PracticesPopPage],
-  entryComponents: [PopoverPage, ModalExample, ConfinementFoodPage, PracticesPopPage]
+  declarations: [PracticesPage]
+  // declarations: [PracticesPage, PopoverPage, ModalExample, PracticesPopPage, PracticesPopPage],
+  // entryComponents: [PopoverPage, ModalExample, ConfinementFoodPage, PracticesPopPage]
 })
 export class PracticesPageModule {}

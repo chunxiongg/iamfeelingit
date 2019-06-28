@@ -5,7 +5,6 @@ import { ScrollHideConfig } from '../parallax.directive';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { PopoverController, NavController } from '@ionic/angular';
-import { Tab1PopPage } from '../pop-over/tab1-pop/tab1-pop.page';
 import { ActionSheetController } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import Swal from 'sweetalert2';
@@ -77,17 +76,6 @@ export class Tab1Page {
   }
 
   galleryType = 'a';
-
-  // async presentPopover(ev: any) {
-  //   const popover = await this.popoverController.create({
-  //   component: Tab1PopPage,
-  //   event: ev,
-  //   translucent: false,
-  //   animated: true,
-  //   backdropDismiss: true
-  //   });
-  //   return await popover.present();
-  // }
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({

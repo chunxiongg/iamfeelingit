@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FoodPage } from './food.page';
-
+import { ArticlePop2Page } from './article-pop2.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: FoodPage
+    component: ArticlePop2Page
   }
 ];
 
@@ -22,8 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FoodPage]
-  // declarations: [FoodPage, PopoverPage, ModalExample],
-  // entryComponents: [PopoverPage, ModalExample]
+  declarations: [ArticlePop2Page]
 })
-export class FoodPageModule {}
+export class ArticlePop2PageModule {}

@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { Router } from '@angular/router';
 import { PopoverController, ModalController } from '@ionic/angular';
-import { PopoverPage } from '../pop-over/pop-over';
-import { ModalExample } from '../pop-over/article-pop';
+import { ArticlePop2Page } from '../pop-over/article-pop2/article-pop2.page';
 import { NavController } from '@ionic/angular';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
@@ -183,50 +182,76 @@ export class PracticesPage implements OnInit {
     }
   ]
 
-  async presentModal(read) {
-    console.log(read.name);
-    const modal = await this.modalController.create({
-    component: ModalExample,
-    componentProps: { value: [{ name: read.name, image: read.image, seeDetails: read.details, 
+  presentModal() {
+
+      let options: NativeTransitionOptions = {
+        direction: 'left',
+        duration: 400,
+        slowdownfactor: -1,
+        iosdelay: 50
+       };
       
-      detailsBreak1a: read.detailsBreak1a, detailsBreak1b: read.detailsBreak1b, 
-      detailsBreak2a: read.detailsBreak2a,
-      detailsBreak2b: read.detailsBreak2b,
-      detailsBreak3a: read.detailsBreak3a,
-      detailsBreak3b: read.detailsBreak3b,
-      detailsBreak4a: read.detailsBreak4a,
-      detailsBreak4b: read.detailsBreak4b,
-      detailsBreak5a: read.detailsBreak5a,
-      detailsBreak5b: read.detailsBreak5b,
-      detailsBreak6a: read.detailsBreak6a,
-      detailsBreak6b: read.detailsBreak6b,
-      detailsBreak7a: read.detailsBreak7a,
-      detailsBreak7b: read.detailsBreak7b,
-      detailsBreak8a: read.detailsBreak8a,
-      detailsBreak8b: read.detailsBreak8b,
-      detailsBreak9a: read.detailsBreak9a,
-      detailsBreak9b: read.detailsBreak9b,
-      detailsBreak10a: read.detailsBreak10a,
-      detailsBreak10b: read.detailsBreak10b,
-      detailsBreak11a: read.detailsBreak11a,
-      detailsBreak11b: read.detailsBreak11b,
-      
-      goLink: read.link,
-      
-      detailsBreak: read.detailsBreak, detailsBreak1: read.detailsBreak1,
-      detailsBreak2: read.detailsBreak2,
-      detailsBreak3: read.detailsBreak3,
-      detailsBreak4: read.detailsBreak4,
-      detailsBreak5: read.detailsBreak5,
-      detailsBreak6: read.detailsBreak6,
-      detailsBreak7: read.detailsBreak7,
-      detailsBreak8: read.detailsBreak8,
-      detailsBreak9: read.detailsBreak9,
-      detailsBreak10: read.detailsBreak10,
-      detailsBreak11: read.detailsBreak11 }] }
-});
-    return await modal.present();
+       this.nativePageTransitions.slide(options);
+       this.navController.navigateForward(['/article-pop2'])
+
   }
+
+
+  presentCooking() {
+
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navController.navigateForward(['/article-pop3'])
+
+}
+//   async presentModal(read) {
+//     console.log(read.name);
+//     const modal = await this.modalController.create({
+//     component: ArticlePop2Page,
+//     componentProps: { value: [{ name: read.name, image: read.image, seeDetails: read.details, 
+      
+//       detailsBreak1a: read.detailsBreak1a, detailsBreak1b: read.detailsBreak1b, 
+//       detailsBreak2a: read.detailsBreak2a,
+//       detailsBreak2b: read.detailsBreak2b,
+//       detailsBreak3a: read.detailsBreak3a,
+//       detailsBreak3b: read.detailsBreak3b,
+//       detailsBreak4a: read.detailsBreak4a,
+//       detailsBreak4b: read.detailsBreak4b,
+//       detailsBreak5a: read.detailsBreak5a,
+//       detailsBreak5b: read.detailsBreak5b,
+//       detailsBreak6a: read.detailsBreak6a,
+//       detailsBreak6b: read.detailsBreak6b,
+//       detailsBreak7a: read.detailsBreak7a,
+//       detailsBreak7b: read.detailsBreak7b,
+//       detailsBreak8a: read.detailsBreak8a,
+//       detailsBreak8b: read.detailsBreak8b,
+//       detailsBreak9a: read.detailsBreak9a,
+//       detailsBreak9b: read.detailsBreak9b,
+//       detailsBreak10a: read.detailsBreak10a,
+//       detailsBreak10b: read.detailsBreak10b,
+//       detailsBreak11a: read.detailsBreak11a,
+//       detailsBreak11b: read.detailsBreak11b,
+      
+//       detailsBreak: read.detailsBreak, detailsBreak1: read.detailsBreak1,
+//       detailsBreak2: read.detailsBreak2,
+//       detailsBreak3: read.detailsBreak3,
+//       detailsBreak4: read.detailsBreak4,
+//       detailsBreak5: read.detailsBreak5,
+//       detailsBreak6: read.detailsBreak6,
+//       detailsBreak7: read.detailsBreak7,
+//       detailsBreak8: read.detailsBreak8,
+//       detailsBreak9: read.detailsBreak9,
+//       detailsBreak10: read.detailsBreak10,
+//       detailsBreak11: read.detailsBreak11 }] }
+// });
+//     return await modal.present();
+//   }
 
   doRefresh(event) {
     this.appServe.doRefresh(event);
