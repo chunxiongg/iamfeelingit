@@ -183,7 +183,7 @@ export class AppServeService {
     {
       id: 6,
       qn_number: 'Myth vs Fact 6',
-      img: 'assets/app.svg',
+      img: 'assets/Myth-SVG/cookies.svg',
       qn: 'All my confinement meals should have ginger.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -193,7 +193,7 @@ export class AppServeService {
     {
       id: 7,
       qn_number: 'Myth vs Fact 7',
-      img: 'assets/app.svg',
+      img: 'assets/Myth-SVG/reminders.svg',
       qn: 'I must get plenty of bed rest during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -203,7 +203,7 @@ export class AppServeService {
     {
       id: 8,
       qn_number: 'Myth vs Fact 8',
-      img: 'assets/app.svg',
+      img: 'assets/Myth-SVG/walking.svg',
       qn: 'I should avoid seafood like shellfish.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -212,8 +212,8 @@ export class AppServeService {
 
     {
       final: 'You have completed the myth vs fact!',
-      pic: 'assets/read.svg',
-      results: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptatum voluptatem ducimus magni. Quos, rerum?',
+      pic: 'assets/Myth-SVG/complete.svg',
+      results: 'Congrats! You have just acquired new knowledges.',
       resetBtn: 'Restart',
       home: 'Go Home'
     }
@@ -225,7 +225,7 @@ export class AppServeService {
 
   public foodRecipe = [
     { 
-      cat_id: 1, cat_name: 'Common', cat_img: 'assets/Food/steamed-cod-fish.png',
+      cat_id: 1, cat_name: 'Common', cat_img: 'assets/Food/dang-gui-soup.png',
       image: 'assets/Food/shenghua-soup.png', id: 1, name: 'Sheng Hua Soup 生化汤', 
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Sheng Hua Tang (生化汤) is a Chinese herbal soup formula designed for mothers after childbirth to aid uterus recovery in clearing blood stasis and tissue from the uterus.',
@@ -323,7 +323,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/Food/meat-braised-vinegar.png', id: 7, name: 'Sesame Braised Chicken',
+      image: 'assets/', id: 7, name: 'Sesame Braised Chicken',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -341,7 +341,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/Food/meat-braised-vinegar.png', id: 8, name: 'Steamed Threadfin',
+      image: 'assets/Food/steamed-threadfin.png', id: 8, name: 'Steamed Threadfin',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -356,7 +356,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/Food/meat-braised-vinegar.png', id: 9, name: 'Stir-fried meat',
+      image: 'assets/', id: 9, name: 'Stir-fried meat',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -373,7 +373,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/Food/steak.png',
-      image: 'assets/chicken.jpg', id: 10, name: 'Seaweed Soup Korean',
+      image: 'assets/Food/seaweed-soup.png', id: 10, name: 'Seaweed Soup Korean',
       information: [{ title: 'Calories', figure: 3000 }, { title: 'Prep Time', figure: '30m' }, { title: 'Cook Time', figure: '165m' }],
       briefDes: 'Healthy steamed chicken. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aspernatur.',
       des: 'Many ways to cook chicken and one is to enjoy it steamed and let it cooked in its own juices. It\'s also healthier than cooking it in oil! Here is a steamed chicken dish that can be prepared without hassle.',
@@ -390,7 +390,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 11, name: 'Cod Fish Teriyaki (Japanase)',
+      image: 'assets/Food/cod-fish-teriyaki.png', id: 11, name: 'Cod Fish Teriyaki (Japanase)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -467,7 +467,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 16, name: 'Braised Meatballs with Logan',
+      image: 'assets/Food/meatballs.png', id: 16, name: 'Braised Meatballs with Logan',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -535,7 +535,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/Food/ABC-Soup.png',
-      image: 'assets/herbal.jpg', id: 20, name: 'Ginger Fried Rice',
+      image: 'assets/Food/ginger-fried-rice.png', id: 20, name: 'Ginger Fried Rice',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -564,7 +564,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 22, name: 'Basil Omelette',
+      image: 'assets/Food/basil-omelette.png', id: 22, name: 'Basil Omelette',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -760,7 +760,7 @@ export class AppServeService {
     {
       Card_id: 3,
       Card: 'There is no or not enough milk during the first three to four days after birth',
-      info: 'Card C info'
+      info: 'Most probably due to poor latching onto the breast and when there is not a lot of milk (which is normal in the first few days), the baby must be latched well in order for the baby to get milk. If not latched on well, the baby is unable to get the mother\'s first milk, also known as colostrum. Mothers are encouraged to breastfeed every 2 to 3 hours, and good latching from the beginning can prevent problems later on.'
     },
 
     {

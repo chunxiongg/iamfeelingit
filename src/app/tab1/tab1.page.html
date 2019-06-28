@@ -31,41 +31,50 @@
 <div class='segButton'>
     <ion-segment [(ngModel)]="galleryType" color="dark" mode='md'>
         <ion-segment-button value="a" mode='md'>
-          Stage A
+          Stage 1
         </ion-segment-button>
     
         <ion-segment-button value="b" mode='md'>
-          Stage B
+          Stage 2
         </ion-segment-button>
     
         <ion-segment-button value="c" mode='md'>
-            Stage C
+            Stage 3
         </ion-segment-button>
       </ion-segment>
 </div>
 
 <!-- NEW -->
-<ion-content padding>
+<ion-content>
 
     <div [ngSwitch]="galleryType">
+      <br>
         <div *ngSwitchCase="'a'">
           <img src='assets/stageOne.svg' class='moon'>
           <ion-card padding>
-            Explanation of A
+              <ion-card-title>Womb Recovery 子宫修复 </ion-card-title>
+              <br>
+              <ion-text> Reduces blood stasis and lochia Uterus healing</ion-text>
           </ion-card>
         </div>
 
         <div *ngSwitchCase="'b'">
           <img src='assets/stageTwo.svg' class='moon'>
           <ion-card padding>
-            Explanation of B
+              <ion-card-title>Qi & Blood Replenishment 补气补血 </ion-card-title>
+              <br>
+              <ion-text>Regulate Qi and blood circulation
+                  Encourage healthy milk supply    </ion-text>         
           </ion-card>
         </div>
 
         <div *ngSwitchCase="'c'">
           <img src='assets/stageThree.svg' class='moon'>
           <ion-card padding>
-            Explanation of C
+              <ion-card-title>Regain Vitality 培补元气</ion-card-title>
+             <br>
+             <ion-text> Strengthen immunity and prompte slimming
+                Reduce wind and water retention</ion-text>
           </ion-card>
         </div>
     </div>

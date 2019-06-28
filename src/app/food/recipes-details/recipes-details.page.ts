@@ -3,6 +3,7 @@ import { AppServeService } from 'src/app/app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { timer } from 'rxjs'
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recipes-details',
@@ -13,6 +14,7 @@ export class RecipesDetailsPage implements OnInit {
 
   constructor(private nativePageTransitions: NativePageTransitions,
               private appServe: AppServeService, 
+              private navController: NavController,
               private activatedRoute: ActivatedRoute,
               private router: Router) { }
 

@@ -25,18 +25,113 @@ import { ScrollDetail } from '@ionic/core';
         <ion-card class='noBorder'>
             <ion-card-content>
             <ion-text> {{ value[0].seeDetails }} </ion-text>
-            <br>
-            <br>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
             <ion-text> {{ value[0].detailsBreak1a }} </ion-text>
-            <br>
+            <br *ngIf='value[0].detailsBreak1a'>
             <ion-text> {{ value[0].detailsBreak1b }} </ion-text>
-            <br>
-            <br>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>    
             <ion-text> {{ value[0].detailsBreak2a }} </ion-text>
-            <br>
-            <ion-text> {{ value[0].detailsBreak1b }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak2b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak3a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak3b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak4a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak4b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak5a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak5b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak6a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak6b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak7a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak7b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak8a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak8b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak9a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak9b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak10a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak10b }} </ion-text>
+
+            <br *ngIf='value[0].detailsBreak1a'>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak11a }} </ion-text>
+            <br *ngIf='value[0].detailsBreak1a'>
+            <ion-text> {{ value[0].detailsBreak11b }} </ion-text>
+
+
+
+
+
+
+
+
+
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak1 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak2 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak3 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak4 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak5 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak6 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak8 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak9 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak10 }} </ion-text> <!-- Second Article -->
+            <br *ngIf='value[0].detailsBreak'>
+            <br *ngIf='value[0].detailsBreak'>
+            <ion-text> {{ value[0].detailsBreak11 }} </ion-text> <!-- Second Article -->
             <ion-card-subtitle>
-            <ion-button expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button>
+            <br>
+            <ion-button *ngIf='value[0].detailsBreak1a' expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button>
             </ion-card-subtitle>
           
             </ion-card-content>

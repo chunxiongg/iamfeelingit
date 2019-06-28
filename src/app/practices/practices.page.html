@@ -142,9 +142,9 @@
           
           <ion-list lines='none'>
               <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
-                <ion-thumbnail slot="start">
+                <!-- <ion-thumbnail slot="start">
                   <img src="{{ read.image }}">
-                </ion-thumbnail>
+                </ion-thumbnail> -->
                 <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
                 <ion-label>{{ read.name }} </ion-label>
               </ion-item>

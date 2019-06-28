@@ -6,9 +6,27 @@
 ion-card {
   // min-height: 100vh !important;
   overflow: hidden !important;
-  min-height: 30vh !important;
+  min-height: 15vh !important;
+  width: 85% !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
 }
+
+ion-card-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2vh;
+  text-align: center;
+}
+
+ion-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2vh;
+  text-align: center;
+  display: block;
+}
+
 
 ion-img {
   width: 50% !important;
