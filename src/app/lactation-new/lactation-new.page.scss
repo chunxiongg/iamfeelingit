@@ -1,0 +1,178 @@
+/*Optional*/
+.bar-stable {
+    background-color: #d9d9d9 !important;
+  }
+  .tabs{
+    background-color: #d9d9d9 !important;
+  }
+  .icon-size-lg {
+    font-size: 40px;
+  }
+  
+  .timeline-thumb ion-icon {
+      zoom: 1.5;
+      margin-top: .3em;
+  }
+  .timeline-stats ion-icon {
+      vertical-align: bottom;
+      font-size: 1.3em;
+  }
+  /*Timeline*/
+  
+  .pos-absolute-right {
+      position: absolute;
+      right: 8px;
+  }
+  
+  .timeline {
+      position: relative;
+      margin: 15px 0 0 0;
+  }
+  .ans {
+    // --background: #F5DDD0;  /* fallback for old browsers */
+    // --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
+    // --background: linear-gradient(to bottom, #ffdde1, #F5DDD0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --color: black;
+    --background: #fff;
+    border: .8px solid #929292;
+    font-family: 'Raleway', sans-serif;
+    --border-radius: 0px !important;
+    width: 90% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  
+  .timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #929292;
+      left: 44px;
+      margin-left: -10px;
+      z-index: 1;
+  }
+  
+  .timeline .timeline-thumb {
+      border-radius: 500px;
+      width: 50px;
+      z-index: 2;
+      position: absolute;
+      left: 10px
+  }
+  
+  .timeline .timeline-thumb.timeline-icon {
+      height: 50px;
+      text-align: center;
+      color: white;
+      border: 5px solid #fff;
+  }
+  
+  .timeline .timeline-thumb.timeline-icon i {
+      font-size: 28px;
+      margin: 6px 0;
+      display: block;
+  }
+  
+  .timeline .timeline-item {
+      margin-left: 72px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+  }
+  
+  .timeline .timeline-stats {
+      position: relative;
+      font-size: 12px;
+      color: #7F8C8D;
+  }
+  
+  
+  .divider-title {
+      background: #e4e4e4;
+      padding: 5px 15px;
+  }
+  
+  /* === Color Themes === */
+  .text-muted {
+      color: #6d6d72 !important;
+  }
+  
+  .color-gray {
+      color: #8e8e93 !important;
+  }
+  
+  .color-red {
+      color: #ff3b30 !important;
+  }
+  
+  .bg-color-red {
+      background-color: #ff3b30 !important;
+  }
+  
+  .color-white {
+      color: #ffffff !important;
+  }
+  
+  .color-yellow {
+      color: #ffcc00 !important;
+  }
+  
+  .bg-color-yellow {
+      background-color: #ffcc00 !important;
+  }
+  
+  .color-green {
+      color: #4cd964 !important;
+  }
+  
+  .color-orange {
+      color: #ff9500 !important;
+  }
+  
+  .bg-color-orange {
+      background-color: #ff9500 !important;
+  }
+  
+  .color-blue {
+      color: #F5DDD0 !important;
+  }
+  
+  .bg-color-blue {
+      background-color: #F5DDD0 !important;
+  }
+  
+  .color-lightblue {
+      color: #5ac8fa !important;
+  }
+  
+  .bg-color-lightblue {
+      background-color: #000 !important;
+  }
+  
+  .color-bluegray {
+      color: #607d8b !important;
+  }
+  
+  .bg-color-bluegray {
+      background-color: #607d8b !important;
+  }
+  
+  .color-night {
+      color: #2B1B17 !important;
+  }
+  
+  .color-black {
+      color: black !important;
+  }
+  
+  .bg-color-white {
+      background-color: #ffffff;
+  }
+  
+  .bg-color-green {
+      background-color: #4cd964 !important;
+  }
+  

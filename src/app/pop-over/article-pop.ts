@@ -131,7 +131,7 @@ import { ScrollDetail } from '@ionic/core';
             <ion-text> {{ value[0].detailsBreak11 }} </ion-text> <!-- Second Article -->
             <ion-card-subtitle>
             <br>
-            <ion-button *ngIf='value[0].detailsBreak1a' expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button>
+            <!-- <ion-button *ngIf='value[0].detailsBreak1a' expand='block' size="small" fill='outline' (click)='openBrowser()'>Learn More</ion-button> -->
             </ion-card-subtitle>
           
             </ion-card-content>

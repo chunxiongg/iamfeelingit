@@ -8,6 +8,8 @@ import { NavController } from '@ionic/angular';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { ActionSheetController } from '@ionic/angular';
+import { ConfinementFoodPage } from '../pop-over/confinement-food/confinement-food.page';
+import { PracticesPopPage } from '../pop-over/practices-pop/practices-pop.page';
 
 @Component({
   selector: 'app-practices',
@@ -36,15 +38,19 @@ export class PracticesPage implements OnInit {
   //   this.navCtrl.pop();
   // }
 
+  async presentPopover() {
+    const modal = await this.modalController.create({
+      component: ConfinementFoodPage
+    });
+    return await modal.present();
+  }
 
-  // async presentPopover(ev: any) {
-  //   const popover = await this.popoverController.create({
-  //   component: PopoverPage,
-  //   event: ev,
-  //   translucent: false
-  //   });
-  //   return await popover.present();
-  // }
+  async openPractices() {
+    const modal = await this.modalController.create({
+      component: PracticesPopPage
+    })
+    return await modal.present();
+  }
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -75,7 +81,7 @@ export class PracticesPage implements OnInit {
     });
     await actionSheet.present();
   }  
-  
+
 
   onClickMyth() {
     let options: NativeTransitionOptions = {

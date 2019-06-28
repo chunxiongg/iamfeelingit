@@ -10,6 +10,9 @@ import { PopoverPage } from '../pop-over/pop-over';
 import { ModalExample } from '../pop-over/article-pop';
 import { SharedModule } from './shared.module';
 
+import { ConfinementFoodPage } from '../pop-over/confinement-food/confinement-food.page'
+import { PracticesPopPage } from '../pop-over/practices-pop/practices-pop.page'
+
 const routes: Routes = [
   {
     path: '',
@@ -25,7 +28,7 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PracticesPage, PopoverPage, ModalExample],
-  entryComponents: [PopoverPage, ModalExample]
+  declarations: [PracticesPage, PopoverPage, ModalExample, ConfinementFoodPage, PracticesPopPage],
+  entryComponents: [PopoverPage, ModalExample, ConfinementFoodPage, PracticesPopPage]
 })
 export class PracticesPageModule {}

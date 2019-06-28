@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
 import { AppServeService } from '../app-serve.service';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
 
 @Component({
@@ -11,7 +11,7 @@ import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
 })
 export class Tab3Page {
 
-  constructor(private modalController: ModalController, private http: HTTP, private appServe: AppServeService) {}
+  constructor(private modalController: ModalController, private navController: NavController, private http: HTTP, private appServe: AppServeService) {}
 
   LactationArr = [];
 
@@ -35,5 +35,10 @@ export class Tab3Page {
     });
     return await modal.present();
   }
+
+  goBack() {
+    this.navController.navigateBack(['/tabs/lactation'])
+}
+
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 
 @Component({
   selector: 'app-splash-quote',
@@ -9,25 +11,37 @@ import { Router } from '@angular/router';
 })
 export class SplashQuotePage implements OnInit {
 
-  constructor(private appServe: AppServeService, private router: Router) { }
+  constructor(private navController: NavController, private nativePageTransitions: NativePageTransitions) { }
 
-  returnQuote;
-  randomQuote = [];
 
   ngOnInit() {
-    this.returnQuote = this.appServe.getArrQuote();
-    this.randomQuote = this.appServe.returnChosen();
+    
   }
 
-  ionViewWillEnter() {
-    setTimeout(() => {
-      this.router.navigate(['/tabs/tab1'])
-      console.log('Quote Page Loaded!')
-    }, 3000);
+  firstTime() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navController.navigateForward(['/tabs/tab1'])
+
   }
 
-  onEnter() {
-    this.router.navigate(['/tabs/tab1'])
+  wentThrough() {
+    let options: NativeTransitionOptions = {
+      direction: 'left',
+      duration: 400,
+      slowdownfactor: -1,
+      iosdelay: 50
+     };
+    
+     this.nativePageTransitions.slide(options);
+     this.navController.navigateForward(['/tabs/practices'])
+
   }
 
 }

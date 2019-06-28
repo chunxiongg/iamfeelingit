@@ -17,7 +17,7 @@
         <ion-slide *ngFor='let answer of NewMythFact'>
           <ion-card class='mythCard'>
 
-            <img *ngIf='answer.optionA' src='{{ answer.img }}'>
+            <img *ngIf='answer.optionA' src='{{ answer.img }}' class='mythImg'>
             <br>
               <ion-card-content>
                   <ion-card-subtitle  *ngIf='answer.optionA' class='qnNo'>{{ answer.qn_number }}</ion-card-subtitle>

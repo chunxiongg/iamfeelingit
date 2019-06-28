@@ -16,10 +16,9 @@ ion-label {
 
 
 #myImg {
-    width: 25% !important;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 75% !important;
+    position: relative !important;
+    top: 2.5vh !important
 }
 
 ion-card-header {

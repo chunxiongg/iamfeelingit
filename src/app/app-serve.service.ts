@@ -15,7 +15,7 @@ export class AppServeService {
       question: 'Your best friend accidentally broke your go-to eyeshadow palette, what will you do?',
       image: 'assets/steps/1.svg',
       answerOption: [
-        { id: 1, answer: 'aa', name: "Say “It’s okay, I can always get a new one" },
+        { id: 1, answer: 'aa', name: "Say 'It’s okay, I can always get a new one.'" },
         { id: 2, answer: 'b', name: 'Will be angry but will get over it' },
         { id: 3, answer: 'c', name: 'Argue with your friend and hold a grudge for a long time' },
       ]
@@ -134,7 +134,7 @@ export class AppServeService {
     {
       id: 1,
       qn_number: 'Myth vs Fact 1',
-      img: 'assets/Myth-SVG/preparation.svg',
+      img: 'assets/Practices/drinking-water.svg',
       qn: 'I can drink plain water.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -143,7 +143,7 @@ export class AppServeService {
     {
       id: 2,
       qn_number: 'Myth vs Fact 2',
-      img: 'assets/Myth-SVG/cards.svg',
+      img: 'assets/Practices/workout.svg',
       qn: 'I cannot workout during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -153,7 +153,7 @@ export class AppServeService {
     {
       id: 3,
       qn_number: 'Myth vs Fact 3',
-      img: 'assets/Myth-SVG/happy.svg',
+      img: 'assets/Practices/bathing.svg',
       qn: 'I cannot bathe and wash my hair for one month.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -163,7 +163,7 @@ export class AppServeService {
     {
       id: 4,
       qn_number: 'Myth vs Fact 4',
-      img: 'assets/Myth-SVG/saying.svg',
+      img: 'assets/Practices/wind.svg',
       qn: 'I must avoid all sources of wind, including fans and air conditioners.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -173,7 +173,7 @@ export class AppServeService {
     {
       id: 5,
       qn_number: 'Myth vs Fact 5',
-      img: 'assets/Myth-SVG/selfie.svg',
+      img: 'assets/Practices/alcohol.svg',
       qn: 'I must consume alcohol in my confinement meals.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -183,7 +183,7 @@ export class AppServeService {
     {
       id: 6,
       qn_number: 'Myth vs Fact 6',
-      img: 'assets/Myth-SVG/cookies.svg',
+      img: 'assets/Practices/ginger.svg',
       qn: 'All my confinement meals should have ginger.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -193,7 +193,7 @@ export class AppServeService {
     {
       id: 7,
       qn_number: 'Myth vs Fact 7',
-      img: 'assets/Myth-SVG/reminders.svg',
+      img: 'assets/Practices/bed-rest.svg',
       qn: 'I must get plenty of bed rest during confinement.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -203,7 +203,7 @@ export class AppServeService {
     {
       id: 8,
       qn_number: 'Myth vs Fact 8',
-      img: 'assets/Myth-SVG/walking.svg',
+      img: 'assets/Practices/seafood.svg',
       qn: 'I should avoid seafood like shellfish.',
       optionA: 'Myth',
       optionB: 'Fact',
@@ -289,6 +289,23 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
+      image: 'assets/Food/red-wine-fermented-wine-chicken.png', id: 31, name: 'Red Fermented Wine Chicken',
+      information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
+      briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
+      des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
+      ingredients: [{ a: '1.5kg whole chicken (chopped into smaller sizes)', b: '150g old ginger (thin slices)', c: '4 tbsp Red wine dregs (红糟)', d: '4 tbsp sugar', e: '1 tbsp Sesame oil for frying', f: '3 tbsp light soya sauce', g: '1⁄2 tsp salt', h: '350ml water', i: 'Coriander to garnish' }],
+      recipe: [{ Step: 'Add sesame oil into a wok and turn it to high heat. Add the ginger in and fry it till it turns golden brown.', img: 'assets/steps/1.svg' },
+               { Step: 'Add chicken into the wok and stir-fry it on high heat.', img: 'assets/steps/2.svg' },
+               { Step: 'Add in 2 tbsp of red wine dregs and stir fry until add the chicken is evenly coated.', img: 'assets/steps/3.svg' },
+               { Step: 'Add in sugar, light soya sauce and salt. Ensure everything is evenly coated.', img: 'assets/steps/4.svg' },
+               { Step: 'Add in the remaining red wine dregs and stir fry till everything is evenly coated.', img: 'assets/steps/5.svg' },
+               { Step: 'Add in water and bring it to a boil.', img: 'assets/steps/6.svg' },
+               { Step: 'Once it boils, cover with a lid and turn heat to low and simmer for 45 minutes.', img: 'assets/steps/7.svg' },
+               { Step: 'You may top the dish with coriander before serving.', img: 'assets/steps/8.svg' } ]
+    }, // Common
+
+    {
+      cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
       image: 'assets/Food/steamed-cod-fish.png', id: 5, name: 'Steamed Cod Fish',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
@@ -323,7 +340,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/', id: 7, name: 'Sesame Braised Chicken',
+      image: 'assets/Food/sesame-braised-chicken.png', id: 7, name: 'Sesame Braised Chicken',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -356,7 +373,7 @@ export class AppServeService {
 
     {
       cat_id: 1, cat_name: 'Common', cat_img: 'assets/babi.jpg',
-      image: 'assets/', id: 9, name: 'Stir-fried meat',
+      image: 'assets/Food/stir-fry-pork-liver.png', id: 9, name: 'Stir-fried meat',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
@@ -390,7 +407,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/Food/cod-fish-teriyaki.png', id: 11, name: 'Cod Fish Teriyaki (Japanase)',
+      image: 'assets/Food/cod-fish-teriyaki.png', id: 11, name: 'Cod Fish Teriyaki (Japanese)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -403,7 +420,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 12, name: 'Methi Fish (Indian)',
+      image: 'assets/Food/methiandgingerfish.png', id: 12, name: 'Methi Fish (Indian)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -421,7 +438,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 13, name: 'Pasta (Western)',
+      image: 'assets/Food/angel-hair-pasta-with-goji-berries.png', id: 13, name: 'Pasta (Western)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -453,7 +470,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 15, name: 'Roast Chicken (Western)',
+      image: 'assets/Food/roasted-chicken.png', id: 15, name: 'Roast Chicken (Western)',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -499,7 +516,7 @@ export class AppServeService {
 
     { 
       cat_id: 2, cat_name: 'Fusion', cat_img: 'assets/chicken.jpg',
-      image: 'assets/herbal.jpg', id: 18, name: 'Fillet Meat Chop',
+      image: 'assets/Food/fried-meat-chop.png', id: 18, name: 'Fillet Meat Chop',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
@@ -550,20 +567,6 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 21, name: 'Vegetarian Fried Rice',
-      information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
-      briefDes: 'Lorem',
-      des: 'Lorem2',
-      ingredients: [{ a: '', b: '', c: '', d: '', e: '' }],
-      recipe: [{ Step: '', img: 'assets/steps/1.svg' }, 
-               { Step: '', img: 'assets/steps/2.svg' },
-               { Step: '', img: 'assets/steps/3.svg' },
-               { Step: '', img: 'assets/steps/4.svg' },
-               { Step: '', img: 'assets/steps/5.svg' }]
-    },
-
-    {
-      cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
       image: 'assets/Food/basil-omelette.png', id: 22, name: 'Basil Omelette',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
@@ -591,7 +594,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 24, name: 'Eight Treasure Rice',
+      image: 'assets/Food/eight-treasure-rice.png', id: 24, name: 'Eight Treasure Rice',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -647,7 +650,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 28, name: 'Vegan ‘Trotter’ with old ginger and vinegar',
+      image: 'assets/Food/vegan-pork-trotter.png', id: 28, name: 'Vegan ‘Trotter’ with old ginger and vinegar',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -659,7 +662,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 29, name: 'Stir-fried mushrooms with sesame oil and ginger',
+      image: 'assets/Food/stir-fry-mushroom-with-ginger.png', id: 29, name: 'Stir-fried mushrooms with sesame oil and ginger',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem2',
@@ -672,7 +675,7 @@ export class AppServeService {
 
     {
       cat_id: 3, cat_name: 'Vegetarian', cat_img: 'assets/chickenSoup.png',
-      image: 'assets/herbal.jpg', id: 30, name: 'Vegetarian Chicken Rice',
+      image: 'assets/Food/vegan-chicken-rice.png', id: 30, name: 'Vegetarian Chicken Rice',
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem 3',

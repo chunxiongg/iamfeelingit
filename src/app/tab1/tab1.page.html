@@ -28,7 +28,9 @@
           <ion-note color='dark'>{{ today | date:'fullDate' }}</ion-note>
 </div>
 
-<div class='segButton'>
+
+
+<!-- <div class='segButton'>
     <ion-segment [(ngModel)]="galleryType" color="dark" mode='md'>
         <ion-segment-button value="a" mode='md'>
           Stage 1
@@ -42,47 +44,13 @@
             Stage 3
         </ion-segment-button>
       </ion-segment>
-</div>
+</div> -->
 
 <!-- NEW -->
-<ion-content>
 
-    <div [ngSwitch]="galleryType">
-      <br>
-        <div *ngSwitchCase="'a'">
-          <img src='assets/stageOne.svg' class='moon'>
-          <ion-card padding>
-              <ion-card-title>Womb Recovery 子宫修复 </ion-card-title>
-              <br>
-              <ion-text> Reduces blood stasis and lochia Uterus healing</ion-text>
-          </ion-card>
-        </div>
-
-        <div *ngSwitchCase="'b'">
-          <img src='assets/stageTwo.svg' class='moon'>
-          <ion-card padding>
-              <ion-card-title>Qi & Blood Replenishment 补气补血 </ion-card-title>
-              <br>
-              <ion-text>Regulate Qi and blood circulation
-                  Encourage healthy milk supply    </ion-text>         
-          </ion-card>
-        </div>
-
-        <div *ngSwitchCase="'c'">
-          <img src='assets/stageThree.svg' class='moon'>
-          <ion-card padding>
-              <ion-card-title>Regain Vitality 培补元气</ion-card-title>
-             <br>
-             <ion-text> Strengthen immunity and prompte slimming
-                Reduce wind and water retention</ion-text>
-          </ion-card>
-        </div>
-    </div>
-
-</ion-content>
   
   <!-- <ion-content #pageContent fullscreen> -->
-   <!-- <ion-content padding>
+   <ion-content padding>
       <ion-refresher (ionRefresh)="doRefresh($event)">
           <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
       </ion-refresher>
@@ -94,54 +62,50 @@
         <ion-card-subtitle color='dark' class='threeStages'>3 Stages of Confinement</ion-card-subtitle>
       </ion-col>
 
-      <ion-col>
-        <ion-buttons justify-content-end class='threeStagesBtn'>
-            <ion-button (click)='presentActionSheet()'>
-              <ion-icon color='warning' class='myIcon' slot="icon-only" name="more"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-        </ion-col>
-
           <ion-slides pager="true" [options]="slideOpts" color='dark'> 
             
               <ion-slide>
-                  <ion-card class="welcome-card">
+                  <ion-card class="noBorder">
                     <br>
-                      <ion-img src='assets/stageOne.svg'></ion-img>
-                      <ion-card-header>
-                        <ion-card-subtitle>Womb Recovery</ion-card-subtitle>
-                      </ion-card-header>
-                      <ion-card-content>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel esse, voluptatum necessitatibus maiores atque.
-                      </ion-card-content>
+                    <img src='assets/stageOne.svg' class='moon'>
+                    <br>
+                    <ion-card-title>Womb Recovery 子宫修复 </ion-card-title>
+
+                    <br>
+                    <ion-text> Reduces blood stasis and lochia uterus healing</ion-text>
+                    
+                    </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                  <ion-card class="noBorder">
+                    <br>
+                    <img src='assets/stageTwo.svg' class='moon'>
+                    <br>
+                    <ion-card-title>Qi & Blood Replenishment 补气补血 </ion-card-title>
+
+                    <br>
+                    <ion-text> Regulate Qi and blood circulation
+                        Encourage healthy milk supply    </ion-text>
+                    
+                    </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                  <ion-card class="noBorder">
+                    <br>
+                    <img src='assets/stageThree.svg' class='moon'>
+                    <br>
+                    <ion-card-title>Regain Vitality 培补元气 </ion-card-title>
+
+                    <br>
+                    <ion-text>Strengthen immunity and promote slimming <br>
+                        Reduce wind and water retention</ion-text>
+                    
                     </ion-card>
               </ion-slide>
       
-              <ion-slide>
-                  <ion-card class="welcome-card">
-                    <br>
-                      <ion-img src='assets/stageTwo.svg'></ion-img>
-                      <ion-card-header>
-                        <ion-card-subtitle>Replenishment of Qi and Blood</ion-card-subtitle>
-                      </ion-card-header>
-                      <ion-card-content>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quasi natus distinctio, ut reprehenderit rerum.
-                        </ion-card-content>
-                    </ion-card>
-              </ion-slide>
-      
-              <ion-slide>
-                  <ion-card class="welcome-card">
-                    <br>
-                      <ion-img src='assets/stageThree.svg'></ion-img>
-                      <ion-card-header>
-                        <ion-card-subtitle>Boost and Regain Vitality</ion-card-subtitle>
-                      </ion-card-header>
-                      <ion-card-content>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias corrupti officia, laboriosam animi dolorem itaque.
-                        </ion-card-content>
-                    </ion-card>
-              </ion-slide>
+
       
             </ion-slides>
           
@@ -151,4 +115,4 @@
   
   
   </ion-content>
-   -->
+   

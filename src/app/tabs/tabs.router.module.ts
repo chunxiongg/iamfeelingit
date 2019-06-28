@@ -26,6 +26,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'lactation',
+        children: [
+          {
+            path: '',
+            loadChildren: '../lactation-new/lactation-new.module#LactationNewPageModule'
+          }
+        ]
+      },
+      {
         path: 'tab3',
         children: [
           {
@@ -124,7 +133,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/splash-quote',
     pathMatch: 'full'
   }
 ];

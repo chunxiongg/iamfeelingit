@@ -4,6 +4,17 @@
     <ion-title>Practices</ion-title>
   </ion-toolbar>
 
+</ion-header>
+
+<!-- <ion-text padding>
+  <b>Introduction of Confinement to First Time Mother</b>
+  <br>
+  Confinement is an important postpartum process which aids the healing of every mother after
+  giving birth. This process usually lasts for 30 days, with some lasting for 40 days. This period is
+  where mothers usually stay at home unless required due to their low immune system to
+  recuperate their bodies and regain vitality.
+</ion-text> -->
+
     <!-- Default Segment -->
   <ion-toolbar>
     <ion-segment [(ngModel)]="galleryType" color="dark" mode='md' (ionChange)='segmentChanged()'>
@@ -22,7 +33,6 @@
     
       </ion-segment>
     </ion-toolbar>
-</ion-header>
 
 <ion-content class="card-background-page">
 
@@ -30,10 +40,13 @@
 
   <div [ngSwitch]="galleryType">
     
-    <div *ngSwitchCase="'mvf'" class='ActivitiesCard' padding>
+    <div *ngSwitchCase="'mvf'" class='ActivitiesCard' >
+      <br>
+        <ion-button class='ans' color='white' (click)='openPractices()'>View Information</ion-button>
+
         <br>
-        <ion-card-subtitle class='info'>Series of activities that you can complete</ion-card-subtitle>
-        <ion-slides pager="false" [options]="slideOptsForActivities">  
+        <ion-card-subtitle padding class='info'>Series of activities that you can complete</ion-card-subtitle>
+        <ion-slides pager="false" [options]="slideOptsForActivities" padding>  
             <ion-slide>
                 <ion-card (click)='onClickMyth()'>
                     <ion-card-content> 
@@ -81,13 +94,12 @@
 
     <!-- Food -->
     <div *ngSwitchCase="'makan'">
-        <ion-refresher (ionRefresh)="doRefresh($event)">
-          <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
-      </ion-refresher>
 
         <div>
-    
-
+            <br>
+            <ion-button class='ans' color='white' (click)='presentPopover($event)'>View Information</ion-button>
+  
+            <br>
           <ion-grid>
             <ion-row>
               <ion-col>
@@ -137,8 +149,7 @@
               </ion-row>
           </ion-grid>
 
-          <br>
-
+          
           
           <ion-list lines='none'>
               <ion-item (click)='presentModal(read)' *ngFor='let read of readArticles'>
@@ -148,6 +159,7 @@
                 <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
                 <ion-label>{{ read.name }} </ion-label>
               </ion-item>
+              
           </ion-list>
         </div>
        
