@@ -5,7 +5,13 @@
           <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
             </ion-button>
         </ion-buttons>
-      <ion-title>Strict</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+          Strict
+        </ion-title>
+    
+        <ion-title slot='end' *ngIf="platform.is('android')">
+          Strict
+        </ion-title>
     </ion-toolbar>
   </ion-header>
   

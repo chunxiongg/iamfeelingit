@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NavParams } from '@ionic/angular';
 import { AppServeService } from 'src/app/app-serve.service';
 import { ModalController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-lactation-pop',
@@ -10,7 +11,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class LactationPopPage implements OnInit {
 
-  constructor(private navParams: NavParams, private appServe: AppServeService, private modalController: ModalController ) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private navParams: NavParams, private appServe: AppServeService, private modalController: ModalController ) {
+    this.platform = myPlatform;
+   }
 
   @Input() value: '';
 

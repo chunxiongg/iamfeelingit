@@ -6,7 +6,13 @@
             </ion-button>
         </ion-buttons>
 
-        <ion-title>Before</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+            Before
+          </ion-title>
+      
+          <ion-title slot='end' *ngIf="platform.is('android')">
+            Before
+          </ion-title>
     </ion-toolbar>
 </ion-header>
 

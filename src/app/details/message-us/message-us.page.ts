@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-message-us',
@@ -11,8 +12,11 @@ import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs/ngx';
 })
 export class MessageUsPage implements OnInit {
 
-  constructor(private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs,
-              private navController: NavController, private nativePageTransitions: NativePageTransitions) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private emailComposer: EmailComposer, private coloredBrowserTabs: ColoredBrowserTabs,
+              private navController: NavController, private nativePageTransitions: NativePageTransitions) { 
+                this.platform = myPlatform;
+              }
 
   ngOnInit() {
   }

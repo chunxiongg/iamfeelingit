@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-lactation-bg-info',
@@ -8,7 +9,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class LactationBgInfoPage implements OnInit {
 
-  constructor(private modalController: ModalController ) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private modalController: ModalController) {
+    this.platform = myPlatform;
+   }
 
   ngOnInit() {
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppServeService } from '../app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-category-details',
@@ -10,7 +11,11 @@ import { NavController } from '@ionic/angular';
 })
 export class CategoryDetailsPage implements OnInit {
 
-  constructor(private navController: NavController, private appServe: AppServeService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private navController: NavController, private appServe: AppServeService, private router: Router, private activatedRoute: ActivatedRoute) { 
+    this.platform = myPlatform;
+
+  }
 
 
   makanIndividual = null;

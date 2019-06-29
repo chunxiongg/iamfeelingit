@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-about-us',
@@ -9,7 +10,10 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 })
 export class AboutUsPage implements OnInit {
 
-  constructor(private navController: NavController, private nativePageTransitions: NativePageTransitions) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private navController: NavController, private nativePageTransitions: NativePageTransitions) {
+    this.platform = myPlatform;
+   }
 
   ngOnInit() {
   }
