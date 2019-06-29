@@ -5,7 +5,13 @@
           <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
             </ion-button>
         </ion-buttons>
-      <ion-title>In-Between</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+          In-Between
+        </ion-title>
+    
+        <ion-title slot='end' *ngIf="platform.is('android')">
+          In-Between
+        </ion-title>
     </ion-toolbar>
   </ion-header>
   

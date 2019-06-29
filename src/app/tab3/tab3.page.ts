@@ -3,6 +3,7 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { AppServeService } from '../app-serve.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -11,7 +12,10 @@ import { LactationPopPage } from '../pop-over/lactation-pop/lactation-pop.page';
 })
 export class Tab3Page {
 
-  constructor(private modalController: ModalController, private navController: NavController, private http: HTTP, private appServe: AppServeService) {}
+  public platform: any;
+  constructor(private myPlatform: Platform, private modalController: ModalController, private navController: NavController, private http: HTTP, private appServe: AppServeService) {
+    this.platform = myPlatform;
+  }
 
   LactationArr = [];
 

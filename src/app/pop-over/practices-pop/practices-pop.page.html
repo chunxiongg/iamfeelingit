@@ -6,7 +6,13 @@
             </ion-button>
         </ion-buttons>
 
-        <ion-title>Confinement Practices</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+            Confinement Practices
+          </ion-title>
+      
+          <ion-title slot='end' *ngIf="platform.is('android')">
+            Confinement Practices
+          </ion-title>
     </ion-toolbar>
 </ion-header>
 

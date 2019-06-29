@@ -6,7 +6,13 @@
                 </ion-button>
             </ion-buttons>
 
-    <ion-title>Still Young</ion-title>
+            <ion-title *ngIf="platform.is('ios')">
+                Still Young
+              </ion-title>
+          
+              <ion-title slot='end' *ngIf="platform.is('android')">
+                Still Young
+              </ion-title>
   </ion-toolbar>
 </ion-header>
 

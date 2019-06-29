@@ -6,7 +6,13 @@
             </ion-button>
         </ion-buttons>
 
-        <ion-title>Confinement Food</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+            Confinement Food
+          </ion-title>
+      
+          <ion-title slot='end' *ngIf="platform.is('android')">
+            Confinement Food
+          </ion-title>
     </ion-toolbar>
 </ion-header>
 

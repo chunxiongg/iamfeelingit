@@ -6,7 +6,13 @@
               <ion-icon color='dark' name='md-close' slot='icon-only'></ion-icon>
           </ion-button>
       </ion-buttons>
-    <ion-title>Myth</ion-title>
+      <ion-title *ngIf="platform.is('ios')">
+        Myth
+      </ion-title>
+  
+      <ion-title slot='end' *ngIf="platform.is('android')">
+        Myth
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 

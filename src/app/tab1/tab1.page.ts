@@ -9,6 +9,7 @@ import { ActionSheetController } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -17,11 +18,14 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 })
 export class Tab1Page {
 
-  constructor(private navController: NavController, private popoverController: PopoverController, 
+  public platform: any;
+  constructor(private myPlatform: Platform, private navController: NavController, private popoverController: PopoverController, 
               private nativePageTransitions: NativePageTransitions,
               private datePicker: DatePicker, private nativeAudio: NativeAudio, private appServe: AppServeService, 
               private router: Router, private actionSheetController: ActionSheetController,
-              private socialSharing: SocialSharing ) { }
+              private socialSharing: SocialSharing ) {
+                this.platform = myPlatform;
+               }
 
   footerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-bottom', maxValue: undefined };
   headerScrollConfig: ScrollHideConfig = { cssProperty: 'margin-top', maxValue: 44 };

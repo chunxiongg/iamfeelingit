@@ -6,7 +6,13 @@
             </ion-button>
         </ion-buttons>
 
-        <ion-title>Lactation</ion-title>
+        <ion-title *ngIf="platform.is('ios')">
+            Lactation
+          </ion-title>
+      
+          <ion-title slot='end' *ngIf="platform.is('android')">
+            Lactation
+          </ion-title>
     </ion-toolbar>
 </ion-header>
 

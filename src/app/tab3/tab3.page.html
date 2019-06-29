@@ -5,7 +5,11 @@
         <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
           </ion-button>
       </ion-buttons>
-    <ion-title>
+    <ion-title *ngIf="platform.is('ios')">
+      Lactation
+    </ion-title>
+
+    <ion-title slot='end' *ngIf="platform.is('android')">
       Lactation
     </ion-title>
   </ion-toolbar>
