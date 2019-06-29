@@ -1,7 +1,8 @@
 {
   "name": "Maternity-App",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular",
   "id": "f411e0a2"
