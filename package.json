@@ -126,7 +126,6 @@
       "cordova-plugin-shake": {}
     },
     "platforms": [
-      "ios",
       "android"
     ]
   }

@@ -4,6 +4,7 @@ import { AppServeService } from '../app-serve.service';
 import { NavController } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -13,7 +14,10 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 
 export class Tab2Page {
 
-  constructor(private nativePageTransitions: NativePageTransitions, private navController: NavController, private appServe: AppServeService) {}
+  public platform: any;
+  constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions, private navController: NavController, private appServe: AppServeService) {
+    this.platform = myPlatform;
+  }
 
   @ViewChild('slides') slides: IonSlides;
 

@@ -6,7 +6,12 @@
           </ion-button>
       </ion-buttons>
       
-    <ion-title>
+
+    <ion-title *ngIf="platform.is('ios')">
+      Personality Quiz
+    </ion-title>
+
+    <ion-title slot='end' *ngIf="platform.is('android')">
       Personality Quiz
     </ion-title>
   </ion-toolbar>

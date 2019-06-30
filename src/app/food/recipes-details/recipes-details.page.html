@@ -4,7 +4,14 @@
       <ion-buttons slot="start">
           <ion-back-button text="Back" color='dark'></ion-back-button>
       </ion-buttons>
-      <ion-title>{{ getMakanOne.cat_name }}</ion-title>
+
+      <ion-title *ngIf="platform.is('ios')">
+        {{ getMakanOne.cat_name }}
+      </ion-title>
+  
+      <ion-title slot='end' *ngIf="platform.is('android')">
+        {{ getMakanOne.cat_name }}
+      </ion-title>
   </ion-toolbar>
     
   <!-- <img [src]='getMakanOne.image'> -->
