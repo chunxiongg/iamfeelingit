@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { timer } from 'rxjs'
 import { NavController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-recipes-details',
@@ -12,11 +13,14 @@ import { NavController } from '@ionic/angular';
 })
 export class RecipesDetailsPage implements OnInit {
 
-  constructor(private nativePageTransitions: NativePageTransitions,
+  public platform: any;
+  constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions,
               private appServe: AppServeService, 
               private navController: NavController,
               private activatedRoute: ActivatedRoute,
-              private router: Router) { }
+              private router: Router) { 
+                this.platform = myPlatform;
+              }
 
   galleryType = 'ingredients';
   public tests = new Array(20);

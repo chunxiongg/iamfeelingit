@@ -5,6 +5,7 @@ import { IonSlides } from '@ionic/angular';
 import Swal from 'sweetalert2';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-myth-page',
@@ -13,8 +14,11 @@ import { Vibration } from '@ionic-native/vibration/ngx';
 })
 export class MythPagePage implements OnInit {
 
-  constructor(private nativePageTransitions: NativePageTransitions, private navController: NavController, 
-              private appServe: AppServeService, private vibration: Vibration) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions, private navController: NavController, 
+              private appServe: AppServeService, private vibration: Vibration) {
+                this.platform = myPlatform;
+               }
 
   @ViewChild('slides') slides: IonSlides;
   NewMythFact = [];

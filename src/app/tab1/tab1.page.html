@@ -12,12 +12,19 @@
 
   <ion-header no-border>
       <ion-toolbar>
-              <ion-buttons justify-content-end>
+              <ion-buttons justify-content-end *ngIf="platform.is('ios')">
                     <ion-button (click)='openMilk()'>
 
                   <ion-icon color='dark' slot='icon-only' src='assets/tilted-bottle.svg'></ion-icon>
                     </ion-button>
                 </ion-buttons> 
+
+                <ion-buttons justify-content-start *ngIf="platform.is('android')">
+                  <ion-button (click)='openMilk()'>
+
+                <ion-icon color='dark' slot='icon-only' src='assets/tilted-bottle.svg'></ion-icon>
+                  </ion-button>
+              </ion-buttons> 
 
                 <ion-title *ngIf="platform.is('ios')">
                   Still Young
