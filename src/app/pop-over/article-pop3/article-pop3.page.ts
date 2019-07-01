@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, NavController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-article-pop3',
@@ -8,7 +9,10 @@ import { NavParams, NavController } from '@ionic/angular';
 })
 export class ArticlePop3Page implements OnInit {
 
-  constructor(private navController: NavController) { }
+  public platform: any;
+  constructor(private myPlatform: Platform, private navController: NavController) {
+    this.platform = myPlatform;
+   }
 
   ngOnInit() {
   }

@@ -5,7 +5,13 @@
               <ion-icon color='dark' name='md-close' slot='icon-only'></ion-icon>
           </ion-button>
       </ion-buttons>
-    <ion-title>Methods of Cooking</ion-title>
+      <ion-title *ngIf="platform.is('ios')">
+        Methods of Cooking
+      </ion-title>
+  
+      <ion-title slot='end' *ngIf="platform.is('android')">
+        Methods of Cooking
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
