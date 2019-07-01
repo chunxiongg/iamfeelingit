@@ -50,7 +50,11 @@ export class Tab1Page {
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    centeredSlides: true
+    centeredSlides: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    }
     // pagination: {
     //   el: '.swiper-pagination',
     //   type: 'bullets',
