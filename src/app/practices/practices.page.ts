@@ -60,6 +60,10 @@ export class PracticesPage implements OnInit {
         text: 'Share',
         handler: () => {
           console.log('Share clicked');
+          Swal.fire({
+            type: 'info',
+            text: 'Coming soon!',
+          })
         }
       }, 
       
@@ -67,6 +71,10 @@ export class PracticesPage implements OnInit {
         text: 'Favourite',
         handler: () => {
           console.log('Favorite clicked');
+          Swal.fire({
+            type: 'info',
+            text: 'Coming soon!',
+          })
         }
       }, 
       
