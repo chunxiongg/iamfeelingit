@@ -585,16 +585,16 @@ export class AppServeService {
       briefDes: 'Lorem',
       des: 'Lorem2',
       ingredients: [{ a: 'Non-GMO canola oil, for frying', b: '4 cloves garlic, chopped', c: '1/2 medium onion, chopped', d: '2 fresh shiitake/button mushrooms, chopped', e: '120g pumpkin, peeled, deseeded & 1cm cubed', f: '135g brown long-grain rice, washed & drained', g: '175ml water or vegetable broth, for cooking rice' }],
-      recipe: [{ Step: 'Wash the rice.', img: 'assets/steps/1.svg' }, 
-               { Step: 'Heat a pot over high heat with a little vegetable oil. Add a teaspoon of garlic, a teaspoon of ginger, and a tablespoon of chopped scallion.', img: 'assets/steps/2.svg' },
-               { Step: 'Add in the mushrooms. Reduce the heat to medium high and let the mushrooms cook until soft; about 5 minutes. Stir occasionally.', img: 'assets/steps/3.svg' },
-               { Step: 'Add an additional teaspoon of garlic, a teaspoon of ginger, a tablespoon of scallions (again only white and light green parts), 3 cups of broth.', img: 'assets/steps/4.svg' },
-               { Step: 'Turn the heat to high, let the broth come to a boil, then simmer on low for about 3 minutes.', img: 'assets/steps/5.svg' },
-               { Step: 'Turn the heat off. Remove the beans and mushrooms with a slotted spoon and transfer to a bowl to cool.', img: 'assets/steps/6.svg' },
-               { Step: 'You will have about 3 cups of broth remaining. Reserve one cup and set aside, checking that you have 2 cups left in the pot.', img: 'assets/steps/7.svg' },
-               { Step: 'Add washed rice to the pot and turn the heat to high. When it comes to a boil, turn the heat to low, cover and simmer until the rice has absorbed all the broth; about 15 minutes. Do not stir the rice while simmering!', img: 'assets/steps/8.svg' },
-               { Step: 'While the rice is cooking, make the Scallion Ginger Sauce and Hainan Chili Sauce.', img: 'assets/steps/9.svg' },
-               { Step: 'Serve the hot rice with beans and mushrooms on top, along with Scallion Ginger Sauce, Hainan Chili Sauce', img: 'assets/steps/10.svg' }]
+      recipe: [{ Step: 'Heat up oil in a wok or large skillet. Sauté the onion and garlic until aromatic.', img: 'assets/steps/1.svg' }, 
+               { Step: 'Add in the mushrooms. Reduce the heat to medium high and let the mushrooms cook until soft; about 5 minutes. Stir occasionally.', img: 'assets/steps/2.svg' },
+               { Step: 'Pour in pumpkin and uncooked rice, mix gently and be careful not to mash the pumpkin.', img: 'assets/steps/3.svg' },
+               { Step: 'Add seasonings, sauté lightly for about 1 minute.', img: 'assets/steps/4.svg'},
+               { Step: 'Add water and stir mixture until well combined for 30 seconds.', img: 'assets/steps/5.svg'},
+               { Step: 'Transfer mixture into rice cooker pot, turn on the rice cooker. When the rice is cooked, use the rice scoop to stir the rice and loosen it up.', img: 'assets/steps/6.svg'},
+               { Step: 'If you find the rice too wet for your liking after stirring, press the mode for \'cook rice\' again. The new cycle will continue to cook and dry up the mixture to the right consistency. Loosen the rice and keep warm in the cooker for a few minutes.', img: 'assets/steps/7.svg'},
+               { Step: 'Garnish and serve immediately.', img: 'assets/steps/8.svg'}
+              ],
+              
     },
 
     {
@@ -689,7 +689,13 @@ export class AppServeService {
                { Step: 'Heat a pot over high heat with a little vegetable oil. Add a teaspoon of garlic, a teaspoon of ginger, and a tablespoon of chopped scallion.', img: 'assets/steps/2.svg' },
                { Step: 'Add in the mushrooms. Reduce the heat to medium high and let the mushrooms cook until soft; about 5 minutes. Stir occasionally.', img: 'assets/steps/3.svg' },
                { Step: 'Add an additional teaspoon of garlic, a teaspoon of ginger, a tablespoon of scallions (again only white and light green parts), 3 cups of broth.', img: 'assets/steps/4.svg' },
-               { Step: 'Turn the heat to high, let the broth come to a boil, then simmer on low for about 3 minutes.', img: 'assets/steps/5.svg' }]
+               { Step: 'Turn the heat to high, let the broth come to a boil, then simmer on low for about 3 minutes.', img: 'assets/steps/5.svg' },
+               { Step: 'Turn the heat off. Remove the beans and mushrooms with a slotted spoon and transfer to a bowl to cool.', img: 'assets/steps/6.svg'},
+               { Step: 'You will have about 3 cups of broth remaining. Reserve one cup and set aside, checking that you have 2 cups left in the pot.', img: 'assets/steps/7.svg'},
+               { Step: 'Add washed rice to the pot and turn the heat to high. When it comes to a boil, turn the heat to low, cover and simmer until the rice has absorbed all the broth; about 15 minutes. Do not stir the rice while simmering!', img: 'assets/steps/8.svg'},
+               { Step: 'While the rice is cooking, make the Scallion Ginger Sauce and Hainan Chili Sauce.', img: 'assets/steps/9.svg'},
+               { Step: 'Serve the hot rice with beans and mushrooms on top, along with Scallion Ginger Sauce, Hainan Chili Sauce', img: 'assets/steps/10.svg'}
+              ]
     }
 
   ]
@@ -809,7 +815,7 @@ export class AppServeService {
 
     {
       Card_id: 10,
-      Card: 'There is no way to know how much Breast Milk the baby is getting',
+      Card: 'There is no way to know how much breast milk the baby is getting',
       info: 'The methods are not easy but it does not mean that the Mother cannot know how much breast milk the baby is getting. The best way to find out is when the baby actually drinks (open mouth wide - pause - close mouth type of suck) at the breast for several minutes each feeding.'
     },
 
