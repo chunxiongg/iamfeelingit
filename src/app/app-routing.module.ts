@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'lactation-bg-info', loadChildren: './pop-over/lactation-bg-info/lactation-bg-info.module#LactationBgInfoPageModule' },
   { path: 'new-mothers', loadChildren: './new-mothers/new-mothers.module#NewMothersPageModule' },
   { path: 'article-pop2', loadChildren: './pop-over/article-pop2/article-pop2.module#ArticlePop2PageModule' },
-  { path: 'article-pop3', loadChildren: './pop-over/article-pop3/article-pop3.module#ArticlePop3PageModule' }
+  { path: 'article-pop3', loadChildren: './pop-over/article-pop3/article-pop3.module#ArticlePop3PageModule' },
+  { path: 'timer', loadChildren: './pop-over/timer/timer.module#TimerPageModule' }
 ];
 @NgModule({
   imports: [

@@ -26,6 +26,8 @@ import { PracticesPopPageModule } from './pop-over/practices-pop/practices-pop.m
 import { LactationBgInfoPageModule } from './pop-over/lactation-bg-info/lactation-bg-info.module';
 import { LactationPopPageModule } from './pop-over/lactation-pop/lactation-pop.module';
 import { BreastfeedingBeforePageModule } from './pop-over/breastfeeding-before/breastfeeding-before.module';
+import { TimerPageModule } from './pop-over/timer/timer.module';
+
 
 export class CustomeHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -40,7 +42,8 @@ export class CustomeHammerConfig extends HammerGestureConfig {
   entryComponents: [],
   imports: [ 
     FormsModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    LactationBgInfoPageModule, BreastfeedingBeforePageModule, LactationPopPageModule, PracticesPopPageModule, ConfinementFoodPageModule],
+    LactationBgInfoPageModule, BreastfeedingBeforePageModule, LactationPopPageModule, TimerPageModule,
+    PracticesPopPageModule, ConfinementFoodPageModule],
   providers: [
     StatusBar,
     InAppBrowser,

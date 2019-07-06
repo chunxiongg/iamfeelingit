@@ -28,4 +28,20 @@ export class NewMothersPage implements OnInit {
      this.navController.navigateForward(['/tabs/tab1'])
   }
 
+  // timeLeft: number = 5;
+  // interval;
+
+  // start() {
+  //   this.interval = setInterval(() => {
+  //     if(this.timeLeft > 0) {
+  //       this.timeLeft--;
+  //     } 
+  //   },1000)
+  // }
+
+  // pause() {
+  //   clearInterval(this.interval);
+  // }
+
+
 }

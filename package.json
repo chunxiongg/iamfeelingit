@@ -40,6 +40,7 @@
     "@ionic/angular": "^4.1.0",
     "@material/ripple": "^2.3.0",
     "@mobiscroll/angular": "https://npm.mobiscroll.com/@mobiscroll/angular-trial/-/angular-trial-4.7.2.tgz",
+    "angular-svg-round-progressbar": "^3.0.1",
     "animate.css": "^3.7.2",
     "com.telerik.plugins.nativepagetransitions": "0.6.5",
     "cordova-android": "8.0.0",

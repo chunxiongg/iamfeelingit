@@ -3,8 +3,9 @@ import { AppServeService } from 'src/app/app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { timer } from 'rxjs'
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
+import { TimerPage } from '../../pop-over/timer/timer.page';
 
 @Component({
   selector: 'app-recipes-details',
@@ -15,7 +16,8 @@ export class RecipesDetailsPage implements OnInit {
 
   public platform: any;
   constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions,
-              private appServe: AppServeService, 
+              private appServe: AppServeService,
+              private modalController: ModalController , 
               private navController: NavController,
               private activatedRoute: ActivatedRoute,
               private router: Router) { 
@@ -81,14 +83,14 @@ export class RecipesDetailsPage implements OnInit {
     console.log(steps)
   }
 
-  async presentModal(getMakanOne) {
-    console.log(getMakanOne.name);
-    // const modal = await this.modalController.create({
-    //   component: ModalExample,
-    //   componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
-    // });
-    // return await modal.present();
-  }
+  // async presentModal(getMakanOne) {
+  //   console.log(getMakanOne.name);
+  //   // const modal = await this.modalController.create({
+  //   //   component: ModalExample,
+  //   //   componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
+  //   // });
+  //   // return await modal.present();
+  // }
 
   doRefresh(event) {
     this.appServe.doRefresh(event);
@@ -97,5 +99,13 @@ export class RecipesDetailsPage implements OnInit {
   tickBox(value) {
     console.log(value)
   }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+    component: TimerPage,
+    });
+    return await modal.present();
+  }
+
 }
 
