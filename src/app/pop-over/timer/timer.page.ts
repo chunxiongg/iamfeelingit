@@ -25,7 +25,7 @@ export class TimerPage implements OnInit {
   rounded: boolean = false;
   responsive: boolean = false;
   clockwise: boolean = false;
-  color: string = '#faddd8';
+  color: string = 'red';
   background: string = '#eaeaea';
   duration: number = 800;
   animation: string = 'easeOutCubic';

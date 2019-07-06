@@ -103,9 +103,12 @@ export class RecipesDetailsPage implements OnInit {
   async presentModal() {
     const modal = await this.modalController.create({
     component: TimerPage,
+    cssClass: 'timerModal'
     });
     return await modal.present();
   }
+
+  
 
 }
 

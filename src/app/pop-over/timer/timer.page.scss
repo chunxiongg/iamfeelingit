@@ -11,6 +11,15 @@
     bottom: 3.5vh !important;
   }
 
+  .currentText {
+    position: absolute;
+    color: #000;
+    font-weight: 100;
+    line-height: 1;
+    bottom: 3.5vh !important;
+    font-size: 4vh !important;
+  }
+
 round-progress {
     display: block;
     margin-left: auto;

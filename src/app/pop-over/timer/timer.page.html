@@ -1,17 +1,18 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
+      <!-- <ion-title>Timer</ion-title>
       <ion-buttons>
           <ion-button (click)='cancel()'>
               <ion-icon color='dark' name='md-close' slot='icon-only'></ion-icon>
           </ion-button>
-      </ion-buttons>
-    <ion-title>Timer</ion-title>
+      </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
     <div class="progress-wrapper">
-        <div class="current" [ngStyle]="getOverlayStyle()">{{ timeLeft }}s</div>
+        <div class="current" [ngStyle]="getOverlayStyle()" *ngIf='timeLeft > 0'>{{ timeLeft }}s</div>
+        <div class="currentText" [ngStyle]="getOverlayStyle()" *ngIf='timeLeft == 0'>Time's up!</div>
       
         <round-progress
           [current]="timeLeft"
@@ -37,6 +38,7 @@
               <ion-col>
                   <ion-button class='ans' (click)="pauseTimer();">Pause</ion-button>
               </ion-col>
+
             </ion-row>
           </ion-grid>
 
