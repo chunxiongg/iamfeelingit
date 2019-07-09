@@ -3,8 +3,9 @@ import { AppServeService } from 'src/app/app-serve.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { timer } from 'rxjs'
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
+import { TimerPage } from '../../pop-over/timer/timer.page';
 
 @Component({
   selector: 'app-recipes-details',
@@ -15,16 +16,17 @@ export class RecipesDetailsPage implements OnInit {
 
   public platform: any;
   constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions,
-              private appServe: AppServeService, 
-              private navController: NavController,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) { 
-                this.platform = myPlatform;
-              }
+    private appServe: AppServeService,
+    private modalController: ModalController,
+    private navController: NavController,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) {
+    this.platform = myPlatform;
+  }
 
   galleryType = 'ingredients';
   public tests = new Array(20);
-  
+
   makanIndividual = null;
   foodRecipe = [];
   getMakanOne;
@@ -48,7 +50,7 @@ export class RecipesDetailsPage implements OnInit {
     this.newArr.push(this.getMakanOne.ingredients[0]);
     console.log(Object.values(this.newArr[0]));
     this.finalArr = Object.values(this.newArr[0]);
-    
+
     for (var i = 0; i < this.getMakanOne.recipe.length; i++) {
       var details = this.getMakanOne.recipe[i]
       this.stepsArr.push(details)
@@ -81,14 +83,14 @@ export class RecipesDetailsPage implements OnInit {
     console.log(steps)
   }
 
-  async presentModal(getMakanOne) {
-    console.log(getMakanOne.name);
-    // const modal = await this.modalController.create({
-    //   component: ModalExample,
-    //   componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
-    // });
-    // return await modal.present();
-  }
+  // async presentModal(getMakanOne) {
+  //   console.log(getMakanOne.name);
+  //   // const modal = await this.modalController.create({
+  //   //   component: ModalExample,
+  //   //   componentProps: { value: [ { name: read.name, image: read.image, goLink: read.link } ] }
+  //   // });
+  //   // return await modal.present();
+  // }
 
   doRefresh(event) {
     this.appServe.doRefresh(event);
@@ -97,5 +99,16 @@ export class RecipesDetailsPage implements OnInit {
   tickBox(value) {
     console.log(value)
   }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: TimerPage,
+      cssClass: 'timerModal'
+    });
+    return await modal.present();
+  }
+
+
+
 }
 
