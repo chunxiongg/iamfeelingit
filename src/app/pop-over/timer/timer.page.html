@@ -27,7 +27,9 @@
           [background]="background"
           [duration]="duration"
           [animation]="animation"
-          [animationDelay]="animationDelay"></round-progress>
+          [animationDelay]="animationDelay">
+        </round-progress>
+
           <br />
           <ion-grid>
             <ion-row>
@@ -38,6 +40,10 @@
               <ion-col>
                   <ion-button class='ans' (click)="pauseTimer();">Pause</ion-button>
               </ion-col>
+
+              <ion-col>
+                <ion-button class='ans' (click)="restartTimer();">Restart</ion-button>
+            </ion-col>
 
             </ion-row>
           </ion-grid>

@@ -47,6 +47,10 @@ export class TimerPage implements OnInit {
     clearInterval(this.interval);
   }
 
+  restartTimer() {
+    
+  }
+
   getOverlayStyle() {
     let isSemi = this.semicircle;
     let transform = (isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';

@@ -16,17 +16,17 @@ export class RecipesDetailsPage implements OnInit {
 
   public platform: any;
   constructor(private myPlatform: Platform, private nativePageTransitions: NativePageTransitions,
-              private appServe: AppServeService,
-              private modalController: ModalController , 
-              private navController: NavController,
-              private activatedRoute: ActivatedRoute,
-              private router: Router) { 
-                this.platform = myPlatform;
-              }
+    private appServe: AppServeService,
+    private modalController: ModalController,
+    private navController: NavController,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) {
+    this.platform = myPlatform;
+  }
 
   galleryType = 'ingredients';
   public tests = new Array(20);
-  
+
   makanIndividual = null;
   foodRecipe = [];
   getMakanOne;
@@ -50,7 +50,7 @@ export class RecipesDetailsPage implements OnInit {
     this.newArr.push(this.getMakanOne.ingredients[0]);
     console.log(Object.values(this.newArr[0]));
     this.finalArr = Object.values(this.newArr[0]);
-    
+
     for (var i = 0; i < this.getMakanOne.recipe.length; i++) {
       var details = this.getMakanOne.recipe[i]
       this.stepsArr.push(details)
@@ -102,13 +102,13 @@ export class RecipesDetailsPage implements OnInit {
 
   async presentModal() {
     const modal = await this.modalController.create({
-    component: TimerPage,
-    cssClass: 'timerModal'
+      component: TimerPage,
+      cssClass: 'timerModal'
     });
     return await modal.present();
   }
 
-  
+
 
 }
 
