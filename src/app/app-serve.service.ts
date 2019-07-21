@@ -94,7 +94,7 @@ export class AppServeService {
       answerOption: [
         { id: 1, answer: 'a17', name: 'Self-medicate' },
         { id: 2, answer: 'b18', name: 'Wait for a few days to see if the pain persists' },
-        { id: 3, answer: 'c19', name: 'Clear my schedule to visit the dentists straight away' },
+        { id: 3, answer: 'c19', name: 'Clear my schedule to visit the dentist straight away' },
       ]
     },
     {
@@ -104,7 +104,7 @@ export class AppServeService {
       image: 'assets/steps/9.svg',
       answerOption: [
         { id: 1, answer: 'a17', name: 'I don’t organise and fold my clothes' },
-        { id: 2, answer: 'b18', name: 'I just fold my clothes and place it in the closet randomly' },
+        { id: 2, answer: 'b18', name: 'I just fold my clothes and place them in the closet randomly' },
         { id: 3, answer: 'c19', name: 'I organise it by colours or style' },
       ]
     },
@@ -310,7 +310,7 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
-      ingredients: [{ a: '1 Cod Fish Steak (2.5cm thickness)', b: '2 slices Ginger', c: '1 tbs Light Soy Sauce', d: '1 tsp Rock Sugar (or castor sugar)', e: '1 tbs Water', f: '1 tbs Hsao Xing Wine (cooking rice wine)' }],
+      ingredients: [{ a: '1 Cod Fish Steak (2.5cm thickness)', b: '2 slices Ginger', c: '1 tbs Light Soy Sauce', d: '1 tsp Rock Sugar (or castor sugar)', e: '1 tbs Water', f: '1 tbs Shao Xing Wine (cooking rice wine)' }],
       recipe: [{ Step: 'Clean the cod fish and use a kitchen towel to pat dry the fish.', img: 'assets/steps/1.svg' },
       { Step: 'Spread the ginger slices in the middle of the plate then put the fish on top of the ginger.', img: 'assets/steps/2.svg' },
       { Step: 'Boil water in a pot or steamer then place the plate of fish in the steamer and steam for 7 minutes.', img: 'assets/steps/3.svg' },
@@ -377,12 +377,12 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Dang Gui Nourishing Soup (当归补血汤), is designed to be consumed during first week of confinement period. Dang Gui Nourishing Soup as your confinement food menu can helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth.',
       des: 'helps to tonify blood, clear blood stasis and speed up a woman’s recovery from childbirth. Dang Gui or Chinese angelica is one of the most well-known Chinese herbs that has a very important place in women’s health and treatment for women’s illnesses. The herb has the ability to strengthen blood, nourish female reproductive organs, regulate menstruation, alleviate period pains and recover from symptoms of low energy or chronic fatigue.',
-      ingredients: [{ a: '150g another meat of your choice (sliced and marinate the pork with 2 tsp light soya sauce and 1 tsp corn flour)', b: '50g old ginger (sliced)', c: '1 tsp minced garlic', d: '1 egg', e: '1 stalked of spring onions (cut into 5cm in length)', f: '1 tbs olive oil', g: '1 tbs seasame oil', h: '150ml warm water', i: '1 tbs oyster sauce', j: '1 1/2 tsp dark soya sauce', k: '1 tsp light soya sauce', l: '2 tsp brandy', m: 'White pepper powder (to taste)' }],
+      ingredients: [{ a: '150g another meat of your choice (sliced and marinate the meat with 2 tsp light soya sauce and 1 tsp corn flour)', b: '50g old ginger (sliced)', c: '1 tsp minced garlic', d: '1 egg', e: '1 stalked of spring onions (cut into 5cm in length)', f: '1 tbs olive oil', g: '1 tbs seasame oil', h: '150ml warm water', i: '1 tbs oyster sauce', j: '1 1/2 tsp dark soya sauce', k: '1 tsp light soya sauce', l: '2 tsp brandy', m: 'White pepper powder (to taste)' }],
       recipe: [{ Step: 'In a wok, add in sesame, garlic and ginger and fry till ingredients turn golden brown.', img: 'assets/steps/1.svg' },
       { Step: 'Leave the garlic and ginger slices aside once its done.', img: 'assets/steps/2.svg' },
       { Step: 'Add in olive oil in the middle of the wok and fry an egg till its semi-done.', img: 'assets/steps/3.svg' },
       { Step: 'Add in meat in the wok and stir fry with all the other ingredients until the meat is cooked.', img: 'assets/steps/4.svg' },
-      { Step: 'Add seasoninga nd warm water and cover the wok with a lid. Bring the gravy to a boil.', img: 'assets/steps/5.svg' },
+      { Step: 'Add seasoninga and warm water and cover the wok with a lid. Bring the gravy to a boil.', img: 'assets/steps/5.svg' },
       { Step: 'Remove lid and stir gently. Add spring onions into the wok.', img: 'assets/steps/6.svg' },
       { Step: 'You may top the dish with some spring onions before serving.', img: 'assets/steps/7.svg' }
       ]
@@ -442,7 +442,7 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
-      ingredients: [{ a: '1 Tbsp Olive Oil', b: '1 Tbsp Minced Ginger', c: '60g Angel Hair Pasta', d: '80g Cod Fish Fillet', e: 'Some (5 to 10 grams) rinsed Goji Berries (garnish purposes)', f: 'Some (5 to 10 grams perhaps) soaked Wood Ear Black Fungus (julienne) (garnish purposes)' }],
+      ingredients: [{ a: '1 Tbsp Olive Oil', b: '1 Tbsp Minced Ginger', c: '60g Angel Hair Pasta', d: '80g Cod Fish Fillet', e: 'Some (5 to 10 grams) rinsed Goji Berries (garnish purposes)', f: 'Some (5 to 10 grams) soaked Wood Ear Black Fungus (julienne) (garnish purposes)' }],
       recipe: [{ Step: 'Season the Cod Fish with a pinch of salt.', img: 'assets/steps/1.svg' },
       { Step: 'Heat up a pan and add olive oil in. Once oil is heated up, add fish and cook.', img: 'assets/steps/2.svg' },
       { Step: 'When 2/3 of the sides of the fish has turned opaque, turn the fish over and cook for another two minutes , depending on your heat.', img: 'assets/steps/3.svg' },
@@ -459,7 +459,7 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
       des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus odit repellendus quisquam pariatur. Beatae deleniti veritatis, est magnam repellat repellendus?',
-      ingredients: [{ a: '150g Sirloin Steaks (patted dry)', b: '1 tbsp Unsalted butter', c: '1 tbsp Minced Ginger', d: '1 tbsp Olive Oil', e: '1 tbsp Fresh Chopped Parsley', f: 'Salted and Pepper (to taste)' }],
+      ingredients: [{ a: '150g Sirloin Steaks (patted dry)', b: '1 tbsp Unsalted butter', c: '1 tbsp Minced Ginger', d: '1 tbsp Olive Oil', e: '1 tbsp Fresh Chopped Parsley', f: 'Salt and Pepper (to taste)' }],
       recipe: [{ Step: 'Add butter, parsley, and ginger in a bowl and mix. Set aside.', img: 'assets/steps/1.svg' },
       { Step: 'Heat your pan up, then lightly grease a layer of oil on your pan and the steaks.', img: 'assets/steps/2.svg' },
       { Step: 'Grill your steaks for about 7 minutes on the pan.', img: 'assets/steps/3.svg' },
@@ -573,9 +573,9 @@ export class AppServeService {
       des: 'Lorem2',
       ingredients: [{ a: 'a small handful fresh basil leaves', b: '60g chickpea flour/ flour', c: '1⁄2 small firm tofu/beancurd, mashed', d: '1⁄2 teaspoon baking powder', e: '60ml water', f: 'salt and pepper, to taste', g: '1 tablespoon oil', h: 'few drops of sesame oil (optional)' }],
       recipe: [{ Step: 'Combine the chickpea flour, baking powder, water, salt and pepper in a bowl. Add in the tofu puree, mix well and leave to stand for at least 5-10 minutes.', img: 'assets/steps/1.svg' },
-      { Step: 'Heat oil and sesame oil in a non-stick pan over medium heat. Throw in the basil leaves and stir fry for 1⁄2 -1 minute.', img: 'assets/steps/2.svg' },
-      { Step: 'Pour in the flour mixture over the basil leaves. Flip over the omelette after 11⁄2 minutes or when the base is slightly brown.', img: 'assets/steps/3.svg' },
-      { Step: 'Remove from heat after another 11⁄2 minutes and transfer to a serving plate.', img: 'assets/steps/4.svg' }]
+      { Step: 'Throw in the basil leaves and stir fry for half to 1 minute.', img: 'assets/steps/2.svg' },
+      { Step: 'Flip over the omelette after 1 and half minutes.', img: 'assets/steps/3.svg' },
+      { Step: 'Remove from heat after another 1 and half minutes', img: 'assets/steps/4.svg' }]
     },
 
     {
@@ -684,7 +684,7 @@ export class AppServeService {
       information: [{ title: 'Calories', figure: 100 }, { title: 'Prep Time', figure: '25m' }, { title: 'Cook Time', figure: '125m' }],
       briefDes: 'Lorem',
       des: 'Lorem 3',
-      ingredients: [{ a: '1 teaspon cooking oil', b: '3-4 teaspoons ginger, minced', c: '3-4 teaspoons garlic, minced', d: '3-4 tablespoon scallion, white and light green parts only, chopped', e: '3-4 mushrooms, thick sliced', f: '3 cups vegan chicken-style prepared broth', g: '1 1/2 cups uncooked white rice' }],
+      ingredients: [{ a: '1 teaspon cooking oil', b: '3-4 teaspoons ginger, minced', c: '3-4 teaspoons garlic, minced', d: '3-4 tablespoon scallion, white and light green parts only, chopped', e: '3-4 mushrooms, thick sliced', f: '3 cups vegan chicken-style prepared broth', g: '1 and half cups uncooked white rice' }],
       recipe: [{ Step: 'Wash the rice.', img: 'assets/steps/1.svg' },
       { Step: 'Heat a pot over high heat with a little vegetable oil. Add a teaspoon of garlic, a teaspoon of ginger, and a tablespoon of chopped scallion.', img: 'assets/steps/2.svg' },
       { Step: 'Add in the mushrooms. Reduce the heat to medium high and let the mushrooms cook until soft; about 5 minutes. Stir occasionally.', img: 'assets/steps/3.svg' },

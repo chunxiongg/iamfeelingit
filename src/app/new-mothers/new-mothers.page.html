@@ -2,99 +2,87 @@
   <ion-toolbar>
     <ion-title>Confinement</ion-title>
   </ion-toolbar>
-
-
 </ion-header>
 
-
 <ion-content padding>
+  <div class="segButton">
+    <ion-segment [(ngModel)]="galleryType" color="dark" mode="md">
+      <ion-segment-button value="a" mode="md">
+        Practices
+      </ion-segment-button>
 
-    <div class='segButton'>
-        <ion-segment [(ngModel)]="galleryType" color="dark" mode='md'>
-        
-            <ion-segment-button value="a" mode='md'>
-              Practices
-            </ion-segment-button>
-        
-            <ion-segment-button value="b" mode='md'>
-                Food
-            </ion-segment-button>
-      
-            <ion-segment-button value="c" mode='md'>
-              Lactation
-          </ion-segment-button>
-          </ion-segment>
-      </div>
+      <ion-segment-button value="b" mode="md">
+        Food
+      </ion-segment-button>
 
-  <div [ngSwitch]="galleryType">
-    <br>
-      <div *ngSwitchCase="'a'">
-        
-        <ion-text>
-          <b>Confinement Practices</b>
-          <br>
-      
-          It is often said that mothers should not shower or wash their hair during the whole confinement
-    process. But is this just a traditional practice to be followed or has it been proven by science?
-    Are you traditional or do you hate the traditional practices?
-          <br>
-          <br>
-
-          Disclaimer: Traditional versus Practicality. The key to confinement practices is being practical,
-          comfortable, and safe. The results are for your guidance only, please consult your doctor when
-          in doubt.
-      
-        </ion-text>
-
-      </div>
-
-
-
-      <div *ngSwitchCase="'b'">
-        
-        <ion-text>
-          <b>Confinement Food</b>
-          <br>
-      
-          During confinement, your diet plays an important role with your healing. It is therefore important
-          to consume a balanced diet for recovery and recuperating your body. Some food like ginger
-          and red dates are recommended for consumption during confinement due to their benefits
-          which aids in your healing. But is it necessary to always consume them?
-          <br>
-          <br>
-
-          Disclaimer: The key to confinement food is a healthy balanced diet to ensure mothers receive
-          nutrients required for recovery. It is also important for mothers to take note of their own allergy
-          and consult their doctor when in doubt.
-      
-        </ion-text>
-      </div>
-
-      <div *ngSwitchCase="'c'">
-          <ion-text>
-              <b>Lactation</b>
-              <br>
-              After delivery, mothers are recommended to breastfeed their children. The World Health
-              Organization recommends exclusive breastfeeding up to at least 6 months. However, during the
-              initial stage, most mothers are often faced with common issues such as engorgement, blocked
-              milk ducts, oversupply of milk, mastitis and more.
-              <br>
-              <br>
-              Disclaimer: Different mothers have different breastfeeding experience, while there are plenty of
-              advice, it is more important for mothers to explore the different solutions to see what suits them
-              best and what not. Breastfeeding should be a comfortable journey and breast milk is the most
-              recommended milk for the baby. If in doubt, mothers should always go to a lactation consultant.
-          </ion-text>
-        
-        
-        
-      </div>
-
-
+      <ion-segment-button value="c" mode="md">
+        Lactation
+      </ion-segment-button>
+    </ion-segment>
   </div>
 
+  <div [ngSwitch]="galleryType">
+    <br />
+    <div *ngSwitchCase="'a'">
+      <ion-text>
+        <b>Confinement Practices</b>
+        <br />
+
+        It is often said that mothers should not shower or wash their hair
+        during the whole confinement process. But is this just a traditional
+        practice to be followed or has it been proven by science? Are you
+        traditional or do you hate the traditional practices?
+        <br />
+        <br />
+
+        Disclaimer: Traditional versus Practicality. The key to confinement
+        practices is being practical, comfortable, and safe. The results are for
+        your guidance only, please consult your doctor when in doubt.
+      </ion-text>
+    </div>
+
+    <div *ngSwitchCase="'b'">
+      <ion-text>
+        <b>Confinement Food</b>
+        <br />
+
+        During confinement, your diet plays an important role with your healing.
+        It is therefore important to consume a balanced diet for recovery and
+        recuperating your body. Some food like ginger and red dates are
+        recommended for consumption during confinement due to their benefits
+        which aid in your healing. But is it necessary to always consume them?
+        <br />
+        <br />
+
+        Disclaimer: The key to confinement food is a healthy balanced diet to
+        ensure mothers receive nutrients required for recovery. It is also
+        important for mothers to take note of their own allergy and consult
+        their doctor when in doubt.
+      </ion-text>
+    </div>
+
+    <div *ngSwitchCase="'c'">
+      <ion-text>
+        <b>Lactation</b>
+        <br />
+        After delivery, mothers are recommended to breastfeed their children.
+        The World Health Organization recommends exclusive breastfeeding up to
+        at least 6 months. However, during the initial stage, most mothers are
+        often faced with common issues such as engorgement, blocked milk ducts,
+        oversupply of milk, mastitis and more.
+        <br />
+        <br />
+        Disclaimer: Different mothers have different breastfeeding experience,
+        while there are plenty of advice, it is more important for mothers to
+        explore the different solutions to see what suits them best and what
+        not. Breastfeeding should be a comfortable journey and breast milk is
+        the most recommended milk for the baby. If in doubt, mothers should
+        always go to a lactation consultant.
+      </ion-text>
+    </div>
+  </div>
 </ion-content>
 
 <ion-footer padding no-border>
-  <ion-button (click)='goTo()' class='ans' expand="full">Skip</ion-button>
+  <ion-button (click)="goTo()" class="ans" expand="full">Skip</ion-button>
 </ion-footer>

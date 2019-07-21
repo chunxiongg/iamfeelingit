@@ -1,87 +1,83 @@
-<ion-header no-border>
+<ion-header>
   <ion-toolbar>
     <ion-title>Lactation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <div class="">
+    <ion-card-subtitle class="myArticles">Breastfeeding</ion-card-subtitle>
+    <br />
 
-    <div class="">
-      <ion-card-subtitle class='myArticles'>Breastfeeding</ion-card-subtitle>
-      <br>
+    <ion-button class="ans" color="white" (click)="presentPopover()"
+      >View Information</ion-button
+    >
+    <br />
+    <ul class="timeline">
+      <li (click)="before()">
+        <div class="timeline-thumb bg-color-blue timeline-icon">
+          <ion-icon src="assets/tilted-bottle.svg"></ion-icon>
+        </div>
+        <div class="timeline-item">
+          <h4>Before</h4>
+          <ion-text>Breastfeeding</ion-text>
+        </div>
+      </li>
 
-      <ion-button class='ans' color='white' (click)='presentPopover()'>View Information</ion-button>
-      <br>
-        <ul class="timeline">
-          <li (click)='before()'>
-            <div class="timeline-thumb bg-color-blue timeline-icon">
-          
-              <ion-icon src='assets/tilted-bottle.svg'></ion-icon>
-            </div>
-            <div class="timeline-item">
-              <h4>Before</h4>
-              <ion-text>Breastfeeding</ion-text>
-           
-            </div>
-            
-          </li>
+      <li (click)="while()">
+        <div class="timeline-thumb bg-color-blue timeline-icon">
+          <ion-icon src="assets/tilted-bottle.svg"></ion-icon>
+        </div>
+        <div class="timeline-item">
+          <h4>While</h4>
+          <ion-text>Breastfeeding</ion-text>
+        </div>
+      </li>
 
-          <li (click)='while()'>
-              <div class="timeline-thumb bg-color-blue timeline-icon">
-                <ion-icon src='assets/tilted-bottle.svg'></ion-icon>
-              </div>
-              <div class="timeline-item">
-                <h4>While</h4>
-                <ion-text>Breastfeeding</ion-text>
-               
-              </div>
-            </li>
+      <li (click)="while()">
+        <div class="timeline-thumb bg-color-blue timeline-icon">
+          <ion-icon src="assets/tilted-bottle.svg"></ion-icon>
+        </div>
+        <div class="timeline-item">
+          <h4>After</h4>
 
-            <li (click)='while()'>
-                <div class="timeline-thumb bg-color-blue timeline-icon">
-                  <ion-icon src='assets/tilted-bottle.svg'></ion-icon>
-                </div>
-                <div class="timeline-item">
-                  <h4>After</h4>
-                  
-                  <ion-text>Breastfeeding</ion-text>
-                 
-                </div>
-              </li>
-    
-  
+          <ion-text>Breastfeeding</ion-text>
+        </div>
+      </li>
+    </ul>
+  </div>
 
+  <br />
 
-        </ul>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card-subtitle>
+          <ion-text class="myArticles">Articles</ion-text>
+        </ion-card-subtitle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  
-    </div>
-  
-<br>
+  <ion-list lines="none">
+    <ion-item (click)="openLactation()">
+      <ion-icon
+        size="small"
+        color="warning"
+        slot="end"
+        name="arrow-forward"
+      ></ion-icon>
+      <ion-label>Myths Surrounding Lactation</ion-label>
+    </ion-item>
 
-
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <ion-card-subtitle>
-                    <ion-text class='myArticles'>Articles</ion-text>
-                  </ion-card-subtitle>
-            </ion-col>
-          </ion-row>
-      </ion-grid>
-
-    <ion-list lines='none'>
-        <ion-item (click)='openLactation()'>
-          <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-          <ion-label>Myths Surrounding Lactation</ion-label>
-        </ion-item>
-
-        <ion-item (click)='openNewLink()'>
-            <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-            <ion-label>Supported by BMSG</ion-label>
-          </ion-item>
-    </ion-list>
-
+    <ion-item (click)="openNewLink()">
+      <ion-icon
+        size="small"
+        color="warning"
+        slot="end"
+        name="arrow-forward"
+      ></ion-icon>
+      <ion-label>Supported by BMSG</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
-
-

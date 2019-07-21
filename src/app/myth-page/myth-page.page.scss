@@ -1,49 +1,62 @@
 .options {
-    --background: #F5DDD0;  /* fallback for old browsers */
-    --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
-    --background: linear-gradient(to bottom, #ffdde1, #F5DDD0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --color: black;
-    font-family: 'Raleway', sans-serif;
-    --border-radius: 20px !important;
-    width: 60% !important;
-  }
-  
-  
-  .reveal {
-    opacity: .8;
-  }
-
-.qnNo {
-    text-align: center !important;
+  --background: #f5ddd0; /* fallback for old browsers */
+  --background: -webkit-linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --color: black;
+  font-family: "Raleway", sans-serif;
+  --border-radius: 20px !important;
+  width: 60% !important;
 }
 
+.reveal {
+  opacity: 0.8;
+}
+
+.qnNo {
+  text-align: center !important;
+}
 
 .qnLeft {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .mythCard {
-    min-height: 40vh !important;
-    width: 40vh !important;
-    box-shadow: none !important;
-  }
+  min-height: 40vh !important;
+  width: 40vh !important;
+  box-shadow: none !important;
+}
 
-  .mythImg {
-    width: 50% !important;
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  
-  .ans {
-    --background: #F5DDD0;  /* fallback for old browsers */
-    --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
-    --background: linear-gradient(to bottom, #ffdde1, #F5DDD0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --color: black;
-    font-family: 'Raleway', sans-serif;
-    --border-radius: 20px !important;
-    width: 100% !important;
-  }
+.mythImg {
+  width: 50% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
+.ans {
+  --background: #f5ddd0; /* fallback for old browsers */
+  --background: -webkit-linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --color: black;
+  font-family: "Raleway", sans-serif;
+  --border-radius: 20px !important;
+  width: 100% !important;
+}
 
-  @import '../../theme/ToolBarColor';
+@import "../../theme/ToolBarColor";
