@@ -1,178 +1,171 @@
-
 <ion-header no-border>
   <ion-toolbar>
     <ion-title>Practices</ion-title>
   </ion-toolbar>
-
 </ion-header>
 
-<!-- <ion-text padding>
-  <b>Introduction of Confinement to First Time Mother</b>
-  <br>
-  Confinement is an important postpartum process which aids the healing of every mother after
-  giving birth. This process usually lasts for 30 days, with some lasting for 40 days. This period is
-  where mothers usually stay at home unless required due to their low immune system to
-  recuperate their bodies and regain vitality.
-</ion-text> -->
+<!-- Default Segment -->
+<ion-toolbar>
+  <ion-segment
+    [(ngModel)]="galleryType"
+    color="dark"
+    mode="md"
+    (ionChange)="segmentChanged()"
+  >
+    <ion-segment-button value="makan" mode="md">
+      Food
+    </ion-segment-button>
 
-    <!-- Default Segment -->
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="galleryType" color="dark" mode='md' (ionChange)='segmentChanged()'>
-    
-       <ion-segment-button value="makan" mode='md'>
-          Food
-        </ion-segment-button>
-
-        <ion-segment-button value="mvf" mode='md'>
-          <!-- Myth vs Fact --> Activities
-        </ion-segment-button>
-    
-        <!-- <ion-segment-button value="quiz" mode='md'>
-          Quiz
-        </ion-segment-button> -->
-    
-      </ion-segment>
-    </ion-toolbar>
+    <ion-segment-button value="mvf" mode="md">
+      <!-- Myth vs Fact -->
+      Activities
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
 
 <ion-content class="card-background-page">
-
   <!-- Myth Vs Fact -->
 
   <div [ngSwitch]="galleryType">
-    
-    <div *ngSwitchCase="'mvf'" class='ActivitiesCard' >
-      <br>
-        <ion-button class='ans' color='white' (click)='openPractices()'>View Information</ion-button>
+    <div *ngSwitchCase="'mvf'" class="ActivitiesCard">
+      <br />
+      <ion-button class="ans" color="white" (click)="openPractices()"
+        >View Information</ion-button
+      >
 
-        <br>
-        <ion-card-subtitle padding class='info'>Series of activities that you can complete</ion-card-subtitle>
-        <ion-slides pager="false" [options]="slideOptsForActivities" padding>  
-            <ion-slide>
-                <ion-card (click)='onClickMyth()'>
-                    <ion-card-content> 
-                    <img src='assets/tilted-bottle.svg' class='bottle'>
-                    <br>
-                    <ion-text>Myth Vs Fact Showdown!</ion-text>
-                    <br>
-                    <br>
-                    <!-- <ion-button class='ans' (click)='onClickMyth()'>Let's go!</ion-button> -->
-       
-                  </ion-card-content>
-                </ion-card> 
-            </ion-slide>
+      <br />
+      <ion-card-subtitle padding class="info"
+        >Series of activities that you can complete</ion-card-subtitle
+      >
+      <ion-slides pager="false" [options]="slideOptsForActivities" padding>
+        <ion-slide>
+          <ion-card (click)="onClickMyth()">
+            <ion-card-content>
+              <img src="assets/tilted-bottle.svg" class="bottle" />
+              <br />
+              <ion-text>Myth Vs Fact Showdown!</ion-text>
+              <br />
+              <br />
+              <!-- <ion-button class='ans' (click)='onClickMyth()'>Let's go!</ion-button> -->
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
 
-          <ion-slide>
-              <ion-card (click)='takeQuiz()'>
-                <ion-card-content> 
-                <img src='assets/Still Young Logo.png' class='bottle'>
-                <br>
-                <ion-text>Take this personality quiz to find out which category of personalities do you belong to!</ion-text>
-                <br>
-                <br>
+        <ion-slide>
+          <ion-card (click)="takeQuiz()">
+            <ion-card-content>
+              <img src="assets/Still Young Logo.png" class="bottle" />
+              <br />
+              <ion-text
+                >Take this personality quiz to find out which personality
+                category do you belong to!</ion-text
+              >
+              <br />
+              <br />
               <!-- <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button> -->
- 
-                </ion-card-content>
-            </ion-card>  
-          </ion-slide>
-      </ion-slides> 
-    </div> <!-- end of  Myth vs Fact -->
-
-
-    <!-- Quiz -->
-    <!-- <div *ngSwitchCase="'quiz'">
-      <ion-card class='noBorder'>
-          <ion-card-content> 
-              <img src='assets/Still Young Logo.svg'>
-              <ion-text>What Confinement Food Ingredient Are You? Take this questionnaire to find out!</ion-text>
-              <br>
-              <br>
-              <ion-button class='ans' (click)='takeQuiz()'>Take Quiz</ion-button>
-          </ion-card-content>
-        </ion-card>   
-    </div>  -->
-    <!-- end of Quiz Div -->
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <!-- end of  Myth vs Fact -->
 
     <!-- Food -->
     <div *ngSwitchCase="'makan'">
+      <div>
+        <br />
+        <ion-button class="ans" color="white" (click)="presentPopover($event)"
+          >View Information</ion-button
+        >
 
-        <div>
-            <br>
-            <ion-button class='ans' color='white' (click)='presentPopover($event)'>View Information</ion-button>
-  
-            <br>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                  <ion-card-subtitle>
-                      <ion-text class='myRecipe'>Recipes</ion-text>
-                    </ion-card-subtitle>
-              </ion-col>
+        <br />
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-card-subtitle>
+                <ion-text class="myRecipe">Recipes</ion-text>
+              </ion-card-subtitle>
+            </ion-col>
 
-              <ion-col>
-                  <ion-buttons justify-content-end>
-                      <!-- <ion-button (click)='presentPopover($event)'> -->
-                          <ion-button (click)='presentActionSheet()'>
-                        <ion-icon color='warning' class='moreIcon' slot="icon-only" name="more"></ion-icon>
-                      </ion-button>
-                    </ion-buttons>
-              </ion-col>
-            </ion-row>
+            <ion-col>
+              <ion-buttons justify-content-end>
+                <!-- <ion-button (click)='presentPopover($event)'> -->
+                <ion-button (click)="presentActionSheet()">
+                  <ion-icon
+                    color="warning"
+                    class="moreIcon"
+                    slot="icon-only"
+                    name="more"
+                  ></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
 
+          <ion-row>
+            <ion-slides pager="false" [options]="slideOpts">
+              <!-- Category -->
+              <ion-slide
+                *ngFor="let makan of foodRecipe | unique; let m = index"
+                (click)="openRecipe(makan)"
+              >
+                <ion-card class="welcome-card">
+                  <img
+                    class="myPic"
+                    src="{{ makan.cat_img }}"
+                    class="cardImg"
+                  />
+                  <!-- <div class="card-title">{{ makan.cat_name }}</div> -->
+                  <ion-card-subtitle class="titleMakan"
+                    >{{ makan.cat_name }}
+                  </ion-card-subtitle>
+                  <br />
+                </ion-card>
+              </ion-slide>
+            </ion-slides>
+          </ion-row>
+        </ion-grid>
 
-              <ion-row>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-card-subtitle>
+                <ion-text class="myArticles">Articles</ion-text>
+              </ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-                    <ion-slides pager="false" [options]="slideOpts"> 
-                        <!-- Category -->
-                        <ion-slide *ngFor='let makan of foodRecipe | unique; let m = index' (click)='openRecipe(makan)'>
-                              <ion-card class="welcome-card">
-
-                                <img class='myPic' src='{{ makan.cat_img }}' class='cardImg'>
-                                <!-- <div class="card-title">{{ makan.cat_name }}</div> -->
-                                <ion-card-subtitle class='titleMakan'>{{ makan.cat_name }} </ion-card-subtitle>
-                                  <br>
-                                </ion-card>
-                        </ion-slide>
-                
-                      </ion-slides>
-
-            </ion-row>
-          </ion-grid>
-      
-
-          <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <ion-card-subtitle>
-                        <ion-text class='myArticles'>Articles</ion-text>
-                      </ion-card-subtitle>
-                </ion-col>
-              </ion-row>
-          </ion-grid>
-
-          
-          
-          <ion-list lines='none'>
-              <ion-item (click)='presentModal()'>
-                <!-- <ion-thumbnail slot="start">
+        <ion-list lines="none">
+          <ion-item (click)="presentModal()">
+            <!-- <ion-thumbnail slot="start">
                   <img src="{{ read.image }}">
                 </ion-thumbnail> -->
-                <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-                <ion-label>Food to Avoid </ion-label>
-              </ion-item>
+            <ion-icon
+              size="small"
+              color="warning"
+              slot="end"
+              name="arrow-forward"
+            ></ion-icon>
+            <ion-label>Food to Avoid </ion-label>
+          </ion-item>
 
-              <ion-item (click)='presentCooking()'>
-                <!-- <ion-thumbnail slot="start">
+          <ion-item (click)="presentCooking()">
+            <!-- <ion-thumbnail slot="start">
                   <img src="{{ read.image }}">
                 </ion-thumbnail> -->
-                <ion-icon size='small' color='warning' slot='end' name='arrow-forward'></ion-icon>
-                <ion-label>Methods of Cooking </ion-label>
-              </ion-item>
-              
-          </ion-list>
-        </div>
-       
-
-    </div> <!-- End of Food Div-->
-  </div> <!-- End of main div -->
+            <ion-icon
+              size="small"
+              color="warning"
+              slot="end"
+              name="arrow-forward"
+            ></ion-icon>
+            <ion-label>Methods of Cooking </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+    <!-- End of Food Div-->
+  </div>
+  <!-- End of main div -->
 </ion-content>
-

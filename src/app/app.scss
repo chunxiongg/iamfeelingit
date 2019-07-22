@@ -1,33 +1,31 @@
 // App Styles
 // ----------------------------------------------------------------------------
-// Put style rules here that you want to apply to the entire application. These 
-// styles are for the entire app and not just one component. Additionally, this 
-// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// Put style rules here that you want to apply to the entire application. These
+// styles are for the entire app and not just one component. Additionally, this
+// file can hold Sass mixins, functions, and placeholder classes to be imported
 // and used throughout the application.
 
-@import '../theme/ToolBarPadding';
+@import "../theme/ToolBarPadding";
 
 ion-title {
-    // font-family: 'Raleway', sans-serif;
-    // letter-spacing: 1px;
-    font-family: 'Acme', sans-serif;
-    font-size: 2.8vh;
-    letter-spacing: .15vh;
-    
+  font-family: "Acme", sans-serif;
+  font-size: 2.8vh;
+  letter-spacing: 0.15vh;
 }
 
 .timerModal {
-    background: rgba(0, 0, 0, 0.5) !important;
-    padding: 20% 10%  !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 20% 10% !important;
 }
 
-ion-label, ion-note {
-    font-family: 'Raleway', sans-serif !important;
-    //font-family: 'Cantarell', sans-serif;
+ion-label,
+ion-note {
+  font-family: "Raleway", sans-serif !important;
+  //font-family: 'Cantarell', sans-serif;
 }
 
 .swal2-styled.swal2-confirm {
-    color: #403e3e !important;
-    font-family: 'Raleway', sans-serif !important;
-    background-color: #ffdde1 !important;
+  color: #403e3e !important;
+  font-family: "Raleway", sans-serif !important;
+  background-color: #ffdde1 !important;
 }

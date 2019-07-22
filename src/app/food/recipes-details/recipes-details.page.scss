@@ -1,74 +1,77 @@
-@import '../../../theme/BoxShadowNone';
-
+@import "../../../theme/BoxShadowNone";
 
 hr {
-    background: grey !important;
-    display: block !important;
-    font-size: 2em !important;
-    opacity: .2 !important;
-    visibility: visible !important;
-  }
-
+  background: grey !important;
+  display: block !important;
+  font-size: 2em !important;
+  opacity: 0.2 !important;
+  visibility: visible !important;
+}
 
 ion-toolbar {
-    --padding-top: 0vh !important;
-    --padding-bottom: 0vh !important;
-    --padding-start: 0vh !important;
-    --padding-end: 0vh !important;
-
-    
-    
+  --padding-top: 0vh !important;
+  --padding-bottom: 0vh !important;
+  --padding-start: 0vh !important;
+  --padding-end: 0vh !important;
 }
 
 .ans {
-    --background: #F5DDD0;  /* fallback for old browsers */
-    --background: -webkit-linear-gradient(to bottom, #ffdde1, #F5DDD0);  /* Chrome 10-25, Safari 5.1-6 */
-    --background: linear-gradient(to bottom, #ffdde1, #F5DDD0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --color: black;
-    font-family: 'Raleway', sans-serif;
-    --border-radius: 0px !important;
-    width: 100% !important;
-  }
+  --background: #f5ddd0; /* fallback for old browsers */
+  --background: -webkit-linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(
+    to bottom,
+    #ffdde1,
+    #f5ddd0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --color: black;
+  font-family: "Raleway", sans-serif;
+  --border-radius: 0px !important;
+  width: 100% !important;
+}
 
 .stepsImg {
-    width: 35% !important;
+  width: 35% !important;
 }
 
 .dark {
-    font-weight: bold;
-    font-size: 2.3vh !important;
-    color: #000 !important;
+  font-weight: bold;
+  font-size: 2.3vh !important;
+  color: #000 !important;
 }
 
 ion-card-title {
-    text-align: center;
-    font-size: 1.5em;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 ion-card {
-    margin-top: 5vh !important;
+  margin-top: 5vh !important;
 }
 
 ion-button {
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1.5px !important;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1.5px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ion-note {
-    font-size: 2vh !important;
+  font-size: 2vh !important;
 }
 
 ion-card-title {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 ion-item {
-    margin: 1vh !important;
+  margin: 1vh !important;
 }

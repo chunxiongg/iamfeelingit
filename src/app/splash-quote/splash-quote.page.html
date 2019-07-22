@@ -5,29 +5,27 @@
 </ion-header>
 
 <ion-content padding>
-  <br>
-  <br>
-  <br>
-  <ion-text> Any Confinement Experience?</ion-text>
-  <br>
+  <br />
+  <br />
+  <br />
+  <ion-text>Have you been through confinement before?</ion-text>
+  <br />
   <ion-grid>
-
     <ion-row>
       <ion-col>
-        <ion-img src='assets/Logo/stillyounglogo.png'></ion-img>
+        <ion-img src="assets/Logo/stillyounglogo.png"></ion-img>
       </ion-col>
 
       <ion-col>
-        <br>
+        <br />
         <ion-row>
-            <ion-button class='ans' (click)='firstTime()'>First Time</ion-button>
+          <ion-button class="ans" (click)="wentThrough()">Yes</ion-button>
         </ion-row>
 
         <ion-row>
-            <ion-button class='ans' (click)='wentThrough()'>Went Through</ion-button>
+          <ion-button class="ans" (click)="firstTime()">No</ion-button>
         </ion-row>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 </ion-content>

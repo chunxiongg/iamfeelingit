@@ -1,38 +1,35 @@
 <ion-header>
   <!-- <ion-toolbar [myScrollVanish]="scrollArea" > -->
-      <ion-toolbar>
-      <ion-buttons>
-          <ion-button (click)='returnBack()'>
-        <ion-icon color='dark' src='assets/icon/arrow.svg'></ion-icon>
-          </ion-button>
-      </ion-buttons>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="returnBack()">
+        <ion-icon color="dark" src="assets/icon/arrow.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
 
     <ion-title *ngIf="platform.is('ios')">
       {{ getMakanOne.cat_name }}
     </ion-title>
 
-    <ion-title slot='end' *ngIf="platform.is('android')">
+    <ion-title slot="end" *ngIf="platform.is('android')">
       {{ getMakanOne.cat_name }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+  </ion-refresher>
 
-
-    <ion-refresher (ionRefresh)="doRefresh($event)">
-        <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
-    </ion-refresher>
-
-<div *ngIf='isLoaded'>
-  <ion-card-subtitle>
+  <div *ngIf="isLoaded">
+    <ion-card-subtitle>
       <ion-text>
         Cookbook
       </ion-text>
     </ion-card-subtitle>
 
-  <!-- <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
+    <!-- <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
 
     <ion-card-content>
       <ion-list>
@@ -46,58 +43,65 @@
     </ion-card-content>
   </ion-card> -->
 
-    <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
-      <ion-img [src]='details.image' *ngIf='details.name || details.briefDes'></ion-img>
-      <ion-card-header class='ion-text-left'>
-
-          <!-- If Recipe is Unavailable, Show this Message -->
-        <ion-row *ngIf='!details.name || !details.briefDes'>
-            <ion-card class='noBorder'>
-              <img src='assets/not-found.svg'>
-              <br>
-              <br>
-              <ion-note color='dark'>Cookbook is empty. No recipes available.</ion-note>
-            </ion-card>
-          </ion-row>
+    <ion-card
+      *ngFor="let details of arr; let i = index"
+      (click)="openFood(details)"
+    >
+      <ion-img
+        [src]="details.image"
+        *ngIf="details.name || details.briefDes"
+      ></ion-img>
+      <ion-card-header class="ion-text-left">
+        <!-- If Recipe is Unavailable, Show this Message -->
+        <ion-row *ngIf="!details.name || !details.briefDes">
+          <ion-card class="noBorder">
+            <img src="assets/not-found.svg" />
+            <br />
+            <br />
+            <ion-note color="dark"
+              >Cookbook is empty. No recipes available.</ion-note
+            >
+          </ion-card>
+        </ion-row>
 
         <ion-card-subtitle text-center>{{ details.name }}</ion-card-subtitle>
-    
+
         <!-- <ion-note color='dark'>{{ details.briefDes }} </ion-note> -->
         <!-- <br>
         <br>
         <br> -->
- 
+
         <!-- <ion-card-subtitle *ngIf='details.name || details.briefDes' class='learnMore'>Learn More</ion-card-subtitle> -->
-      </ion-card-header> 
+      </ion-card-header>
     </ion-card>
-
-
   </div>
 
-    <!-- Skeleton Page -->
-  <div *ngIf='!isLoaded'>
-      <ion-card *ngFor='let details of arr; let i = index' (click)='openFood(details)'>
-          <!-- <ion-img [src]='details.image'></ion-img> -->
-          <div class='custom-skeleton'>
-            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
-          </div>
+  <!-- Skeleton Page -->
+  <div *ngIf="!isLoaded">
+    <ion-card
+      *ngFor="let details of arr; let i = index"
+      (click)="openFood(details)"
+    >
+      <!-- <ion-img [src]='details.image'></ion-img> -->
+      <div class="custom-skeleton">
+        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+      </div>
 
-          <ion-card-header class='ion-text-left'>
-            <ion-skeleton-text animated style="width: 50%; display: block; margin-left: auto; margin-right: auto"></ion-skeleton-text>
-      
-            <!-- <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
+      <ion-card-header class="ion-text-left">
+        <ion-skeleton-text
+          animated
+          style="width: 50%; display: block; margin-left: auto; margin-right: auto"
+        ></ion-skeleton-text>
+
+        <!-- <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
             <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
             <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
             <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text>
             <ion-skeleton-text animated style="width: 90%;"></ion-skeleton-text> -->
-            <!-- <br>
+        <!-- <br>
             <br>
             <ion-skeleton-text animated style="width: 30%; display: block; margin-left: auto; margin-right: auto"></ion-skeleton-text> -->
-          </ion-card-header> 
-        </ion-card>
+      </ion-card-header>
+    </ion-card>
   </div>
-
 </ion-content>
-
-
-
